@@ -1,0 +1,38 @@
+.routeMyQuestion_wrap {
+  padding: 24px;
+  .list {
+    border: 1px solid $lightGray;
+    margin-bottom: 16px;
+    &:last-child {
+      margin-bottom: 0
+    }
+    .clickContent {
+      @include flex_aline_center();
+      p {
+        padding: 16px 0;
+        text-align: center;
+        &.tit {
+          width: 62%;
+          text-align: start;
+          text-indent: 16px;
+        }
+        &.time {
+          width: 15%;
+        }
+        &.ck {
+          width: 15%;
+        }
+        &.accordion_btn {
+          width: 8%;
+        }
+      }
+    }
+    .accordionContent {
+      border-top: 1px solid $lightGray;
+      padding: 16px;
+      height: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+  }
+}

@@ -1,0 +1,89 @@
+
+.header_wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 18px 0;
+  background: $main_font_color;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  z-index: 30;
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.56, 1);
+    &.hide {
+      // top: -80px;
+      transform: translateY(-80px);
+    }
+    .header_container {
+      position: relative;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .main_logo {
+        // width: 110px;
+        width: 145px;
+        cursor: pointer;
+        img {
+          display: block;
+          width: 100%;
+          image-rendering: crisp-edges;
+          image-rendering: -webkit-optimize-contrast;
+        }
+        // .img {
+        //   height: 29px;
+        //   background-size: cover;
+        // }
+      } // .main_logo
+
+        .gnb_menu {
+          @include flex_aline_center();
+          font-size: 14px;
+        li {
+          @include flex_aline_center();
+          cursor: pointer;
+          font-weight: 400;//노토산스
+          color: $white;
+          >span {
+            display: block;
+            width: 1px;
+            height: 12px;
+            margin: 0 12px;
+            background: $lightGray;
+          }
+          a {
+            color: $white;
+          }
+          &#bell {
+            position: relative;
+            img {
+              display: block;
+            }
+            &.active {
+              .newsCountBoard {
+                opacity: 0;
+              }
+            }
+            .newsCountBoard {
+              display: block;
+              position: absolute;
+              top: -3px;
+              right: 18px;
+              min-width: 20px;
+              padding: 0px 3px 1px 3px;
+              background: $main_color0;
+              text-align: center;
+              font-weight: 500;
+              color: #fff;
+              font-size: 10px;
+              border-radius: 12px;
+              transition: opacity 0.2s ease-in-out
+            }
+          } // &.bell
+        } // li
+
+      } // .gnb_menu
+
+    } //.header_container
+} //.header

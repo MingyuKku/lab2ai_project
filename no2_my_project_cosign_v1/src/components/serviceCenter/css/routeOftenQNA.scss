@@ -1,0 +1,58 @@
+.routeOftenQNA_wrap {
+  padding: 24px;
+  .category {
+    display: flex;
+    .list {
+      @include flex_aline_center();
+      flex-direction: column;
+      width: 25%;
+      padding: 16px;
+      border: 1px solid $lightGray2;
+      .iconImg {
+        width: 80px;
+        height: 80px;
+        background: $lightGray2;
+        border-radius: 50%;
+      }
+      h1 {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .question_list {
+    .filter {
+      padding: 16px 0;
+      select {
+        float: right;
+      }
+    }
+    .list {
+      border: 1px solid $lightGray;
+      .clickContent {
+        @include flex_aline_center();
+        justify-content: space-between;
+        padding: 12px;
+        .content {
+          @include flex_aline_center();
+          h2 {
+            font-size: 14px;
+          }
+          h3 {
+            font-size: 14px;
+          }
+        }
+        .accordion_btn {
+          
+        }
+      }
+      .accordionContent {
+        border-top: 1px solid $lightGray;
+        height: 0;
+        overflow: hidden;
+        // padding: 12px;
+        padding: 0;
+      }
+    }
+  }
+}

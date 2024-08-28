@@ -1,0 +1,130 @@
+<template>
+  <div class="myPageSecession_wrap">
+    <div class="title">회원 탈퇴</div>
+    <div class="myPageSecession_body">
+      <div class="info_title">
+        <h2>탈퇴 안내</h2>
+        <p>회원 탈퇴 및 계정 삭제 전에 안내 사항을 확인해 주세요.</p>
+      </div>
+      <ul class="info_confirm">
+        <li><i class="xi-check"></i><p>사용하고 계신 계정 ( {{ userEmail }} )은 탈퇴할 경우 재사용 및 복구가 불가능합니다.<br>
+        탈퇴한 이메일은 본인과 타인 모두 재사용 및 복구가 불가하오니 신중하게 선택하시기 바랍니다.</p></li>
+        <li><i class="xi-check"></i>탈퇴 후 회원정보 및 서비스 이용기록은 모두 삭제되며, 삭제된 데이터는 복구되지 않습니다.</li>
+        <li><i class="xi-check"></i>탈퇴 후에도 게시판형 서비스에 등록된 게시글은 그대로 남아 있습니다.</li>
+      </ul>
+      <div class="info_agree">
+        <input type="checkbox" id="checkAgree" v-model="infoAgree">
+        <label for="checkAgree">
+          <div class="checkBox"><i class="xi-check"></i></div>
+          <p>위 안내사항을 모두 숙지하였고 이에 동의합니다.</p>
+        </label>
+      </div>
+      <div class="confirm_userInfo">
+        <div class="user_email">
+          <h2>이메일</h2>
+          <input type="text" disabled v-model="userEmail">
+        </div>
+        <div class="user_password">
+          <h2>비밀번호 확인</h2>
+          <input type="password" placeholder="비밀번호를 입력해 주세요." v-model="userPassword">
+        </div>
+      </div>
+      <button type="button" :disabled="!infoAgree || !userPassword" @click="submitSecession">회원탈퇴</button>
+    </div>
+  </div>
+</template>
+
+<script>
+import axios from 'axios'
+import qs from 'qs';
+import { API_URL } from '@/core/apiUrl';
+import Swal from 'sweetalert2';
+
+export default {
+  data() {
+    return {
+      userEmail: '',
+      userPassword: '',
+      infoAgree: false,
+    }
+  },
+  async mounted() {
+    await axios.post(`${API_URL}/api/user/sign_out/load`, {}, {withCredentials:true})
+    .then(res=> {
+      this.userEmail = res.data.userInfo.username
+    })
+    .catch(err=> {
+      alert(`${err} 관리자에게 문의해 주세요!`)
+    })
+  },
+  computed: {
+  },
+  methods: {
+    submitSecession() {
+      Swal.fire({
+        icon: 'info',
+        html: 
+          '회원탈퇴를 하시면 회원님의 모든 데이터가 삭제됩니다.<br>' +
+          '그래도 회원을 탈퇴하시겠습니까?',
+        text: '성공적으로 로그인되었습니다.',
+        iconColor: '#00D8D6',
+        confirmButtonText: '아니요',
+        confirmButtonColor: '#F53B57',
+        showCancelButton: true,
+        cancelButtonText: '예',
+        cancelButtonColor: '#ccc',
+        showClass: {
+          popup: 'animate__animated animate__fadeInDown'
+        },
+        hideClass: {
+          popup: 'animate__animated animate__fadeOutUp'
+        },
+      })
+      .then(result=> {
+        if(result.isConfirmed || result.dismiss === 'backdrop') {  //아니요 클릭(회원탈퇴취소)
+          return;
+        } else if(result.isDismissed) { //예 클릭(회원탈퇴진행)
+          const userData = {
+            'pwd': this.userPassword,
+            'username': this.userEmail
+          }
+          axios.post(`${API_URL}/api/user/sign_out/sign_out`, qs.stringify(userData), {withCredentials: true}, 
+          {headers: {"Content-Type": `application/x-www-form-urlencoded`,}})
+          .then(res=> {
+            if(res.data.code === 1000) {
+              Swal.fire({
+                icon: 'success',
+                title: '회원탈퇴가 <span>완료되었습니다.</span>',
+                text: '그동안 COSIGN을 이용해 주셔서 감사합니다.',
+                iconColor: '#F53B57',
+                confirmButtonText: '확인',
+                confirmButtonColor: '#F53B57',
+                showClass: {
+                  popup: 'animate__animated animate__fadeInDown'
+                },
+                hideClass: {
+                  popup: 'animate__animated animate__fadeOutUp'
+                },
+              })
+              .then(res=> {
+                if(res.isConfirmed || res.isDismissed) {
+                  location.href = '/';
+                }
+              })
+            } else {
+              alert(res.data.message)
+            }
+          })
+          .catch(err=> {
+            alert(err, '회원탈퇴를 실패했습니다!')
+          })
+        }
+      })
+    }
+  }
+}
+</script>
+
+<style lang="scss">
+  @import './css/myPageSecession.scss';
+</style>

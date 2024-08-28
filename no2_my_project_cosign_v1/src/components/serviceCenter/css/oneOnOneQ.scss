@@ -1,0 +1,62 @@
+.oneOnOneQ_wrap {
+  display: flex;
+  .direct_inquiry {
+    width: 45%;
+    padding: 20px 0;
+    margin-right: 20px;
+    .title {
+      font-size: 19px;
+      padding-bottom: 16px;
+    }
+    .content {
+      padding: 16px;
+      border: 1px solid $lightGray;
+      h2 {
+        font-size: 19px;
+      }
+      p {
+        font-size: 15px;
+      }
+    }
+  }
+  .my_inquiry_list {
+    width: 55%;
+    padding: 20px 0;
+    .title {
+      @include flex_aline_center();
+      justify-content:  space-between;
+      h1 {
+        font-size: 19px;
+      }
+      .more {
+        border: 1px solid $lightGray;
+        p {
+          padding: 10px;
+          font-size: 13px;
+        }
+      }
+    }
+    .list {
+      ul {
+        li {
+          @include flex_aline_center();
+          justify-content: space-between;
+          padding: 10px;
+          border: 1px solid $lightGray;
+          .content {
+            @include flex_aline_center();
+            h2 {
+              font-size: 14px;
+            }
+            h3 {
+              font-size: 14px;
+            }
+          }
+          .time {
+            font-size: 13px;
+          }
+        }
+      }
+    }
+  }
+}

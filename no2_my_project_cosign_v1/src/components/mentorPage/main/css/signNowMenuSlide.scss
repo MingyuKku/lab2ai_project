@@ -1,0 +1,77 @@
+.menuSlider_wrap {
+  position: relative;
+  width: 100%;
+  .menuSlider {
+    width: 100%;
+    margin: 0;
+    .swiper-slide {
+      color: #888;
+      &.active {
+        background: $main_color0;
+        border-radius: 6px;
+        color: #fff;
+        .inner {
+          font-weight: 500;
+        }
+      }
+
+      .inner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        font-size: 15px;
+        font-weight: 400;
+        padding: 8px 16px;
+        cursor: pointer;
+      }
+    }
+  } //.menuSlider
+  .menu_swiper-button-prev {
+      background: none;
+      background: url('https://kr.object.ncloudstorage.com/cosign/project-images/cosign-view/mentorPage/prev_btn.svg') no-repeat center;
+      background-size: cover;
+      z-index: 2;
+      top: 50%;
+      left: -20px;
+      transform: translateY(-50%);
+      margin: 0;
+      width: 38px;
+      height: 38px;
+      transition: opacity 0.2s ease-in-out;
+      &.swiper-button-disabled {
+        opacity: 0;
+      }
+      &.gradient_prev {
+        left: 0;
+        z-index: 1;
+        pointer-events: none;
+        width: 60px;
+        background: linear-gradient(90deg, $white 15%, transparent 100%);
+      }
+    }
+    .menu_swiper-button-next {
+      background: url('https://kr.object.ncloudstorage.com/cosign/project-images/cosign-view/mentorPage/next_btn.svg') no-repeat center;
+      background-size: cover;
+      z-index: 2;
+      top: 50%;
+      transform: translateY(-50%);
+      right: -20px;
+      margin: 0;
+      width: 38px;
+      height: 38px;
+      transition: opacity 0.2s ease-in-out;
+      &.swiper-button-disabled {
+        opacity: 0;
+      }
+      &.gradient_next {
+        right: 0;
+        z-index: 1;
+        pointer-events: none;
+        width: 60px;
+        background: linear-gradient(-90deg, $white 15%, transparent 100%);
+      }
+    }
+    
+} //.menuSlider_wrap
+

@@ -1,0 +1,50 @@
+.talk_list_wrap {
+  width: 100%;
+  padding: 13px;
+  background: $backgroundColor;
+  border-radius: 10px;
+  margin-top: 12px;
+  .user_info {
+    @include flex_aline_center();
+    justify-content: space-between;
+    padding-bottom: 10px;
+    .user {
+      @include flex_aline_justify_center();
+      h2 {
+        font-size: 13px;
+        font-weight: 600;
+        font-weight: 500;//노토산스
+        color: #333;
+      }
+      span {
+        display: block;
+        margin: 0 5px;
+        cursor: pointer;
+        &:hover {
+          i {
+            color: $middleGray;
+          }
+        }
+        i {
+          display: block;
+          font-size: 15px;
+          color: $lightGray;
+        }
+      }
+    }
+    p {
+      font-size: 12px;
+      font-weight: 400;
+      font-weight: 300;//노토산스
+      color: #737373;
+    }
+  }
+  >p {
+    width: 100%;
+    word-break: break-all;
+    font-size: 13px;
+    color: #555;
+    line-height: 1.4;
+    text-align: justify;
+  }
+}

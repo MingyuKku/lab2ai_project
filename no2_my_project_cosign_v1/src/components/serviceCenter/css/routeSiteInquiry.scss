@@ -1,0 +1,85 @@
+.routeSiteInquiry_wrap {
+  padding: 24px;
+  .form {
+    >div {
+      margin-bottom: 24px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      >h2 {
+        font-size: 17px;
+      }
+      &.email {
+        input {
+          display: block;
+          width: 400px;
+          padding: 14px 10px;
+        }
+      }
+      &.inquiry_cont {
+        textarea {
+          display: block;
+          width: 100%;
+        }
+      }
+      &.attachfile_area {
+        .title {
+          @include flex_aline_center();
+          h2 {
+            font-size: 17px;
+          }
+          .addFile {
+            padding: 4px 8px;
+            border: 1px solid $lightGray;
+            font-size: 13px;
+            cursor: pointer;
+          }
+        }
+        .attachfile {
+          position: relative;
+          @include flex_aline_center();
+          width: 520px;
+          padding: 8px;
+          border: 1px solid $lightGray;
+          >label {
+            display: block;
+            padding:  6px 10px;
+            background: $lightGray2;
+            font-size: 14px;
+          }
+          >input {
+            display: none;
+          }
+          .deleteFile {
+            position: absolute;
+            right: 10px;
+          }
+        }
+      }
+      &.note {
+        @include flex_aline_center();
+        padding: 14px;
+        background: $lightGray2;
+        .text {
+          width: 30%;
+          p {
+            i {
+
+            }
+          }
+        }
+        >ul {
+          li {
+            list-style: disc;
+            font-size: 13px;
+          }
+        }
+      }
+    }
+    button {
+      display: block;
+      margin:  0 auto;
+    }
+  }
+  
+}

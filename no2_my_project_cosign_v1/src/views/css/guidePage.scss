@@ -1,0 +1,25 @@
+.guidePage_wrap {
+  background: $white;
+  #section1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 40vh;
+    // padding-top: 65px; //해더의높이
+  }
+  #section2 {
+    width: 100%;
+    margin-top: 40vh;
+    padding: 70px 0;
+    box-shadow: 0 -50px 36px rgba($color: #000000, $alpha: 0.0);
+    .center {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+  }
+  footer {
+    background: $backgroundColor;
+  }
+}

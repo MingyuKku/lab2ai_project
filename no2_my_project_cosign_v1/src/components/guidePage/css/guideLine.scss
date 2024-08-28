@@ -1,0 +1,23 @@
+.guideLine_wrap {
+  width: 100%;
+  background: $white;
+  .title {
+    @include flex_aline_justify_center();
+    margin-bottom: 70px;
+    .title_icon {
+      width: 52px;
+      margin-right: 16px;
+      img {
+        display: block;
+        width: 100%;
+      }
+    }
+    h1 {
+      font-size: 42px;
+      font-weight: 600;
+      span {
+        color: $main_color0;
+      }
+    }
+  }
+}

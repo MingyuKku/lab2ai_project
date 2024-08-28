@@ -1,0 +1,27 @@
+.oftenQNA_wrap {
+  .title {
+    @include flex_aline_center();
+    justify-content: space-between;
+    padding: 20px 0;
+    h1 {
+      font-size: 21px;
+    }
+    .more {
+      border: 1px solid $middleGray2;
+      p {
+        padding: 10px;
+        font-size: 13px;
+      }
+    }
+  }
+  .questions {
+    display: flex;
+    flex-wrap: wrap;
+    .question {
+      width: 25%;
+      padding: 16px;
+      border: 1px solid $lightGray2;
+      cursor: pointer;
+    }
+  }
+}

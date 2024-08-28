@@ -1,0 +1,72 @@
+.visualBanner_wrap {
+  width: 100%;
+  height: 100%;
+  .banner_inner {
+    @include flex_aline_justify_center();
+    position: relative;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    // padding: 70px 0;
+    background-image: url('https://kr.object.ncloudstorage.com/cosign/project-images/cosign-view/index/main/guidePage/visualBanner.png');
+    background-position: center 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    // transition: background-position 0.2s ease;
+    &::before {
+      position: absolute;
+      content: '';
+      display: block;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      background: $black;
+      opacity: 0.3;
+    }
+    .textContents {
+      width: 100%;
+      height: auto;
+      margin-top: 65px; //해더의 높이만큼
+      .title {
+        height: auto;
+        @include flex_aline_center();
+        flex-direction: column;
+        h1 {
+          width: 600px;
+          margin-bottom: 40px;
+          img {
+            display: block;
+            width: 100%;
+          }
+        }
+        p {
+          position: relative;
+          z-index: 0;
+          margin-bottom: 5px;
+          text-align: center;
+          font-size: 21px;
+          font-weight: 500;
+          color: $white;
+          &:last-child {
+            margin-bottom: 0;
+          }
+          &::after {
+            position: absolute;
+            content: '';
+            display: block;
+            bottom: 0;
+            left: 50%;
+            z-index: -1;
+            transform: translate3d(-50%,0,0);
+            width: 102%;
+            // height: 60%;
+            height: 93%;
+            background: rgba($color: $black, $alpha: 0.6);
+          }
+        }
+      }
+    }
+  }
+}

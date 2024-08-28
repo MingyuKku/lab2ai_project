@@ -1,0 +1,28 @@
+.notice_wrap {
+  .title {
+    @include flex_aline_center();
+    justify-content: space-between;
+    padding: 20px 0;
+    h1 {
+      font-size: 21px;
+    }
+    .more {
+      border: 1px solid $middleGray2;
+      p {
+        padding: 10px;
+        font-size: 13px;
+      }
+    }
+  }
+  .lately_notice_list {
+    ul {
+      li {
+        @include flex_aline_center();
+        justify-content: space-between;
+        padding: 12px;
+        border: 1px solid $lightGray;
+        cursor: pointer;
+      }
+    }
+  }
+}

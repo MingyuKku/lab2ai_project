@@ -1,0 +1,84 @@
+.guideChapter_wrap {
+  width: 100%;
+  margin-bottom: 100px;
+  &:last-child {
+    margin-bottom: 30px;  //합쳐서 100px주기위해
+  }
+  &:nth-child(2n-1) {
+    .chapter_inner {
+      .left_cont {
+        order: 1;
+        margin-right: 0;
+        margin-left: 150px;
+      }
+      .right_cont {
+        order: 0;
+        .cont_inner {
+          text-align: right;
+        }
+      }
+    }
+  }
+  .chapter_inner {
+    display: flex;
+    .left_cont {
+      flex: 1.1;
+      margin-right: 150px;
+      .contImg {
+        img {
+          display: block;
+          width: 100%;
+        }
+      }
+    }
+    .right_cont {
+      flex: 0.9;
+      .cont_inner {
+        color: $main_font_color;
+        .number {
+          font-family: 'Paytone One', sans-serif;
+          font-size: 32px;
+          color: $main_color0;
+        }
+        h1 {
+          white-space: nowrap;
+          margin: 10px 0;
+          font-size: 24px;
+          font-weight: 600;
+        }
+        >p {
+          text-align: justify;
+          line-height: 1.8;
+          font-size: 16px;
+          font-weight: 400;
+          &.txtRight {
+            text-align: right;
+          }
+          span {
+            font-weight: 500;
+            color: $main_color0;
+          }
+        }
+        .sub_img {
+          display: flex;
+          align-items: flex-end;
+          justify-content: space-between;
+          margin-top: 20px;
+          p {
+            flex: 0.9;
+            margin-right: 16px;
+            font-size: 14px;
+            color: $middleGray2;
+          }
+          .img {
+            flex: 1.1;
+            img {
+              display: block;
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

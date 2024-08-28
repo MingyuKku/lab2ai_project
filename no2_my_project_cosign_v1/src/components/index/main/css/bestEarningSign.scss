@@ -1,0 +1,316 @@
+.bestEarningSign_wrap {
+  // @include flex_aline_center();
+  display: flex;
+  // align-items: stretch;
+  // align-items: flex-start;
+  margin-left: 20px; //부모섹션에서 좌우 25px를 줬기에
+  height: 100%;
+  .title {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 18%;
+    // height: 100%;
+    padding: 20px 0;  //swiper도 아래위로 패딩을 줬기에
+    // .titIcon {
+    //   width: 30px;
+    //   margin-right: 10px;
+    //   img {
+    //     width: 100%;
+    //     display: block;
+    //   }
+    // }
+    .text {
+      h1 {
+        margin-bottom: 30px;
+        font-size: 21px;
+        font-weight: 600;
+        color: $main_font_color;
+      }
+      p {
+        white-space: nowrap;
+        font-size: 14px;
+        font-weight: 500;
+        color: $lightGray;
+      }
+    }
+    .date {
+      display: inline-block;
+      // margin-top: 50px;
+      font-size: 14px;
+      font-weight: 500;
+      color: $middleGray;
+    }
+  }
+  .swiperSlide_wrap {
+    position: relative;
+    width: 82%;
+    &:active {
+      cursor: grabbing;
+    }
+    &:hover .button:not(.swiper-button-disabled) {
+      opacity: 1;
+    }
+    .swiperHidden_wrap {
+      overflow: hidden;
+      .swiper {
+        width: 100%;
+        padding-right: 20px; //부모섹션에서 좌우 25px를 줬기에
+        overflow: visible;
+        .swiper-wrapper {
+          padding: 20px 0 0 0;
+          
+          .swiper-slide {
+            // @include flex_aline_justify_center();
+            .slide_inner {
+              position: relative;
+              &:hover {
+              }
+              &.ranker {
+                position: relative;
+                .ranking {
+                  img {
+                    position: absolute;
+                    display: block;
+                    width: 100%;
+                    bottom: 0;
+                    left: 0;
+                    z-index: -1;
+                  }
+                  color: #F7E4C7;
+                  // background: url('https://kr.object.ncloudstorage.com/cosign/project-images/cosign-view/index/main/topRanker_bg.png') no-repeat center;
+                  // background-size: cover;
+                }
+              }
+              &:not(.ranker) {
+                .ranking {
+                  left: -24px;
+                }
+                .content_wrap {
+                  width: 75%;
+                }
+              }
+              &.last {
+                .ranking {
+                  left: -45px;
+                  letter-spacing: -15px;
+                }
+                .content_wrap {
+                  width: 68%;
+                }
+              }
+              .ranking {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                // z-index: -1;
+                // width: 180px;
+                // height: 180px;
+                padding: 0 42px;
+                font-size: 130px;
+                color: $lightGray;
+                font-weight: 700;
+                color: #E1E1E1;
+              }
+              .content_wrap {
+                width: 70%;
+                float: right;
+                padding: 10px 0 30px 0;
+                a {
+                  display: block;
+                  .slide_content {
+                    position: relative;
+                    background: $white;
+                    border-radius: 10px;
+                    box-shadow: 0 4px 20px rgba($color: #000000, $alpha: 0.25);
+                    overflow: hidden;
+                    &::before {
+                      position: absolute;
+                      content: '';
+                      top: -20px;
+                      width: 350px;
+                      height: 350px;
+                      border-radius: 50%;
+                      background: #FFF0DA;
+                    }
+                    .content_zindex {
+                      position: relative;
+                      z-index: 2;
+                      display: flex;
+                      flex-direction: column;
+                      align-items: flex-end;
+                      padding: 20px;
+                      .mentor {
+                        @include flex_aline_center();
+                        .mentorImg {
+                          flex-shrink: 0;
+                          width: 25px;
+                          border-radius: 50%;
+                          // outline: 1px solid $lightGray2;
+                          overflow: hidden;
+                          img {
+                            display: block;
+                            width: 100%;
+                            // object-fit: cover;
+                          }
+                        }
+                        .marquee {
+                          margin-right: 5px;
+                          overflow: hidden;
+                          &:hover {
+                            h2 {
+                              overflow: visible;
+                            }
+                          }
+                          h2 {
+                            text-align: justify;
+                            white-space: nowrap;
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                            font-size: 15px;
+                            font-weight: 500;
+                            color: $middleGray;
+                          }
+                        }
+                      }
+                      .earning {
+                        @include flex_aline_center();
+                        margin: 5px 0;
+                        // .validation {
+                        //   position: relative;
+                        //   padding: 5px 8px;
+                        //   background: rgba($color: $special_color, $alpha: 0.75);
+                        //   border-radius: 6px;
+                        //   overflow: hidden;
+                        //   font-size: 14px;
+                        //   font-weight: 500;
+                        //   color: $middleGray2;
+                        //   &::before {
+                        //     position: absolute;
+                        //     top: 50%;
+                        //     left: 0;
+                        //     display: block;
+                        //     content: '';
+                        //     width: 150%;
+                        //     height: 100%;
+                        //     background: rgba($color: $white, $alpha: 0.4);
+                        //     transform: translate(-100%,-50%) rotate(45deg);
+                        //     animation: windowSlide 4s ease-in-out infinite both;
+                        //   }
+                        // }
+                        h2 {
+                          margin-right: 8px;
+                          font-weight: 700;
+                          color: $main_color0;
+                          span {
+                            font-size: 30px;
+                            &:first-child {
+                              font-size: 40px;
+                            }
+                          }
+                        }
+                        p {
+                          align-self: flex-end;
+                          margin-bottom: 10px;
+                          font-size: 15px;
+                          font-weight: 500;
+                          color: $middleGray2
+                        }
+                      }//earning
+                      .coin {
+                        // @include flex_aline_center();
+                        // .coinImg {
+                        //   flex-shrink: 0;
+                        //   width: 25px;
+                        //   img {
+                        //     display: block;
+                        //     width: 100%;
+                        //   }
+                        // }
+                        h2 {
+                          // margin: 0 5px;
+                          font-size: 15px;
+                          font-weight: 500;
+                          color: $main_font_color;
+                        }
+                        // h3 {
+                        //   font-size: 13px;
+                        //   font-weight: 400;
+                        //   color: $middleGray;
+                        // }
+                      }//coin
+                      .validation {
+                        margin-top: 15px;
+                        font-size: 11px;
+                        font-weight: 500;
+                        padding: 4px 10px;
+                        border-radius: 20px;
+                        border: 1px solid $lightGray;
+                        color: $middleGray;
+                      }
+                    }
+                    
+                  }
+                }
+                
+              }
+              
+              
+            } //slide_inner
+          } //swiper-slide
+        }
+      } //swiper
+    }
+    
+    .button {
+      @include flex_aline_justify_center();
+      width: auto;
+      height: auto;
+      margin-top: 0;
+      background: transparent;
+      color: $main_font_color;
+      top: -10px;
+      &:active {
+        i {
+          color: $lightGray;
+        }
+      }
+      &.BestEarningSign-button-prev {
+        left: auto;
+        // right: 80px;
+        right: 70px;
+      }
+      &.BestEarningSign-button-next {
+        left: auto;
+        right: 20px;  //아우터가 좌우로 +20px되었기에
+      }
+      i {
+        display: block;
+        font-size: 28px;
+      }
+    }
+  } //swiperSlide_wrap
+  .noItems {
+    width: 100%;
+    margin-left: 20px;
+    padding: 90px;
+    background: $backgroundColor;
+    p {
+      text-align: center;
+      font-size: 16px;
+      font-weight: 400;
+      color: $lightGray;
+      i {
+        display: inline-block;
+        vertical-align: -2px;
+        margin-right: 5px;
+        font-size: 21px;
+      }
+    }
+  }
+}
+
+@keyframes windowSlide {
+  80% {transform: translate(-100%,-50%) rotate(45deg);}
+  100% {transform: translate(100%,-50%) rotate(45deg);}
+}

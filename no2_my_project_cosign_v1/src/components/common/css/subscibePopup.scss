@@ -1,0 +1,81 @@
+.modal {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 31;
+  background: rgba($color: #000000, $alpha: 0.8);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  .subscribePopup_wrap {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 32;
+    transform: translate(-50%,-50%);
+    border-radius: 10px;
+    box-shadow: 0 8px 30px rgba($color: #000000, $alpha: 0.2);
+    background: #fff;
+    padding: 45px 30px 30px 30px;
+    .box {
+      @include flex_aline_center();
+      flex-direction: column;
+      .body {
+        text-align: center;
+        h1 {
+          font-size: 18px;
+          font-weight: 400;
+          color: $middleGray;
+        }
+        p {
+          margin-top: 30px;
+          font-size: 18px;
+          font-weight: 500;
+          color: $main_font_color;
+        }
+      }
+      .buttons {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        margin-top: 50px;
+        button {
+          font-family: 'Noto Sans KR', sans-serif;//노토산스
+          flex: 1;
+          display: block;
+          width: 50%;
+          border: none;
+          font-size: 17px;
+          font-weight: 400;
+          width: 200px;
+          padding: 14px;
+          border-radius: 8px;
+          cursor: pointer;
+          &:first-child {
+            background: $main_color0;
+            color: #fff;
+          }
+          &:nth-child(2) {
+            background: #fff;
+            margin-left: 16px;
+            border: 1px solid $lightGray;
+            color: $middleGray2;
+          }
+        }
+      } //.buttons
+    } //.box
+    .close {
+      position: absolute;
+      top: 0;
+      right: -50px;
+      font-size: 45px;
+      cursor: pointer;
+      color: #999;
+      transition: color 0.3s ease-in-out;
+      &:hover {
+        color: #fff;
+      }
+    }
+  } //.popup_wrap
+}

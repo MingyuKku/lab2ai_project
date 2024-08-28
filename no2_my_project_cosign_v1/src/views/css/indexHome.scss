@@ -1,0 +1,92 @@
+.index_wrap {
+  #section1 {
+    // padding: calc(65px + 40px) 0 40px 0; //65px 해더높이
+    // padding-top: 65px; //65px 해더높이
+    background: $main_font_color;
+  } //#section1
+  #section2 {
+    padding: 40px 0;
+    .center {
+      width: 1200px;
+      margin: 0 auto;
+      .mentorList {
+        width: 100%;
+      }
+      // width: calc(1200px + 15px);
+      // margin: 0 auto;
+      // .bestEarningSign {
+      //   margin-bottom: calc(40px - 24px); //swiper padding bottom 24px로 인해
+      // }
+      // .shortValidationSign {
+      //   margin-bottom: calc(40px - 24px);
+      // }
+      // .majorCoinSign {
+      //   margin-bottom: calc(40px - 24px);
+      // }
+    } //center
+  } //#section2
+  #section3 {
+    .bestEarningSign_area {
+      padding: 50px 0;
+      background: #F1F1F1;
+      .center {
+        width: 1200px;
+        width: calc(1200px + 40px);
+        margin: 0 auto;
+      }
+    }
+    .center {
+      width: 1200px;
+      margin: 0 auto;
+      .shortValidationSign {
+        margin-top: 40px;
+      }
+      .majorCoinSign {
+        margin-top: 30px;
+      }
+    }
+  }
+
+  #section4 {
+    margin: 40px 0;
+      // .tableArea {
+      //   width: 60%;
+      //   margin-right: 25px;
+      //   box-shadow: 1px 1px 4px rgba($color: #000000, $alpha: 0.2);
+      // }
+      // .introduceMentor {
+      //   width: 40%;
+      //   box-shadow: 1px 1px 4px rgba($color: #000000, $alpha: 0.2);
+      // }
+  } 
+  #section5 {
+    margin: 40px 0;
+    .center {
+      width: 1200px;
+      margin: 0 auto;
+    }
+  }
+  #section6 {
+    margin: 40px 0;
+    .center {
+      width: 1200px;
+      margin: 0 auto;
+    }
+  }
+  footer {
+    // background: #F2F0F1;
+    border-top: 1px solid #ddd;
+  }
+  
+} //.index_wrap
+
+
+
+@keyframes circleScale {
+  0% {transform: scale(1);}
+  30% {transform: scale(0.9);}
+  40% {transform: scale(0.9);}
+  60% {transform: scale(1.1);}
+  70% {transform: scale(1.1);}
+  100% {transform: scale(1);}
+}

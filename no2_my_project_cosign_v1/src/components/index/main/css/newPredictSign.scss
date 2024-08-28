@@ -1,0 +1,104 @@
+.newPredictSign_wrap {
+  padding: 0 8px 0 12px;  //스크롤바-4px
+  // background: $white;
+  // box-shadow: 0 0 0 rgba($color: #000000, $alpha: 0.0);
+  border-bottom: 1px solid $lightGray2;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+  &:hover {
+    background: $lightBeige;
+  }
+  .inner {
+    position: relative;
+    z-index: 0;
+    @include flex_aline_center();
+    padding: 19px 20px;
+    border-radius: 16px;
+    transition: all 0.2s ease;
+    >div {
+      // padding: 0 10px;
+    }
+    .coin {
+      @include flex_aline_center();
+      width: 23%;
+      .coinImg {
+        flex-shrink: 0;
+        width: 25px;
+        margin-right: 5px;
+        img {
+          display: block;
+          width: 100%;
+        }
+      }
+      h1 {
+        font-size: 14px;
+        font-weight: 500;
+        color: $main_font_color;
+      }
+    }//coin
+    .earning {
+      width: 15%;
+      // text-align: center;
+      font-size: 21px;
+      font-weight: 800;
+      color: $main_color0;
+      span {
+        display: inline-block;
+        text-align: right;
+      }
+    }
+    .validation {
+      width: 17%;
+      // text-align: center;
+      font-size: 14px;
+      font-weight: 500;
+      // color: $main_color2;
+      color: $middleGray2;
+      i {
+        font-size: 19px;
+        vertical-align: -2px;
+      }
+    }
+    .mentor {
+      @include flex_aline_center();
+      width: 25%;
+      .mentorImg {
+        flex-shrink: 0;
+        width: 25px;
+        margin-right: 5px;
+        border-radius: 50%;
+        // outline: 1px solid $lightGray2;
+        overflow: hidden;
+        img {
+          display: block;
+          width: 100%;
+        }
+      }
+      .marquee {
+        overflow: hidden;
+        &:hover {
+          h1 {
+            overflow: visible;
+          }
+        }
+        h1 {
+          text-align: justify;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+          font-size: 14px;
+          font-weight: 500;
+          color: $middleGray;
+        }
+      }
+    }//mentor
+    .postTime {
+      width: 20%;
+      text-indent: 3px;
+      // text-align: center;
+      font-size: 14px;
+      font-weight: 400;
+      color: $main_font_color;
+    }
+  }
+}

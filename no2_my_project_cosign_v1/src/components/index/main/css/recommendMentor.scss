@@ -1,0 +1,90 @@
+.recommendMentor_wrap {
+  .title {
+    .title_list_wrap {
+      position: relative;
+      white-space: nowrap;
+      .title_list {
+        display: inline-block;
+        margin-right: 20px;
+        padding: 10px;
+        font-size: 19px;
+        font-weight: 500;
+        color: $lightGray;
+        cursor: pointer;
+        &.active {
+          color: $main_font_color;
+        }
+      }
+      .activeStick {
+        position: absolute;
+        display: block;
+        bottom: 0;
+        width: 176px;
+        height: 3px;
+        background: $main_font_color;
+        transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+    }
+  }
+  .mentorList {
+    margin-top: 20px;
+    .swiper_wrap {
+      position: relative;
+      .swiper {
+        animation: opacity 0.5s ease-in-out;
+        .swiper-wrapper {
+          .swiper-slide {
+            border-radius: 10px;
+            overflow: hidden;
+            .inner {
+              a {
+                display: block;
+                .mentorImg {
+                  img {
+                    display: block;
+                    width: 100%;
+                  }
+                }
+              }
+              
+              h2 {
+                margin-top: 12px;
+                text-align: center;
+                font-size: 15px;
+                font-weight: 500;
+                color: $middleGray;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+              }
+            }
+          }
+        }
+      }
+      >.button {
+        display: block;
+        width: auto;
+        height: auto;
+        background: transparent;
+        margin: 0;
+        top: -48px;
+        &:active {
+          i {
+            color: $lightGray;
+          }
+        }
+        &.recommendMentor-button-prev {
+          left: auto;
+          right: 50px;
+        }
+        &.recommendMentor-button-next {
+          right: 0;
+        }
+        i {
+          font-size: 28px;
+          color: $main_font_color;
+        }
+      }
+    }//swiper_wrap
+  }//mentorList
+}
