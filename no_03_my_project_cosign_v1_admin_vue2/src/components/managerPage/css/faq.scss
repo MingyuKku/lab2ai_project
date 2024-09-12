@@ -1,0 +1,199 @@
+.faq_wrap {
+  background: $white;
+  @include boxShadow();
+  .header {
+    padding: 34px;
+    text-align: center;
+    background: rgba($color: $main_color0, $alpha: 0.6);
+    h1 {
+      font-size: 19px;
+      font-weight: 600;
+      color: $white;
+    }
+  }
+  .content {
+    padding: 14px 40px 40px 40px;
+    .filter {
+      padding-bottom: 14px;
+      .select_wrap {
+        position: relative;
+        float: right;
+        select {
+          @include notoSans();
+          width: 100%;
+          padding: 6px 24px 6px 6px;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+          border-color: $lightGray2;
+          outline-color: $lightGray;
+          color: $main_font_color;
+          option {
+            width: 100%;
+            background: $backgroundColor;
+          }
+        }
+        i {
+          position: absolute;
+          pointer-events: none;
+          top: 12px;
+          right: 8px;
+          font-size: 12px;
+        }
+      }
+    }
+    .faq_table {
+      .table_title {
+        @include flex_aline_center();
+        border-top: 1px solid $lightGray;
+        border-bottom: 1px solid $lightGray;
+        >div {
+          text-align: center;
+          padding: 16px 0;
+          font-size: 15px;
+          font-weight: 500;
+          color: $main_font_color;
+          &.category {
+            width: 15%;
+          }
+          &.tit {
+            width: 50%;
+          }
+          &.registDate {
+            width: 23%;
+          }
+          &.views {
+            width: 12%;
+            border: none;
+          }
+        }
+      }
+      .table_list {
+        ul {
+          li {
+            @include flex_aline_center();
+            font-size: 14px;
+            border-bottom: 1px solid $lightGray2;
+            cursor: pointer;
+            // &:last-child {
+            //   border-bottom: none;
+            // }
+            // a {
+            //   @include flex_aline_center();
+            //   font-size: 15px;
+              >div {
+                padding: 20px 0;
+                text-align: center;
+                color: $main_font_color;
+                &.list_category {
+                  width: 15%;
+                  color: $main_color0;
+                }
+                &.list_tit {
+                  width: 50%;
+                  font-weight: 500;
+                  text-align: start;
+                  text-indent: 16px;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  white-space: nowrap;
+                }
+                &.list_time {
+                  width: 23%;
+                  color: $middleGray;
+                }
+                &.list_views {
+                  width: 12%;
+                }
+              }
+            // }
+            
+          }
+        }
+      }
+    }
+    .registQuestion {
+      margin-top: 14px;
+      button {
+        @include notoSans();
+        float: right;
+        display: block;
+        border: none;
+        border: 1px solid $lightGray2;
+        padding: 8px 10px;
+        color: $middleGray;
+        font-size: 14px;
+        font-weight: 500;
+        cursor: pointer;
+        // a {
+        //   display: block;
+        //   padding: 8px 10px;
+        //   color: $middleGray;
+        //   font-size: 14px;
+        //   font-weight: 500;
+        // }
+        &:hover, &:active {
+          opacity: 0.9;
+        }
+      }
+    }
+  
+    .pagination_wrap {
+      @include flex_aline_justify_center();
+      margin-top: 24px;
+      .pagination_qna {
+        @include flex_aline_center();
+        .page_num {
+          display: block;
+          margin: 3px;
+          &:not(.disabled) {
+            a {
+              @include flex_aline_justify_center();
+              min-width: 28px;
+              min-height: 28px;
+              padding: 2px;
+              font-size: 15px;
+              font-weight: 400;
+              color: $lightGray;
+            }
+          }
+          &.active {
+            a {
+              font-weight: 600;
+              color: $main_font_color;
+            }
+          }
+        }
+      }
+      .nav {
+        a {
+          color: $lightGray;
+        }
+      }
+    }
+  }
+
+  .nonContent {
+    padding: 40px;
+    .replace {
+      text-align: center;
+      h2 {
+        font-size: 16px;
+        font-weight: 500;
+        color: $main_font_color;
+      }
+      p {
+        margin: 20px 0;
+        font-size: 15px;
+        font-weight: 400;
+        color: $main_color0;
+      }
+      .registQuestion {
+        button {
+          @include notoSans();
+          @include btn_sub();
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,1 @@
+export type SignOnProgressStyleType = "target1" | "target2" | "target3";

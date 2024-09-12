@@ -1,0 +1,15 @@
+@import 'reset.scss';
+@import './fonts/pretendard/font-face.css';
+@import './fonts/SpoqaHanSansNeo/font-face.css';
+
+
+@keyframes slide-up {
+  0% {
+    opacity: 0;
+    transform: translate3d(0,-20px,0);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}

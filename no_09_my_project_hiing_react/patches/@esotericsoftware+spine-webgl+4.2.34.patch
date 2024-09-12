@@ -1,0 +1,36 @@
+diff --git a/node_modules/@esotericsoftware/spine-webgl/dist/Input.js b/node_modules/@esotericsoftware/spine-webgl/dist/Input.js
+index 80a9590..9f6bf99 100644
+--- a/node_modules/@esotericsoftware/spine-webgl/dist/Input.js
++++ b/node_modules/@esotericsoftware/spine-webgl/dist/Input.js
+@@ -85,20 +85,20 @@ export class Input {
+                 document.removeEventListener("mouseup", mouseUp);
+             }
+         };
+-        let mouseWheel = (e) => {
+-            e.preventDefault();
+-            let deltaY = e.deltaY;
+-            if (e.deltaMode == WheelEvent.DOM_DELTA_LINE)
+-                deltaY *= 8;
+-            if (e.deltaMode == WheelEvent.DOM_DELTA_PAGE)
+-                deltaY *= 24;
+-            this.listeners.map((listener) => { if (listener.wheel)
+-                listener.wheel(e.deltaY); });
+-        };
++        // let mouseWheel = (e) => {
++        //     e.preventDefault();
++        //     let deltaY = e.deltaY;
++        //     if (e.deltaMode == WheelEvent.DOM_DELTA_LINE)
++        //         deltaY *= 8;
++        //     if (e.deltaMode == WheelEvent.DOM_DELTA_PAGE)
++        //         deltaY *= 24;
++        //     this.listeners.map((listener) => { if (listener.wheel)
++        //         listener.wheel(e.deltaY); });
++        // };
+         element.addEventListener("mousedown", mouseDown, true);
+         element.addEventListener("mousemove", mouseMove, true);
+         element.addEventListener("mouseup", mouseUp, true);
+-        element.addEventListener("wheel", mouseWheel, true);
++        // element.addEventListener("wheel", mouseWheel, true);
+         element.addEventListener("touchstart", (ev) => {
+             if (!this.touch0 || !this.touch1) {
+                 var touches = ev.changedTouches;

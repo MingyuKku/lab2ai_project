@@ -1,0 +1,26 @@
+.pagination-container {
+
+}
+
+.pagination-container
+li {
+    margin-right: 10px;
+}
+.pagination-container
+li:last-child {
+    margin-right: 0;
+}
+
+.paginate-buttons:not(.next-button, .back-button) {
+    display: block;
+    padding: 5px;
+}
+.paginate-buttons.active-page {
+    color: #000;
+}
+
+.back-button,
+.next-button {
+    padding: 5px;
+    margin-top: 1px;
+}

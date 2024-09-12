@@ -1,0 +1,61 @@
+{
+    "pages": {
+        "news": {
+            "title": "AI 기자단",
+            "content": {
+                "aiCommend": "AI 추천",
+                "lookAtRecentTitle_1": "이어서 볼만한 ",
+                "lookAtRecentTitle_2": "의 최근 뉴스"
+            }
+        },
+        "autotrade": {
+            "title": "선물투자 자동매매 AI 개발실",
+            "content": {
+                "popup": {
+                    "showTotalModel": "자동매매 모델 전체보기",
+                    "transactionHistoryTotalView": "거래내역 전체보기"
+                },
+                "profile": {
+                    "currentAmount": "평가 금액",
+                    "originalAmount": "투자 원금",
+                    "earningAmount": "수익금(수익률)"
+                },
+                "yieldTrend": {
+                    "label": {
+                        "transite": "수익률 추이",
+                        "assets": "자산 구성",
+                        "modelEarning": "AI 모델 수익률",
+                        "changeRate": "BTC 시세 변동률"
+                    }
+                },
+                "assetConfigure": {
+                    "label": {
+                        "position": "포지션",
+                        "coinName": "코인명"
+                    }
+                },
+                "fallbackText": {
+                    "assets": "현재 투자 중인 자산이 없습니다"
+                }
+            }
+        }
+    },
+    "labels": {
+        "more": "더보기",
+        "startPrice": "진입가",
+        "targetPrice": "목표가",
+        "earning": "수익률",
+        "goodNews": "호재",
+        "badNews": "악재",
+        "ad": "광고",
+        "buy": "매수",
+        "sell": "매도"
+    },
+    "footer": {
+        "warning": "본 서비스에서 제공하는 데이타와 정보는 투자 판단의 참고 자료로 수익을 보장하지 않으며, 모든 투자의 판단과 책임은 이용자에게 있습니다. 이용자는 본 서비스의 정보를 무단으로 재배포 및 재활용할 수 없습니다.",
+        "company": "(주)랩투아이",
+        "ceo": "대표",
+        "ceoName": "오종환",
+        "companyNumber": "사업자등록번호"
+    }
+}

@@ -1,0 +1,114 @@
+.foot_wrap {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 50px 0;
+  background: $backgroundColor;
+  .info {
+    @include flex_aline_center();
+    .info_left {
+      @include flex_aline_center();
+      flex: 1;
+      flex-grow: 1;
+      margin-right: 50px;
+      .foot_logoImg {
+        width: 100px;
+        margin-right: 24px;
+        img {
+          display: block;
+          width: 100%;
+        }
+      }
+      .left_text {
+        >ul {
+          @include flex_aline_center();
+          &.customer {
+            margin-bottom: 3px;
+            li {
+              &::after {
+                display: inline-block;
+                content: '';
+                width: 1px;
+                height: 12px;
+                margin: 0 10px;
+                vertical-align: -1px;
+                background: $lightGray;
+              }
+              &:last-child {
+                &::after {
+                  display: none;
+                }
+                a {
+                  color: $main_font_color;
+                  font-weight: 500;
+                }
+              }
+              a {
+                font-size: 14px;
+                font-weight: 400;
+                color: $middleGray;
+              }
+            }
+          }
+          &.company {
+            li {
+              font-size: 13px;
+              font-weight: 400;
+              color: $lightGray;
+              &::after {
+                display: inline-block;
+                content: '';
+                width: 1px;
+                height: 12px;
+                margin: 0 10px;
+                vertical-align: -1px;
+                background: $lightGray;
+              }
+              &:last-child {
+                &::after {
+                  display: none;
+                }
+              }
+            }
+          }
+        }
+        >p {
+          margin-top: 5px;
+          font-size: 13px;
+          font-weight: 400;
+          color: $lightGray;
+        }
+      }
+      
+    }
+    .info_right {
+      flex: 1;
+      flex-grow: 1;
+      ul {
+        @include flex_aline_center();
+        justify-content: space-around;
+        li {
+          text-align: center;
+          .bi {
+            // width: 50px;
+            height: 45px;
+            img {
+              display: block;
+              height: 100%;
+            }
+          }
+          p {
+            margin-top: 10px;
+            font-size: 10px;
+            font-weight: 400;
+            color: $middleGray2;
+          }
+        }
+      }
+    }
+  }
+} //.foot_wrap
+
+
+
+
+

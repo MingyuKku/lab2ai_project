@@ -1,0 +1,58 @@
+$black: #000;
+$main_font_color: #1E272E;
+$main_color1: #F53B57;
+$main_color2: #00D8D6;
+$white: #fff;
+$middleGray: #555;
+$middleGray2: #777;
+$lightGray: #999;
+$lightGray2: #ddd;
+$lightBeige: #f3f3f3;
+$lightBeige2: #f1f1f1;
+$whiteBeige: #fafafa;
+$backgroundColor: #F2F6F4;
+
+@mixin flex_aline_center {
+  display: flex;
+  align-items: center;
+}
+@mixin flex_aline_justify_center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin notoSans {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+
+
+
+
+//스위트얼럿 css
+.swal2-container.swal2-center.swal2-backdrop-show {
+  .swal2-popup.swal2-modal.animate__animated.animate__fadeInDown {
+    .swal2-title {
+      font-size: 19px;
+      span {
+        color: $main_color1;
+      }
+    }
+    .swal2-html-container {
+      @include notoSans();
+      font-size: 16px;
+      line-height: 1.7;
+      font-weight: 400;
+      color: $main_font_color;
+    }
+    .swal2-actions {
+      .swal2-confirm.swal2-styled.swal2-default-outline {
+        width: 100px;
+      }
+      .swal2-cancel.swal2-styled {
+        width: 100px;
+      }
+    }
+  }
+}

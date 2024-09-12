@@ -1,0 +1,102 @@
+$black: #000;
+$darkBackColor: #1d1d1d;
+$main_font_color: #1E272E;
+$main_color0: #F53B57;  //사용중
+$main_color1: #CF3639;  //테스트
+$main_color2: #00D8D6;  //사용중
+$main_color3: #10C576;  //테스트
+$main_color4: #FA0E31;  //테스트
+$main_color5: #0559B8;  //테스트
+$main_color6: #DE7A13;  //테스트
+$main_color7: #EAC013;  //테스트
+$special_color: #E4E9E9;
+$white: #fff;
+$middleGray: #555;
+$middleGray2: #777;
+$lightGray: #999;
+$lightGray2: #ddd;
+$lightBeige: #f3f3f3;
+$lightBeige2: #f1f1f1;
+$whiteBeige: #fafafa;
+$backgroundColor: #F2F3F6;
+
+@mixin flex_aline_center {
+  display: flex;
+  align-items: center;
+}
+@mixin flex_aline_justify_center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin notoSans {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+@mixin boxShadow($x: 0px, $y: 0px, $z: 4px, $sd: 0.1) {
+  box-shadow: $x $y $z rgba($color: #000000, $alpha: $sd);
+}
+
+@mixin btn_main($color: $white, $back: $main_color0, $margin: 40px auto 0 auto) {
+  display: block;
+  margin: $margin;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 100px;
+  background: $back;
+  color: $color;
+  font-weight: 500;
+  cursor: pointer;
+  &:active, &:hover {
+    opacity: 0.9;
+  }
+}
+
+@mixin btn_sub($margin: 0 auto, $padding: 8px 10px, $color: $middleGray, $back: $lightBeige2) {
+  display: block;
+  margin: $margin;
+  outline: none;
+  border: none;
+  border: 1px solid $lightGray2;
+  padding: $padding;
+  color: $color;
+  background: $back;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  &:hover, &:active {
+    opacity: 0.9;
+  }
+}
+
+
+
+
+
+//스위트얼럿 css
+.swal2-container.swal2-center.swal2-backdrop-show {
+  .swal2-popup.swal2-modal.animate__animated.animate__fadeInDown {
+    .swal2-title {
+      font-size: 19px;
+      span {
+        color: $main_color0;
+      }
+    }
+    .swal2-html-container {
+      @include notoSans();
+      font-size: 16px;
+      line-height: 1.7;
+      font-weight: 400;
+      color: $main_font_color;
+    }
+    .swal2-actions {
+      .swal2-confirm.swal2-styled.swal2-default-outline {
+        width: 100px;
+      }
+      .swal2-cancel.swal2-styled {
+        width: 100px;
+      }
+    }
+  }
+}

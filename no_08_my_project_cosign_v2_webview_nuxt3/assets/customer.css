@@ -1,0 +1,42 @@
+.html-customer-notice-content p,
+.html-customer-notice-content h1,
+.html-customer-notice-content h2,
+.html-customer-notice-content h3,
+.html-customer-notice-content h4,
+.html-customer-notice-content h5,
+.html-customer-notice-content h6 {
+  color: #000;
+  text-align: justify;
+  word-break: break-all;
+}
+.html-customer-notice-content h1 {
+  font-size: 24px;
+}
+.html-customer-notice-content h2 {
+  font-size: 22px;
+}
+.html-customer-notice-content h3 {
+  font-size: 20px;
+}
+.html-customer-notice-content h4 {
+  font-size: 17px;
+}
+.html-customer-notice-content h5 {
+  font-size: 16px;
+}
+.html-customer-notice-content h6 {
+  font-size: 15px;
+}
+.html-customer-notice-content p {
+  font-size: 14px;
+  line-height: 1.6em;
+}
+.html-customer-notice-content p img {
+  display: block;
+  width: 100%;
+}
+
+.html-customer-notice-content p a {
+  color: #37CCA4;
+  text-decoration: underline;
+}

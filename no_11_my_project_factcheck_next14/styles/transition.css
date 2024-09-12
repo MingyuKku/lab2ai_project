@@ -1,0 +1,48 @@
+.modal-trans-appear  {
+    opacity: 0;
+}
+.modal-trans-appear-active {
+    opacity: 1;
+    transition: opacity 200ms ease-in-out;
+}
+
+
+.modal-trans-enter {
+    opacity: 0;
+}
+.modal-trans-enter-active {
+    opacity: 1;
+    transition: opacity 200ms ease-in-out;
+}
+.modal-trans-exit {
+    opacity: 1;
+}
+.modal-trans-exit-active {
+    opacity: 0;
+    transition: opacity 200ms ease-in-out;
+}
+
+
+
+.side-popup-trans-appear  {
+    transform: translate3d(100%,0,0);
+}
+.side-popup-trans-appear-active {
+    transform: none;
+    transition: transform 300ms cubic-bezier(0, 0.55, 0.45, 1);
+}
+
+.side-popup-trans-enter {
+    transform: translate3d(100%,0,0);
+}
+.side-popup-trans-enter-active {
+    transform: none;
+    transition: transform 300ms cubic-bezier(0, 0.55, 0.45, 1);
+}
+.side-popup-trans-exit {
+    transform: none;
+}
+.side-popup-trans-exit-active {
+    transform: translate3d(100%,0,0);
+    transition: transform 300ms cubic-bezier(0, 0.55, 0.45, 1);
+}

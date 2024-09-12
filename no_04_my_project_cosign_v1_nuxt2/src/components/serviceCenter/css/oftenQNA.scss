@@ -1,0 +1,105 @@
+.oftenQNA_wrap {
+  position: relative;
+  z-index: 2;
+  margin-top: -120px;
+  margin-bottom: 50px;
+  .title {
+    // @include flex_aline_center();
+    // justify-content: space-between;
+    // padding: 20px 0;
+    // h1 {
+    //   font-size: 21px;
+    // }
+    .more {
+      float: right;
+      margin-bottom: 10px;
+      cursor: pointer;
+      transition: background 0.3s ease-in-out;
+      &:hover {
+        background: $white;
+        p {
+          color: $main_color0;
+        }
+        // a {
+        //   color: $main_color0;
+        // }
+      }
+      p {
+        padding: 8px;
+        font-size: 13px;
+        font-weight: 500;
+        transition: color 0.3s ease-in-out;
+        color: $white;
+        // a {
+        //   transition: color 0.3s ease-in-out;
+        //   color: $white;
+        // }
+      }
+    }
+  }
+  .questions {
+    display: flex;
+    flex-wrap: wrap;
+    .question {
+      position: relative;
+      flex: 20%;
+      padding: 24px 20px;
+      min-height: 128px;
+      border: 1px solid $lightGray2;
+      cursor: pointer;
+      color: $main_font_color;
+      margin-right: 6px;
+      margin-bottom: 5px;
+      background: $lightBeige;
+      transition: all 0.3s ease-in-out;
+      &::before {
+        position: absolute;
+        content: '';
+        top: -2px;
+        left: -2px;
+        width: 100%;
+        height: 100%;
+        border: 2px solid transparent;
+        transition: all 0.3s ease-in-out;
+      }
+      &:hover {
+        border-color: transparent;
+        background: $white;
+        color: $main_color0;
+        &::before {
+          border-color: $main_color0;
+        }
+      }
+      &:nth-child(1),&:nth-child(1)::before {
+        border-radius: 16px 0 0 0;
+      }
+      &:nth-child(4),&:nth-child(4)::before {
+        border-radius: 0 16px 0 0;
+      }
+      &:nth-child(5),&:nth-child(5)::before {
+        border-radius: 0 0 0 16px;
+      }
+      &:nth-child(8),&:nth-child(8)::before {
+        border-radius: 0 0 16px 0;
+      }
+      &:nth-child(4n) {
+        margin-right: 0;
+      }
+      h2 {
+        font-size: 14px;
+        font-weight: 400;
+      }
+      p {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin-top: 14px;
+        font-size: 15px;
+        word-break: break-all;
+        // word-wrap: break-word;
+      }
+    }
+  }
+}

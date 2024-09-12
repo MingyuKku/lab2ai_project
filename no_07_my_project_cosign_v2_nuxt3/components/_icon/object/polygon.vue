@@ -1,0 +1,12 @@
+<template>
+    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6" fill="none">
+        <path d="M4.61589 0.460932C4.81579 0.221055 5.18421 0.221055 5.38411 0.460932L9.31659 5.17991C9.58798 5.50557 9.3564 6 8.93248 6L1.06752 6C0.643603 6 0.412024 5.50557 0.683411 5.17991L4.61589 0.460932Z" :fill="fill ?? '#0EB48C'"/>
+    </svg>
+</template>
+
+<script lang="ts" setup>
+
+defineProps<{
+    fill?: string;
+}>();
+</script>

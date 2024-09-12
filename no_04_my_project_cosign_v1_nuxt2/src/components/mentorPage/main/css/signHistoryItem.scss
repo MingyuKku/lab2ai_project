@@ -1,0 +1,253 @@
+.list_item_wrap {
+  &:last-child {
+    .signItem_inner {
+      .list_item_time {
+        .timeLine {
+          span {
+            display: none;
+          }
+        }
+      }
+      .list_item {
+        padding-bottom: 0;
+      }
+    }
+  }
+  .signItem_inner {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    .list_item_time {
+      display: flex;
+      p {
+        width: 70px;
+        margin-right: 0px;
+        font-weight: 500;//노토산스
+        font-size: 14px;
+        color: #555;
+      }
+      .timeLine {
+        position: relative;
+        height: 100%;
+        .timeImg {
+          @include flex_aline_justify_center();
+          position: relative;
+          z-index: 2;
+          width: 30px;
+          height: 30px;
+          background: $main_color0;
+          @include radiusHidden();
+          &.earning_minus {
+            background: #2058EA;
+          }
+          &.earning_gray {
+            background: $middleGray2;
+          }
+          img {
+            display: block;
+            width: 20px;
+            height: 20px;
+          }
+        }
+        span {
+          position: absolute;
+          top: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          display: block;
+          width: 2px;
+          height: 100%;
+          background: #cdcdcd;
+        }
+      }
+      
+    } //.list_item_time
+  
+    .list_item {
+      width: 100%;
+      margin-left: 24px;
+      padding-bottom: 24px;
+      .list_item_info_wrap {
+        // @include flex_aline_center();
+        // justify-content: space-between;
+        width: 100%;
+        // padding: 30px;
+        background: $white;
+        border-radius: 8px;
+        border: 2px solid rgba($color: $main_color0, $alpha: 0.0);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.14);
+        transition: all 0.4s ease-in-out;
+        // cursor: pointer;
+        &:hover {
+          border: 2px solid rgba($color: $main_color0, $alpha: 0.3);
+          box-shadow: 0 6px 16px rgba($color: $main_color0, $alpha: 0.3);
+        }
+        a {
+          @include flex_aline_center();
+          justify-content: space-between;
+          width: 100%;
+          padding: 30px;
+
+          .list_item_info {
+            .list_item_info_coin_wrap {
+              @include flex_aline_center();
+              .coinImg {
+                @include flex_aline_justify_center();
+                width: 56px;
+                height: 56px;
+                margin-right: 12px;
+                background: $lightBeige;
+                border-radius: 16px;
+                img {
+                  display: block;
+                  width: 32px;
+                  height: 32px;
+                }
+              }
+              .list_item_info_coin {
+                h2 {
+                  font-size: 16px;
+                  font-weight: 600;
+                  font-weight: 500;//노토산스
+                  display: flex;
+                  align-items: center;
+                  color: #333;
+                  span {
+                    font-size: 14px;
+                    font-weight: 400;
+                    color: #555;
+                    margin-left: 4px;
+                  }
+                }
+                div {
+                  display: flex;
+                  align-items: center;
+                  p {
+                    padding: 2px 8px 4px 8px;
+                    border: 1px solid #ddd;
+                    border-radius: 4px;
+                    color: #555;
+                    margin-top: 8px;
+                    font-size: 13px;
+                    &:first-child {
+                      margin-right: 10px;
+                    }
+                    span {
+                      color: #333;
+                      font-weight: 600;
+                      font-weight: 500;//노토산스
+                      margin-left: 6px;
+                    }
+                  }
+                }
+              } //.list_item_info_coin
+              
+            } //.list_item_info_coin_wrap
+          } //.list_item_info
+          .list_item_earning {
+            text-align: right;
+            h2 {
+              font-size: 15px;
+              color: #333;
+              font-weight: 600;
+              font-weight: 500;//노토산스
+              margin-bottom: 5px;
+            }
+            p {
+              font-size: 16px;
+              color: $main_color0;
+              font-weight: 600;
+              font-weight: 500;//노토산스
+              &.earning_minus {
+                color: #2058EA;
+              }
+              &.earning_gray {
+                color: $middleGray2;
+              }
+            }
+          }
+          .list_item_earning_fail {
+            font-size: 15px;
+            color: #777;
+            font-weight: 600;
+            font-weight: 500;//노토산스
+          }
+
+        }
+
+
+
+        
+      } //.list_item_info_wrap
+    } //.list_item
+
+  }
+  .ad_area {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    .list_item_time {
+      display: flex;
+      p {
+        width: 70px;
+      }
+      .timeLine {
+        position: relative;
+        height: 100%;
+        .timeImg {
+          @include flex_aline_justify_center();
+          position: relative;
+          z-index: 2;
+          width: 30px;
+          height: 30px;
+          background: $middleGray2;
+          color: $white;
+          font-size: 14px;
+          font-weight: 600;
+          border-radius: 50%;
+        }
+        span {
+          position: absolute;
+          top: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          display: block;
+          width: 2px;
+          height: 100%;
+          background: #cdcdcd;
+        }
+      }
+      
+    } //.list_item_time
+    .list_item {
+      width: 100%;
+      margin-left: 24px;
+      padding-bottom: 24px;
+      .list_item_info_wrap {
+        @include flex_aline_center();
+        justify-content: space-between;
+        width: 100%;
+        height: 123px;
+        padding: 0 30px;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.14);
+        ins.kakao_ad_area {
+          width: 100% !important;
+          // display: block !important;
+          // width: 100% !important;
+          // height: 100% !important;
+          // min-width: 100% !important;
+          // min-height: 100% !important;
+          .adfit__html-banner {
+            .adfit__html-banner__inner {
+              
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  
+} //.list_item_wrap

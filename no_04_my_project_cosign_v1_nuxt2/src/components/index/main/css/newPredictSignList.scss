@@ -1,0 +1,110 @@
+.newPredictSignList_wrap {
+  animation: opacity 0.5s ease-in-out;
+  .newPredictSignList_inner {
+    .title {
+      padding: 0 8px 0 12px;
+      border-top: 1px solid $lightGray2;
+      border-bottom: 1px solid $lightGray2;
+      ul {
+        @include flex_aline_center();
+        padding: 0 20px;
+        li {
+          padding: 15px 0;
+          // text-align: center;
+          font-size: 14px;
+          font-weight: 400;
+          color: $main_font_color;
+          // img {
+          //   display: inline-block;
+          //   width: 6px;
+          //   margin-left: 4px;
+          //   vertical-align: -1px;
+          //   cursor: pointer;
+          // }
+          >span {
+            display: inline-block;
+            cursor: pointer;
+            i {
+              vertical-align: -1px;
+              font-size: 15px;
+              color: #ccc;
+              &.on {
+                color: $main_font_color;
+              }
+              &.off {
+                color: $main_font_color;
+                transform: rotate(180deg);
+              }
+            }
+          }
+          
+          &.coin {
+            width: 23%;
+          }
+          &.earning {
+            width: 20%;
+          }
+          &.validate {
+            width: 18%;
+          }
+          &.mentor {
+            width: 25%;
+          }
+          &.time {
+            width: 14%;
+          }
+        }
+      }
+    }
+    .predictSign_wrap {
+      position: relative;
+      // padding: 8px 0 20px 0;
+      max-height: calc(68px*10 + 10px);
+      overflow-y: scroll;
+      &::-webkit-scrollbar {
+        width: 4px;
+      }
+      &::-webkit-scrollbar-thumb {
+        background: $lightGray2;
+        border-radius: 8px;
+        &:hover {
+          background: $lightGray;
+        }
+      }
+      &:hover {
+        // .hoverEffect {
+        //   transform: translate(-50%,0) scale(1);
+        //   opacity: 1;
+        // }
+      }
+      // .hoverEffect {
+      //   position: absolute;
+      //   display: block;
+      //   top: 0;
+      //   left: 50%;
+      //   transform: translate(-50%,0) scale(0.8);
+      //   width: calc(100% - 24px);
+      //   height: 63px;
+      //   background: $white;
+      //   border-radius: 16px;
+      //   box-shadow: 0 6px 20px rgba($color: $main_color0, $alpha: 0.4);
+      //   transition: all 0.3s cubic-bezier(0.33, 1, 0.68, 1);
+      //   opacity: 0;
+      // }
+    }
+  }
+  .noItems {
+    border-top: 1px solid #eee;
+    padding: 40px 20px;
+    p {
+      @include flex_aline_center();
+      font-size: 15px;
+      color: $lightGray;
+      i {
+        display: block;
+        margin-right: 5px;
+        font-size: 19px;
+      }
+    }
+  }
+}

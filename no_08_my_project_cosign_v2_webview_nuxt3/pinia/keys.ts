@@ -1,0 +1,14 @@
+export const PiniaCryptoDetailPageSignlist = 'pinia-crypto-detail-page-signlist';
+export const PiniaAuthenticated = 'PiniaAuthenticated';
+export const PiniaHomeServiceData = 'pinia-home-service-data';
+export const PiniaHomeFilterMethods = 'pinia-home-filter-methods';
+export const PiniaSignlistLastFetchCheckValues = 'piniaSignlistLastFetchCheckValues';
+export const PiniaCoinTabNav = 'pinia-coin-tab-nav';
+export const PiniaModelListFilterMethods = 'pinia-model-list-filter-methods';
+export const PiniaModelDetailServiceData = 'pinia-model-detail-service-data';
+export const PiniaModelDetailFilterMethods = 'pinia-model-detail-filter-methods';
+export const PiniaAuthInfoValues = 'piniaAuthInfoValues';
+export const PiniaPopup = 'piniaPopup';
+export const PiniaAlert = 'piniaAlert';
+export const PiniaStompSocket = 'PiniaStompSocket';
+export const PiniaToastMessage = 'PiniaToastMessage';

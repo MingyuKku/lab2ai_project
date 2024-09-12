@@ -1,0 +1,42 @@
+.sign_now_wrap {
+  background: #fff;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 1px 1px 4px rgba($color: #000000, $alpha: 0.2);
+  margin-right: 16px;
+}
+
+.sign_now_head_tit {
+  @include flex_aline_center();
+  justify-content: space-between;
+  width: 100%;
+  padding: 24px 30px;
+  border-bottom: 1px solid $lightGray2;
+  .signOn_img {
+    width: 110px;
+    margin-right: 40px;
+    img {
+      display: block;
+      width: 100%;
+      image-rendering: crisp-edges;
+      image-rendering: -webkit-optimize-contrast;
+    }
+  }
+  .head_tit_right {
+    @include flex_aline_center();
+    justify-content: space-between;
+    width: calc(100% - 150px);
+    .signNow_menu_slide {
+      width: calc(100% - 56px);
+    }
+    .clip {
+      display: block;
+      width: 26px;
+      margin-left: 30px;
+      color: #999;
+      font-size: 22px;
+    }
+  }
+}
+
+

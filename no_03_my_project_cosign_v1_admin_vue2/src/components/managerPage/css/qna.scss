@@ -1,0 +1,145 @@
+.qna_wrap {
+  background: $white;
+  @include boxShadow();
+  .header {
+    padding: 34px;
+    text-align: center;
+    background: rgba($color: $main_color0, $alpha: 0.6);
+    h1 {
+      font-size: 19px;
+      font-weight: 600;
+      color: $white;
+    }
+  }
+  .content {
+    padding: 40px;
+    .qna_table {
+      .table_title {
+        @include flex_aline_center();
+        border-top: 1px solid $lightGray;
+        border-bottom: 1px solid $lightGray;
+        >div {
+          text-align: center;
+          padding: 16px 0;
+          font-size: 15px;
+          font-weight: 500;
+          color: $main_font_color;
+          &.div {
+            width: 10%;
+          }
+          &.email {
+            width: 20%;
+          }
+          &.tit {
+            width: 43%;
+          }
+          &.date {
+            width: 15%;
+          }
+          &.answer {
+            width: 12%;
+          }
+        }
+      }
+      .table_list {
+        ul {
+          li {
+            @include flex_aline_center();
+            width: 100%;
+            font-size: 14px;
+            color: $main_font_color;
+            border-bottom: 1px solid $lightGray2;
+            cursor: pointer;
+            // a {
+            //   @include flex_aline_center();
+            //   font-size: 15px;
+            //   color: $main_font_color;
+              >div {
+                text-align: center;
+                padding: 20px 0;
+                &.list_isMember {
+                  width: 10%;
+                  white-space: nowrap;
+                }
+                &.list_email {
+                  width: 20%;
+                  padding: 0 10px;
+                  color: $middleGray;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  white-space: nowrap;
+                }
+                &.list_tit {
+                  width: 43%;
+                  text-align: left;
+                  padding: 20px 16px;
+                  font-weight: 500;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  white-space: nowrap;
+                }
+                &.list_date {
+                  width: 15%;
+                }
+                &.list_answer {
+                  width: 12%;
+                  .false {
+                    color: $main_color0; 
+                  }
+                }
+              }
+            // }
+            
+          }
+        }
+      }
+    }
+  
+    .pagination_wrap {
+      @include flex_aline_justify_center();
+      margin-top: 24px;
+      .pagination_qna {
+        @include flex_aline_center();
+        .page_num {
+          display: block;
+          margin: 3px;
+          &:not(.disabled) {
+            a {
+              @include flex_aline_justify_center();
+              min-width: 28px;
+              min-height: 28px;
+              padding: 2px;
+              font-size: 15px;
+              font-weight: 400;
+              color: $lightGray;
+            }
+          }
+          &.active {
+            a {
+              font-weight: 600;
+              color: $main_font_color;
+            }
+          }
+        }
+      }
+      .nav {
+        a {
+          color: $lightGray;
+        }
+      }
+    }
+  }
+  
+  .nonContent {
+    padding: 40px;
+    .replace {
+      text-align: center;
+      h2 {
+        font-size: 15px;
+        font-weight: 500;
+        color: $main_font_color;
+      }
+      
+    }
+  }
+}

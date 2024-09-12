@@ -1,0 +1,61 @@
+{
+    "pages": {
+        "news": {
+            "title": "AI 新闻",
+            "content": {
+                "aiCommend": "AI 推荐",
+                "lookAtRecentTitle_1": "查看更多",
+                "lookAtRecentTitle_2": "的最新新闻"
+            }
+        },
+        "autotrade": {
+            "title": "合约AI模型",
+            "content": {
+                "popup": {
+                    "showTotalModel": "자동매매 모델 전체보기",
+                    "transactionHistoryTotalView": "查看所有交易记录"
+                },
+                "profile": {
+                    "currentAmount": "保証金会額",
+                    "originalAmount": "初始余额",
+                    "earningAmount": "盈亏"
+                },
+                "yieldTrend": {
+                    "label": {
+                        "transite": "盈亏趋势",
+                        "assets": "资产分布",
+                        "modelEarning": "AI模型的盈亏",
+                        "changeRate": "BTC趋势"
+                    }
+                },
+                "assetConfigure": {
+                    "label": {
+                        "position": "全部资产",
+                        "coinName": "资产"
+                    }
+                },
+                "fallbackText": {
+                    "assets": "当前没有投资的资产。"
+                }
+            }
+        }
+    },
+    "labels": {
+        "more": "更多",
+        "startPrice": "开仓价格",
+        "targetPrice": "목표가",
+        "earning": "盈亏",
+        "goodNews": "看涨",
+        "badNews": "看跌",
+        "ad": "广告",
+        "buy": "买入",
+        "sell": "卖出"
+    },
+    "footer": {
+        "warning": "本服务提供的数据和信息仅供投资决策参考，不保证盈利。所有投资决策和责任由用户承担。用户不得未经授权重新分发或重复使用本服务提供的信息。",
+        "company": "Lab2AI Corp",
+        "ceo": "代表",
+        "ceoName": "吴钟焕",
+        "companyNumber": "韩国营业执照号"
+    }
+}

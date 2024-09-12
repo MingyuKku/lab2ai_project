@@ -1,0 +1,181 @@
+$main_font_color: #1E272E;
+$main_color1: #F53B57;
+$main_color2: #00D8D6;
+$white: #fff;
+$middleGray: #555;
+$lightGray: #999;
+
+@mixin flex_aline_center {
+  display: flex;
+  align-items: center;
+}
+@mixin flex_aline_justify_center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 31;
+  background: rgba($color: #000000, $alpha: 0.8);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  .login_form_wrap {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 700px;
+    z-index: 32;
+    transform: translate(-50%,-50%);
+    border-radius: 10px;
+    box-shadow: 0 8px 30px rgba($color: #000000, $alpha: 0.2);
+    background: #fff;
+    padding: 70px 130px 30px 130px;
+    .box {
+      .logo {
+        width: 150px;
+        margin: 0 auto 50px auto;
+        img {
+          display: block;
+          width: 100%;
+        }
+      } //.logo
+      .login-form {
+        input {
+          position: relative;
+          font-size: 16px;
+          font-family: 'Noto Sans KR', sans-serif;//노토산스
+          font-weight: 300;//노토산스
+          display: block;
+          width: 100%;
+          height: 60px;
+          border: none;
+          border: 1px solid #e3e3e3;
+          padding: 16px;
+          margin-bottom: 16px;
+          outline-color: rgba($color: #0B35FD, $alpha: 0.3);
+          border-radius: 10px;
+          &::placeholder {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 16px;
+            color: #999;
+            transition: all 0.3s cubic-bezier(0.33, 1, 0.68, 1);
+          }
+          &:nth-child(2) {
+            margin-bottom: 20px;
+          }
+          &:focus::placeholder {
+            position: absolute;
+            transform: none;
+            top: 2px;
+            font-size: 12px;
+          }
+        } //input
+        button {
+          font-family: 'Noto Sans KR', sans-serif;//노토산스
+          display: block;
+          width: 100%;
+          height: 60px;
+          font-size: 19px;
+          font-weight: 500;
+          font-weight: 400;//노토산스
+          color: #fff;
+          background: linear-gradient(to right, #0B35FD, #2B80FF);
+          background: #0B35FD;
+          border: none;
+          border-radius: 10px;
+          cursor: pointer;
+          transition: background 0.3s ease-in-out;
+          &:hover {
+            background: #2B80FF;
+          }
+        }
+      } //login-form
+      .login_help_area {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+        .login_id_save {
+          label {
+            margin-left: 8px;
+            font-size: 16px;
+            color: #333;
+          }
+        }
+        .login_help {
+          display: flex;
+          align-items: center;
+          p {
+            font-size: 14px;
+            color: #999;
+            font-weight: 400;
+            cursor: pointer;
+            &:hover {
+              color: #555;
+              a {
+                color: #555;
+              }
+            }
+            a {
+              color: #999;
+            }
+          }
+          span {
+            display: block;
+            width: 4px;
+            height: 4px;
+            background: #ddd;
+            margin: 0 10px;
+            &:hover {
+              color: #555;
+            }
+          }
+        }
+      } //.login_help_area
+      .join_member_area {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 80px;
+        p {
+          color: #333;
+          font-size: 16px;
+        }
+        span {
+          font-size: 16px;
+          color: #0B35FD;
+          cursor: pointer;
+          &:hover {
+            i {
+              transform: none;
+            }
+          }
+          i {
+            margin-left: 12px;
+            transform: translateX(-10px);
+            transition: all 0.3s ease-in-out;
+          }
+        }
+      } //.join_member_area
+    } //.box
+    .close {
+      position: absolute;
+      top: 0;
+      right: -50px;
+      font-size: 45px;
+      cursor: pointer;
+      color: #999;
+      transition: color 0.3s ease-in-out;
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+} //.login_form_wrap

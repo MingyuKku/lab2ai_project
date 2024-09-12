@@ -1,0 +1,117 @@
+.noticeRead_wrap {
+  background: $white;
+  @include boxShadow();
+  .header {
+    padding: 34px;
+    text-align: center;
+    background: rgba($color: $main_color0, $alpha: 0.6);
+    h1 {
+      font-size: 19px;
+      font-weight: 600;
+      color: $white;
+    }
+  }
+  .content {
+    padding: 40px;
+    .table_wrap {
+      border-top: 2px solid $lightGray2;
+      border-bottom: 2px solid $lightGray2;
+      >table {
+        width: 100%;
+        border-collapse: collapse;
+        >tr {
+          width: 100%;
+          border-bottom: 1px solid $lightGray2;
+          &:last-child {
+            border-bottom: none;
+          }
+          &.cont {
+            >td {
+              padding: 5px 0;
+              .viewer_wrap {
+                width: 100%;
+                height: 100%;
+                padding: 16px;
+                background: $backgroundColor;
+                table {
+                  @include notoSans();
+                  thead {
+                    tr {
+                      th {
+                        background-color: $lightGray2;
+                        p {
+                          color: $main_font_color;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+              .attach {
+                padding: 8px 16px;
+                border-top: 1px solid $lightGray2;
+                background: $backgroundColor;
+                .list {
+                  @include flex_aline_center();
+                  line-height: 1.9;
+                  >h2 {
+                    font-size: 14px;
+                    font-weight: 400;
+                    color: $middleGray2;
+                  }
+                  >p {
+                    margin-left: 5px;
+                    font-size: 14px;
+                    font-weight: 400;
+                    a {
+                      color: $middleGray;
+                      text-decoration: underline;
+                    }
+                  }
+                }
+              }
+            }
+          }
+          >td {
+            padding: 16px 0;
+            font-size: 14px;
+            font-weight: 400;
+            color: $middleGray;
+            word-break: break-all;
+            &:not(.td_tit .td_tit_cont) {
+              width: 80%;
+              padding-left: 14px;
+              font-weight: 500;
+            }
+            &.td_tit {
+              width: 20%;
+              white-space: nowrap;
+              text-align: center;
+              font-weight: 400;
+              color: $main_font_color;
+            }
+            &.td_tit_cont {
+              text-align: justify;
+            }
+          }
+        }
+      }
+    }
+    .buttons {
+      margin-top: 14px;
+      button {
+        @include notoSans();
+        @include btn_sub();
+        float: right;
+        &:first-child {
+          margin-left: 14px;
+        }
+      }
+    }
+    >button {
+      @include notoSans();
+      @include btn_main($margin: 20px auto 0 auto)
+    }
+  }
+}
+

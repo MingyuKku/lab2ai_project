@@ -1,0 +1,128 @@
+.paid-users-wrap {
+  background: white;
+  .header {
+    padding: 34px;
+    text-align: center;
+    background: rgba($color: $main_color0, $alpha: 0.6);
+    h1 {
+      font-size: 19px;
+      font-weight: 600;
+      color: $white;
+    }
+  }
+  .content {
+    padding-bottom: 25px;
+    .users_table_wrap {
+      .users_table {
+        .table_list {
+          table {
+            tbody {
+              th, td {
+                padding: 10px;
+                border: 1px solid $lightGray2;
+                color: $middleGray;
+                white-space: nowrap;
+                font-size: 14px;
+              }
+              tr {
+                &.tr-head {
+                  background: $backgroundColor;
+                }
+                &.list {
+                  td {
+                    a {
+                      color: $middleGray;
+                      text-decoration: underline;
+                      &:hover {
+                        color: $main_font_color;
+                      }
+                    }
+                  }
+                }
+                th {
+                  text-align: start;
+                  font-weight: 500;
+                  color: $main_font_color;
+                }
+                td {
+                  ul {
+                    li {
+                      list-style-type: disc;
+                      list-style-position: inside;
+                      span {
+                        &:last-child {
+                          margin-left: 16px;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .csv-file-wrap {
+      padding: 12px 16px;
+      .text-wrap {
+        @include flex_aline_center();
+        float: right;
+        cursor: pointer;
+        &:hover {
+          .icon {
+            color: $main_font_color;
+          }
+          p {
+            color: $main_font_color;
+          }
+        }
+        .icon {
+          color: $middleGray;
+          margin-right: 5px;
+          i {
+            font-size: 14px;
+          }
+        }
+        p {
+          font-size: 11px;
+          color: $middleGray2;
+        }
+      }
+      
+    }
+    .pagination_wrap {
+      @include flex_aline_justify_center();
+      // margin-top: 24px;
+      .pagination_qna {
+        @include flex_aline_center();
+        .page_num {
+          display: block;
+          margin: 3px;
+          &:not(.disabled) {
+            a {
+              @include flex_aline_justify_center();
+              min-width: 28px;
+              min-height: 28px;
+              padding: 2px;
+              font-size: 15px;
+              font-weight: 400;
+              color: $lightGray;
+            }
+          }
+          &.active {
+            a {
+              font-weight: 600;
+              color: $main_font_color;
+            }
+          }
+        }
+      }
+      .nav {
+        a {
+          color: $lightGray;
+        }
+      }
+    }
+  }
+}

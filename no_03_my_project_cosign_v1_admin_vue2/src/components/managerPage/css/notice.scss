@@ -1,0 +1,146 @@
+.notice_wrap {
+  background: $white;
+  @include boxShadow();
+  .header {
+    padding: 34px;
+    text-align: center;
+    background: rgba($color: $main_color0, $alpha: 0.6);
+    h1 {
+      font-size: 19px;
+      font-weight: 600;
+      color: $white;
+    }
+  }
+  .content {
+    padding: 40px;
+    .notice_table {
+      .table_title {
+        @include flex_aline_center();
+        border-top: 1px solid $lightGray;
+        border-bottom: 1px solid $lightGray;
+        >div {
+          text-align: center;
+          padding: 16px 0;
+          font-size: 15px;
+          font-weight: 500;
+          color: $main_font_color;
+          &.no {
+            width: 10%;
+          }
+          &.tit {
+            width: 70%;
+          }
+          &.registDate {
+            width: 20%;
+          }
+        }
+      }
+      .table_list {
+        ul {
+          li {
+            @include flex_aline_center();
+            font-size: 14px;
+            border-bottom: 1px solid $lightGray2;
+            cursor: pointer;
+            // &:last-child {
+            //   border-bottom: none;
+            // }
+            // a {
+            //   @include flex_aline_center();
+            //   font-size: 15px;
+              >div {
+                padding: 20px 0;
+                text-align: center;
+                color: $main_font_color;
+                &.list_no {
+                  width: 10%;
+                  color: $main_color0;
+                }
+                &.list_tit {
+                  width: 70%;
+                  font-weight: 500;
+                  text-align: start;
+                  text-indent: 16px;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  white-space: nowrap;
+                }
+                &.list_time {
+                  width: 20%;
+                  color: $middleGray;
+                }
+              }
+            // }
+            
+          }
+        }
+      }
+    }
+    .registNotice {
+      margin-top: 14px;
+      button {
+        @include notoSans();
+        @include btn_sub();
+        float: right;
+      }
+    }
+  
+    .pagination_wrap {
+      @include flex_aline_justify_center();
+      margin-top: 24px;
+      .pagination_qna {
+        @include flex_aline_center();
+        .page_num {
+          display: block;
+          margin: 3px;
+          &:not(.disabled) {
+            a {
+              @include flex_aline_justify_center();
+              min-width: 28px;
+              min-height: 28px;
+              padding: 2px;
+              font-size: 15px;
+              font-weight: 400;
+              color: $lightGray;
+            }
+          }
+          &.active {
+            a {
+              font-weight: 600;
+              color: $main_font_color;
+            }
+          }
+        }
+      }
+      .nav {
+        a {
+          color: $lightGray;
+        }
+      }
+    }
+  }
+
+  .nonContent {
+    padding: 40px;
+    .replace {
+      text-align: center;
+      h2 {
+        font-size: 16px;
+        font-weight: 500;
+        color: $main_font_color;
+      }
+      p {
+        margin: 20px 0;
+        font-size: 15px;
+        font-weight: 400;
+        color: $main_color0;
+      }
+      .registNotice {
+        button {
+          @include notoSans();
+          @include btn_sub();
+        }
+      }
+    }
+  }
+}

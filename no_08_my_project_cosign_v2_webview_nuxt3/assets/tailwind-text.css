@@ -1,0 +1,190 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    /* 헤드 텍스트 */
+    .text-h1 {
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 1.4em;
+        letter-spacing: -0.01em;
+    }
+
+    .text-h1_5 {
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 1.4em;
+        letter-spacing: -0.01em;
+    }
+
+
+    .text-h2 {
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 1.4em;
+        letter-spacing: -0.01em;
+    }
+
+    .text-h3 {
+        font-size: 17px;
+        font-weight: 700;
+        line-height: 1.4em;
+        letter-spacing: -0.01em;
+    }
+
+    .text-h4 {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 1.4em;
+        letter-spacing: -0.01em;
+    }
+
+    .text-h5 {
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 1.4em;
+        letter-spacing: -0.01em;
+    }
+
+    .text-h6 {
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 1.4em;
+        letter-spacing: -0.01em;
+    }
+
+
+    /* body 텍스트 */
+    .text-body-1 {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.3em;
+        letter-spacing: -0.01em;
+    }
+    .text-body-1r {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.3em;
+        letter-spacing: -0.01em;
+    }
+
+    .text-body-2 {
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 1.4em;
+        letter-spacing: -0.01em;
+    }
+    .text-body-2r {
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 1.4em;
+        letter-spacing: -0.01em;
+    }
+
+    .text-body-3 {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.3em;
+        letter-spacing: -0.01em;
+    }
+
+    .text-body-3r {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.3em;
+        letter-spacing: -0.01em;
+    }
+
+    .text-body-4 {
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 1.4em;
+        letter-spacing: 0;
+    }
+
+    .text-body-5 {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 1.5em;
+        letter-spacing: 0;
+    }
+
+    .text-body-6 {
+        font-size: 11px;
+        font-weight: 400;
+        line-height: 1.5em;
+        letter-spacing: 0;
+    }
+
+    /* 캡션 텍스트 */
+    .text-cap-1r {
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 1em;
+        letter-spacing: 0;
+    }
+    .text-cap-1m {
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 1em;
+        letter-spacing: 0;
+    }
+    .text-cap-1b {
+        font-size: 13px;
+        font-weight: 700;
+        line-height: 1em;
+        letter-spacing: 0;
+    }
+    .text-cap-2m {
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 1em;
+        letter-spacing: 0;
+    }
+
+
+
+    /* 숫자 텍스트 */
+    .text-price-17b {
+        font-size: 17px;
+        font-weight: 700;
+        line-height: 1em;
+        letter-spacing: 0.01em;
+    }
+
+    .text-price-16b {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 1em;
+        letter-spacing: 0.01em;
+    }
+
+    .text-price-15b {
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 1em;
+        letter-spacing: 0.01em;
+    }
+
+    .text-price-14b {
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 1em;
+        letter-spacing: 0.01em;
+    }
+
+    .text-price-13m {
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 1em;
+        letter-spacing: 0.01em;
+    }
+
+    .text-price-12r {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 1em;
+        letter-spacing: 0.01em;
+    }
+}

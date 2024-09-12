@@ -1,0 +1,112 @@
+$main_font_color: #1E272E;
+$main_color1: #F53B57;
+$main_color2: #00D8D6;
+$white: #fff;
+$middleGray: #555;
+$lightGray: #999;
+
+@mixin flex_aline_center {
+  display: flex;
+  align-items: center;
+}
+@mixin flex_aline_justify_center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.signHistory_wrap {
+  padding: 24px 24px 24px 30px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 1px 1px 4px rgba($color: #000000, $alpha: 0.2);
+  margin-right: 16px;
+  .list_head {
+    padding-bottom: 30px;
+    h1 {
+      font-size: 21px;
+      font-weight: 600;
+      color: #333;
+    }
+  } //.list_head
+  .list_body {
+    position: relative;
+    // background: yellowgreen;
+    .history_list_area {
+      // overflow-x: hidden;
+      padding-bottom: 30px;
+      // &::-webkit-scrollbar {
+      //   width: 4px;
+      // }
+      // &::-webkit-scrollbar-thumb {
+      //   background: #e0e0e0;
+      //   border-radius: 8px;
+      // }
+      // &::-webkit-scrollbar-thumb:hover {
+      //   background: #bbb;
+      // }
+      // &::-webkit-scrollbar-track {
+      //   background: #fff;
+      // }
+    } //.history_list_area
+    
+    // .body_shadow {
+    //   position: absolute;
+    //   width: 95%;
+    //   height: 1px;
+    //   background: #fff;
+    //   box-shadow: 0 0 16px 16px #fff;
+    // }
+    // .top_shadow {
+    //   top: 0;
+    // } 
+    // .bottom_shadow {
+    //   bottom: 0;
+    // }
+    
+  } //.list_body
+  .moreBtn {
+    width: 110px;
+    margin: 10px auto 0 auto;
+    overflow: hidden;
+    border: 1px solid #0B35FD;
+    border-radius: 20px;
+    button {
+      @include notoSans();
+      @include flex_aline_justify_center();
+      width: 100%;
+      padding: 8px;
+      cursor: pointer;
+      outline: none;
+      border: none; 
+      background: $white;
+      color: #0B35FD;
+      &:hover {
+        background: #fafafa;
+      }
+      i {
+        position: relative;
+        z-index: 2;
+        font-size: 16px;
+        margin-right: 5px;
+        pointer-events: none;
+      }
+      span {
+        position: relative;
+        z-index: 2;
+        font-size: 15px;
+        font-weight: 400;
+        pointer-events: none;
+      }
+    }
+  }
+} //.list_wrap
+
+
+
+
+
+
+
+

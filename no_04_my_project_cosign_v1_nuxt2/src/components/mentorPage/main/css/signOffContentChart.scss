@@ -1,0 +1,82 @@
+.dtwChart_off_container {
+  .sigOffContent_chartWrap {
+    @include flex_aline_justify_center();
+    flex-direction: column;
+    // padding: 24px 10px 16px 16px;
+    margin-top: 20px;
+    // background: $lightBeige;
+    border: 1px solid #d3d3d3;
+    
+    .chartBoard_area {
+      align-self: flex-start;
+      position: relative;
+      width: 100%;
+    }
+    .chart_wrap {
+      position: relative;
+      width: 100%;
+      transition: opacity 0.2s ease;
+      .waterMark {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 2;
+        transform: translate(-50%,-50%);
+        user-select: none;
+        pointer-events: none;
+        opacity: 0.04;
+        img {
+          display: block;
+          width: 100%;
+        }
+      }
+      .tv-lightweight-charts {
+        overflow: visible !important;
+      }
+  
+      .Perpendicular {
+        position: absolute;
+        width: 1000%;
+        height: 100%;
+        background: $middleGray;
+        opacity: 0.08;
+        top: 0;
+        left: -1000%;
+        z-index: 10;
+        pointer-events: none;
+        user-select: none;
+      }
+      .Perpendicular_text {
+        position: absolute;
+        left: 5px;
+        top: 5px;
+        z-index: 10;
+        letter-spacing: -0.5px;
+        color: $lightGray;
+        font-size: 12px;
+        font-weight: 500;
+        pointer-events: none;
+        user-select: none;
+      }
+    }
+  }
+  .isError {
+    position: relative;
+    @include flex_aline_justify_center();
+    width: 100%;
+    height: 360px;
+    margin-top: 20px;
+    background: $backgroundColor;
+    .innerText {
+      p {
+        text-align: center;
+        color: $middleGray;
+        font-size: 15px;
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+
+

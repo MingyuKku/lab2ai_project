@@ -1,0 +1,33 @@
+.mobile_tabMenu_wrap {
+  background: #fff;
+  margin: 12px 0;
+  padding: 0 20px;
+  ul {
+    li {
+      position: relative;
+      display: inline-block;
+      padding: 16px 8px;
+      margin-right: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      &:last-child {
+        margin-right: 0;
+      }
+      &.active {
+        color: #0B35FD;
+        font-weight: 600;
+        &::before {
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          display: block;
+          content: '';
+          width: 90%;
+          height: 2px;
+          background: #0B35FD;
+        }
+      }
+    }
+  }
+} //.mobile_tabMenu_wrap

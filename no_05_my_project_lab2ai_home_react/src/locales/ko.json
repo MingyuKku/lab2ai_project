@@ -1,0 +1,486 @@
+{
+    "visual": {
+        "title1": "AI Reports Utilizing",
+        "title2": "Prompt Engineering",
+        "descripton1": "랩투아이는 AI를 이용하여 디지털 자산 시장 데이터를",
+        "descripton2": "수집하고 분석하여 프롬프트 엔지니어 기술을 통해",
+        "descripton3": "읽기 쉬운 정보를 제공합니다."
+    },
+    "about": {
+        "title": [
+            "랩투아이는",
+            "이러한 일들을 하고 있습니다."
+        ],
+        "items": [
+            {
+                "title": "디지털 자산 시장 정보 제공",
+                "deskTop": [
+                    "디지털 자산 시장의 뉴스, SNS, 경제 지표 데이터를 실시간",
+                    "으로 분석하여 투자자가 쉽고 빠르게 시장의 흐름을",
+                    "파악할 수 있도록 AI 리포트를 제공합니다."
+                ],
+                "mobile": [
+                    "디지털 자산 시장의 뉴스, SNS, 경제 지표",
+                    "데이터를 실시간 으로 분석하여 투자자가",
+                    "쉽고 빠르게 시장의 흐름을 파악할 수 있도록",
+                    "AI 리포트를 제공합니다."
+                ]
+            },
+            {
+                "title": "Prompt Engineering 기술",
+                "mobile": [
+                    "2023년 2월 디지털 자산 AI 시장감지",
+                    "코싸인(COSIGN)을 출시하였으며, 랩투아이",
+                    "자체 Prompt Engine AI 자동 리포트를",
+                    "개발 중에 있습니다."
+                ],
+                "deskTop": [
+                    "2023년 2월 디지털 자산 AI 시장감지 코싸인(COSIGN)을",
+                    "출시하였으며, 랩투아이 자체 Prompt Engine AI",
+                    "자동 리포트를 개발 중에 있습니다."
+                ]
+            }
+        ]
+    },
+    "service": {
+        "title": "디지털 자산 AI 시장감지",
+        "brand": "코싸인(COSIGN)",
+        "desktop": [
+            "투자자가 알아야 할 모든 영역의 정보를 확보하여 AI가 대신 분석하고,",
+            "실시간 감지로 적시성 높은 정보를 제공하며 한 눈에 시장 파악 가능 투자자 특성을 고려하여",
+            "빠른 호흡의 맞춤형 예측 정보와 실시간 시장 해석 AI 리포트도 제공합니다."
+        ],
+        "mobile": [
+            "투자자가 알아야 할 모든 영역의 정보를 확보하여",
+            "AI가 대신 분석하고, 실시간 감지로 적시성 높은 정보를",
+            "제공하며 한 눈에 시장 파악 가능 투자자 특성을",
+            "고려하여 빠른 호흡의 맞춤형 예측 정보와 실시간",
+            "시장 해석 AI 리포트도 제공합니다."
+        ],
+        "link": "바로가기"
+    },
+    "portfolio": {
+        "items": [
+            {
+                "imgUrl": "https://kr.object.ncloudstorage.com/cosign/lab2ai/portfolio-image-1.png",
+                "title": {
+                    "deskTop": "ChatGPT 활용 <span>AI 자동 투자 리포트</span>",
+                    "mobile": [
+                        "ChatGPT 활용",
+                        "AI 자동 투자 리포트"
+                    ]
+                },
+                "desc": "프롬프트 엔지니어 기술 활용을 활용하여 디지털 자산, 온체인 데이터 등을 수집 및 분석하여 이벤트 자동 추출 AI 리포트 작성"
+            },
+            {
+                "imgUrl": "https://kr.object.ncloudstorage.com/cosign/lab2ai/portfolio-image-2.png",
+                "title": {
+                    "deskTop": "ChatGPT 활용 <span>지능형 AI 챗봇</span> 기술 개발",
+                    "mobile": [
+                        "ChatGPT 활용",
+                        "지능형 AI 챗봇 기술 개발"
+                    ]
+                },
+                "desc": "프롬프트 엔지니어링 기술을 활용하여 가상 캐릭터의 성격, 유형, 종류에 맞는 차별화된 챗봇 모듈 개발"
+            },
+            {
+                "imgUrl": "https://kr.object.ncloudstorage.com/cosign/lab2ai/portfolio-image-3.png",
+                "title": {
+                    "deskTop": "실시간 시장 감지를 위한 <span>데이터 분석</span>",
+                    "mobile": [
+                        "실시간 시장 감지를",
+                        "위한 데이터 분석"
+                    ]
+                },
+                "desc": "뉴스, SNS, 경제지표 관련 키워드를 수집 및 분석하여 코인 건전성, 신뢰도 평가 리포트 개발 중"
+            },
+            {
+                "imgUrl": "https://kr.object.ncloudstorage.com/cosign/lab2ai/portfolio-image-4.png",
+                "title": {
+                    "deskTop": "<span>KOTRA AI</span> 보고서",
+                    "mobile": [
+                        "KOTRA AI 보고서"
+                    ]
+                },
+                "desc": "KOTRA의 빅데이터 플랫폼 사업에 참여하여 국가별 시장, 해외 유망시장 분석 및 기업별 맞춤 정보 제공"
+            }
+        ]
+    },
+    "history": [
+        {
+            "date": "2023-11",
+            "text": [
+                {
+                    "title": "초격차 딥테크 스타트업(비글즈) 전문 연구협력기관 선정"
+                },
+                {
+                    "title": "글로벌 거래소 주멕스 AI 페르소나 뉴스 콘텐츠 수출"
+                },
+                {
+                    "title": "2023 대한민국인공지능대상 수상"
+                }
+            ]
+        },
+        {
+            "date": "2023-08",
+            "text": [
+                {
+                    "title": "코인니스 내 페르소나 뉴스 AI, 차트패턴 포착 콘텐츠 제휴"
+                }
+            ]
+        },
+        {
+            "date": "2023-05",
+            "text": [
+                {
+                    "title": "서울머니쇼 참가",
+                    "desc": [
+                        "한국핀테크산업협회에 등록된 금융 기업으로 2023 서울머니쇼 참가"
+                    ]
+                }
+            ]
+        },
+        {
+            "date": "2023-02",
+            "text": [
+                {
+                    "title": "코싸인 앱 출시",
+                    "desc": [
+                        "AI 시장감지 서비스 코싸인 모바일 앱 출시"
+                    ]
+                },
+                {
+                    "title": "비글즈 APP 챗봇 기술 연구협력업체 MOU 체결"
+                }
+            ]
+        },
+        {
+            "date": "2023-01",
+            "text": [
+                {
+                    "title": "AI 유사패턴 알고리즘 특허 출원"
+                }
+            ]
+        },
+        {
+            "date": "2022-12",
+            "text": [
+                {
+                    "title": "데이터산업 육성 지원사업 선정 및 우수기업 평가",
+                    "desc": [
+                        "과제명: 글로벌 뉴스데이터와 온체인 거래 데이터를 활용한 가상자산 AI 리포트 개발"
+                    ]
+                }
+            ]
+        },
+        {
+            "date": "2022-11",
+            "text": [
+                {
+                    "title": "2022 대한민국인공지능대상 수상",
+                    "desc": [
+                        "IT조선에서 주최한 2022 대한민국인공지능대상에서 금융부문 대상 수상등록"
+                    ]
+                }
+            ]
+        },
+        {
+            "date": "2022-07",
+            "text": [
+                {
+                    "title": "한국핀테크산업협회 가입"
+                }
+            ]
+        },
+        {
+            "date": "2022-04",
+            "text": [
+                {
+                    "title": "아시아 경제 공모전",
+                    "desc": [
+                        "랩투아이와 아시아경제가 공동 주관하여 디지털 자산가치 AI 예측 모델링 공모전 진행"
+                    ]
+                }
+            ]
+        },
+        {
+            "date": "2022-03",
+            "text": [
+                {
+                    "title": "성남산업진흥원 지원 사업 선정",
+                    "desc": [
+                        "성남산업진흥원으로부터 ‘온라인 플랫폼을 활용한 제품 판매 및 홍보 마케팅 지원’ 선정"
+                    ]
+                }
+            ]
+        },
+        {
+            "date": "2022-01",
+            "text": [
+                {
+                    "title": "청년고용 우수기업 선정"
+                }
+            ]
+        },
+        {
+            "date": "2021",
+            "text": [
+                {
+                    "title": "LG U+ 대스타 해결사 플랫폼 Digital Dream 9 우승",
+                    "desc": [
+                        "모바일 야구중계 전용 앱에 생동감 극대화 서비스 제안"
+                    ]
+                }
+            ]
+        },
+        {
+            "date": "2019",
+            "text": [
+                {
+                    "title": "KOTRA 자동 해외시장 동향 기초 보고서",
+                    "desc": [
+                        "코트라가 발주한 빅데이터 플랫폼 구축 사업에서 국가별 시장정보, 품목별 유망시장, 기업별 맞춤정보 내 AI 분석 문장을 작성하는 서비스 개시"
+                    ]
+                }
+            ]
+        },
+        {
+            "date": "2018",
+            "text": [
+                {
+                    "title": "KBO 퓨처스리그 로봇기사",
+                    "desc": [
+                        "로봇 저널리즘 기술을 적용하여 생성한 기사를 KBO홈페이지에 기재"
+                    ]
+                }
+            ]
+        },
+        {
+            "date": "2017",
+            "text": [
+                {
+                    "title": "Lab2AI의 창립"
+                }
+            ]
+        }
+    ],
+    "media": {
+        "items": [
+            {
+                "date": "2024-01-23",
+                "text": "랩투아이 오종환 대표, ‘경기도 빅데이터위원회’ 신규 위원 위촉",
+                "href": "http://www.kdpress.co.kr/news/articleView.html?idxno=126026"
+            },
+            {
+                "date": "2024-01-04",
+                "text": "랩투아이 AI 모델, 주멕스 가상자산 투자대회서 사람과 겨룬다",
+                "href": "https://it.chosun.com/news/articleView.html?idxno=2023092107702"
+            },
+            {
+                "date": "2023-11-08",
+                "text": "랩투아이, 글로벌 가상자산 거래소에 ‘AI 페르소나 뉴스’ 수출",
+                "href": "https://it.chosun.com/news/articleView.html?idxno=2023092104046"
+            },
+            {
+                "date": "2023-08-28",
+                "text": "랩투아이 “챗GPT 연동해 디지털자산 뉴스 쉽고 재미있게”",
+                "href": "https://it.chosun.com/news/articleView.html?idxno=2023082801836"
+            },
+            {
+                "date": "2023-06-15",
+                "text": "랩투아이 “AI가 분석한 상반기 코인 시장 ‘하락 패턴’ 정확도 95%”",
+                "href": "https://it.chosun.com/news/articleView.html?idxno=2023061501878"
+            },
+            {
+                "date": "2023-05-17",
+                "text": "코싸인앱 “AI와 가상자산 시세예측 겨뤄보세요”",
+                "href": "http://www.sentv.co.kr/news/view/654948"
+            },
+            {
+                "date": "2023-04-14",
+                "text": "랩투아이, 디지털 자산 시세 예측에 챗GPT 활용",
+                "href": "https://www.mk.co.kr/news/business/10712728"
+            },
+            {
+                "date": "2023-03-22",
+                "text": "랩투아이, 소비자물가지수와 비트코인 상관관계 밝혀내",
+                "href": "https://it.chosun.com/site/data/html_dir/2023/03/22/2023032201792.html"
+            },
+            {
+                "date": "2023-02-01",
+                "text": "랩투아이, AI데이터로 디지털자산 시장 분석 및 투자 ...",
+                "href": "https://n.news.naver.com/mnews/article/022/0003779120?sid=101"
+            },
+            {
+                "date": "2022-12-25",
+                "text": "경기도 ‘데이터 산업 육성 지원’, 가시적 성과 도출... 총...",
+                "href": "https://www.aitimes.kr/news/articleView.html?idxno=26923"
+            },
+            {
+                "date": "2022-12-01",
+                "text": "랩투아이, 주식·코인 시세 변동 예측 알고리즘 특허 출원",
+                "href": "https://it.chosun.com/site/data/html_dir/2022/12/01/2022120102409.html"
+            },
+            {
+                "date": "2022-11-24",
+                "text": "랩투아이 “AI활용, 디지털자산 시장 정보 비대칭 해소”",
+                "href": "https://it.chosun.com/site/data/html_dir/2022/11/24/2022112401492.html"
+            },
+            {
+                "date": "2022-09-18",
+                "text": "“AI로 코인 시세 예측에 투명성 높이려고요”",
+                "href": "https://n.news.naver.com/mnews/article/018/0005319743?sid=105"
+            },
+            {
+                "date": "2022-08-05",
+                "text": "“출근시간에 코인거래는 참아주세요”",
+                "href": "https://n.news.naver.com/mnews/article/018/0005284875?sid=105"
+            },
+            {
+                "date": "2022-07-22",
+                "text": "AI 기반 데이터분석 전문기업 랩투아이",
+                "href": "https://it.chosun.com/site/data/html_dir/2022/07/22/2022072200473.html"
+            },
+            {
+                "date": "2022-07-19",
+                "text": "카카오페이ㆍ두나무에 이어... 랩투아이, 한국핀테크산...",
+                "href": "https://n.news.naver.com/mnews/article/009/0004993407?sid=101"
+            },
+            {
+                "date": "2022-07-03",
+                "text": "가상자산 시세 예측하는 AI 서비스 나왔다는데... 얼마나 잘 맞출까",
+                "href": "https://n.news.naver.com/mnews/article/024/0000075909?sid=101"
+            },
+            {
+                "date": "2022-06-27",
+                "text": "랩투아이, AI로 디지털자산 예측하는 ‘코싸인’ 플랫폼 선...",
+                "href": "https://it.chosun.com/site/data/html_dir/2022/06/27/2022062701701.html"
+            },
+            {
+                "date": "2022-05-21",
+                "text": "오종환 랩투아이 대표 “AI분석, 가상화폐 시장에서 분명 장점 있어”",
+                "href": "https://n.news.naver.com/mnews/article/277/0005092082?sid=101"
+            },
+            {
+                "date": "2020-11-20",
+                "text": "‘메쥬’는 필립스, ‘랩투아이’는 LG U+와 협업... ‘대스타 해결사’ 우승",
+                "href": "https://n.news.naver.com/mnews/article/421/0005003266?sid=101"
+            },
+            {
+                "date": "2018-07-24",
+                "text": "3초면 야구기사 뚝딱… ‘케이봇’기자 아시나요",
+                "href": "https://sports.news.naver.com/news.nhn?oid=020&aid=0003159949"
+            }
+        ]
+    },
+    "youtube": [
+        {
+            "id": "O1kpvICe73E",
+            "label": "가상자산 투자 AI가 하면 수익률이 높을까?"
+        },
+        {
+            "id": "WFizfdOBXss",
+            "label": "코인의 모든 싸인, 코싸인"
+        },
+        {
+            "id": "SGvWEOUiIZE",
+            "label": "AI 가상화폐 시세 예측 코싸인"
+        }
+    ],
+    "company": {
+        "title": [
+            "<span class='gradient-text'>인공지능 기술</span>로",
+            "손에 잡히는 정보를 창출하는 기업"
+        ],
+        "ceo": {
+            "title": "CEO",
+            "name": "오종환",
+            "image": "https://kr.object.ncloudstorage.com/cosign/lab2ai/ceo.png",
+            "moImage": "https://kr.object.ncloudstorage.com/cosign/lab2ai/mo-ceo.png",
+            "education": [
+                "서울대 전기공학부 졸업 | 융합과학부 공학박사 수료",
+                "서울대 연합전공정보문화학 | 언론정보학과강사",
+                "시청자미디어재단 인공지능 기반 자동화 팩트체크 기술 개발",
+                "실시간 챗봇을 통한 선거 정보 SBS 나리봇 개발",
+                "국내 최초 로봇 저널리즘 기술 적용 증권 기사 송고",
+                "로봇 저널리즘 기술 적용 야구 기사 발표"
+            ],
+            "thesis": {
+                "title": "주요논문",
+                "items": [
+                    [
+                        "A Research on Developing a Card News System Based",
+                        "on News Generation Algorithm (2020년)"
+                    ],
+                    [
+                        "알고리즘 기반의 개인화된 카드뉴스 생성 시스템 연구 (2020년)"
+                    ],
+                    [
+                        "Automated news generation for tv program ratings(2016년)"
+                    ],
+                    [
+                        "Generating highlights automatically from text-reading",
+                        "behaviors on mobile devices (2014년)"
+                    ]
+                ]
+            }
+        },
+        "idealTalent": {
+            "title": "인재상",
+            "contents": [
+                {
+                    "icon": "https://kr.object.ncloudstorage.com/cosign/lab2ai/icon/i-talent-1.png",
+                    "label": "소통",
+                    "desc": [
+                        "수평적인 의사결정 과정 속에서 의견을",
+                        "개진하고 자유롭게 소통하는 사람"
+                    ]
+                },
+                {
+                    "icon": "https://kr.object.ncloudstorage.com/cosign/lab2ai/icon/i-talent-2.png",
+                    "label": "책임",
+                    "desc": [
+                        "스스로 결정한 일을 수행하고 맡은",
+                        "업무에 책임을 지는 사람"
+                    ]
+                },
+                {
+                    "icon": "https://kr.object.ncloudstorage.com/cosign/lab2ai/icon/i-talent-3.png",
+                    "label": "성장",
+                    "desc": [
+                        "스스로 결정한 일을 수행하고 맡은",
+                        "업무에 책임을 지는 사람"
+                    ]
+                }
+            ]
+        },
+        "workLife": {
+            "title": "WORK&LIFE",
+            "subTitle": "우리가 일하는 방식",
+            "contents": [
+                {
+                    "label": "재충전을 위한 지원",
+                    "items": [
+                        "11개월 근무제",
+                        "자기계발비 지원",
+                        "장기근속 휴가",
+                        "생일휴가, 명절 선물"
+                    ]
+                },
+                {
+                    "label": "몰입을 위한 근무 환경",
+                    "items": [
+                        "탄력근무제, 유동적 재택근무",
+                        "점심 , 저녁식사 제공",
+                        "간식제공, 사내카페 이용",
+                        "주차 지원"
+                    ]
+                }
+            ]
+        }
+    },
+    "footer": {
+        "company": "(주)랩투아이",
+        "address": "경기도 성남시 분당구 벌말로 50번길 41 투아이센터 502호"
+    }
+}

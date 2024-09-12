@@ -1,0 +1,89 @@
+// =========fade===========
+.fade-enter-active {
+  animation: fade_in 0.3s ease-in-out;
+}
+.fade-leave-active {
+  animation: fade_in 0.2s reverse;
+}
+// =========bounce===========
+.bounce-enter-active {
+  animation: bounce_in 0.4s cubic-bezier(0.33, 1, 0.68, 1);
+}
+.bounce-leave-active {
+  animation: bounce_in 0.3s reverse;
+}
+
+.showList-enter-active, .showList-leave-active {
+  transition: all 0.4s ease-in-out;
+}
+
+.showList-enter, .showList-leave-to {
+  opacity: 0;
+}
+
+.openMyPage-enter-active {
+  -webkit-animation: openMyPage 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  -moz-animation: openMyPage 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  -ms-animation: openMyPage 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  -o-animation: openMyPage 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  animation: openMyPage 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.openMyPage-leave-active {
+  -webkit-animation: openMyPage 0.4s cubic-bezier(0.64, 0, 0.78, 0) reverse;
+  -moz-animation: openMyPage 0.4s cubic-bezier(0.64, 0, 0.78, 0) reverse;
+  -ms-animation: openMyPage 0.4s cubic-bezier(0.64, 0, 0.78, 0) reverse;
+  -o-animation: openMyPage 0.4s cubic-bezier(0.64, 0, 0.78, 0) reverse;
+  animation: openMyPage 0.4s cubic-bezier(0.64, 0, 0.78, 0) reverse;
+}
+
+
+@keyframes fade_in {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+@keyframes bounce_in {
+  from {transform: translate(-50%, -50%) scale(0.9);}
+  to {transform: translate(-50%, -50%) scale(1);}
+}
+
+
+@-webkit-keyframes showLineUp {0% {opacity: 0;} 100% {opacity: 1;}}
+@-moz-keyframes showLineUp {0% {opacity: 0;} 100% {opacity: 1;}}
+@-ms-keyframes showLineUp {0% {opacity: 0;} 100% {opacity: 1;}}
+@-o-keyframes showLineUp {0% {opacity: 0;} 100% {opacity: 1;}}
+@keyframes showLineUp {0% {opacity: 0;} 100% {opacity: 1;}}
+
+@-webkit-keyframes openMyPage {0% {opacity: 0; transform: translateY(-60px) scale(0.94);} 100% {opacity: 1; transform: translateY(0) scale(1);}}
+@-moz-keyframes openMyPage {0% {opacity: 0; transform: translateY(-60px) scale(0.94);} 100% {opacity: 1; transform: translateY(0) scale(1);}}
+@-ms-keyframes openMyPage {0% {opacity: 0; transform: translateY(-60px) scale(0.94);} 100% {opacity: 1; transform: translateY(0) scale(1);}}
+@-o-keyframes openMyPage {0% {opacity: 0; transform: translateY(-60px) scale(0.94);} 100% {opacity: 1; transform: translateY(0) scale(1);}}
+@keyframes openMyPage {0% {opacity: 0; transform: translateY(-60px) scale(0.94);} 100% {opacity: 1; transform: translateY(0) scale(1);}}
+
+
+
+
+
+// =============================================================================================
+// =============================================================================================
+// 모바일용 애니메이션
+
+.openMobileMyPage-enter-active {
+  -webkit-animation: openMMyPage 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  -moz-animation: openMMyPage 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  -ms-animation: openMMyPage 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  -o-animation: openMMyPage 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  animation: openMMyPage 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.openMobileMyPage-leave-active {
+  -webkit-animation: openMMyPage 0.4s cubic-bezier(0.64, 0, 0.78, 0) reverse;
+  -moz-animation: openMMyPage 0.4s cubic-bezier(0.64, 0, 0.78, 0) reverse;
+  -ms-animation: openMMyPage 0.4s cubic-bezier(0.64, 0, 0.78, 0) reverse;
+  -o-animation: openMMyPage 0.4s cubic-bezier(0.64, 0, 0.78, 0) reverse;
+  animation: openMMyPage 0.4s cubic-bezier(0.64, 0, 0.78, 0) reverse;
+}
+
+@-webkit-keyframes openMMyPage {0% {opacity: 0; transform: scale(0.94);} 100% {opacity: 1; transform: scale(1);}}
+@-moz-keyframes openMMyPage {0% {opacity: 0; transform: scale(0.94);} 100% {opacity: 1; transform: scale(1);}}
+@-ms-keyframes openMMyPage {0% {opacity: 0; transform: scale(0.94);} 100% {opacity: 1; transform: scale(1);}}
+@-o-keyframes openMMyPage {0% {opacity: 0; transform: scale(0.94);} 100% {opacity: 1; transform: scale(1);}}
+@keyframes openMMyPage {0% {opacity: 0; transform: scale(0.94);} 100% {opacity: 1; transform: scale(1);}}

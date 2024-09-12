@@ -1,0 +1,18 @@
+.swiper.sign-detail-fluid-content-2-swiper
+.swiper-pagination {
+    position: static;
+}
+
+.swiper.sign-detail-fluid-content-2-swiper
+.swiper-pagination
+span {
+    background-color: #D7DADE;
+    opacity: 1;
+}
+
+.swiper.sign-detail-fluid-content-2-swiper
+.swiper-pagination
+span.swiper-pagination-bullet-active {
+    background-color: #4B5058;
+    transform: scale(1.25);
+}

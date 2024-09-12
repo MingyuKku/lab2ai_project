@@ -1,0 +1,499 @@
+{
+    "visual": {
+        "title1": "AI Reports Utilizing",
+        "title2": "Prompt Engineering",
+        "descripton1": "Lab2AI utilizes AI to collect and analyze digital asset market data,",
+        "descripton2": "offering easily readable information through",
+        "descripton3": "prompt engineering technology."
+    },
+    "about": {
+        "title": [
+            "Lab2AI is engaged",
+            "in the following activities:"
+        ],
+        "items": [
+            {
+                "title": "Providing Digital Asset Market Information",
+                "deskTop": [
+                    "We analyze news, social media, and economic indicator data",
+                    "from the digital asset market in real-time. By doing this,",
+                    "we offer AI reports that enable investors to quickly",
+                    "and easily understand market trends."
+                ],
+                "mobile": [
+                    "We analyze news, social media, and economic indicator data",
+                    "from the digital asset market in real-time. By doing this,",
+                    "we offer AI reports that enable investors to quickly",
+                    "and easily understand market trends."
+                ]
+            },
+            {
+                "title": "Prompt Engineering Technology",
+                "mobile": [
+                    "In February 2023, we launched COSIGN,",
+                    "a digital asset AI market detection tool. Additionally,",
+                    "Lab2AI is currently developing its own Prompt Engine AI",
+                    "for automatic reporting."
+                ],
+                "deskTop": [
+                    "In February 2023, we launched COSIGN,",
+                    "a digital asset AI market detection tool. Additionally,",
+                    "Lab2AI is currently developing its own Prompt Engine AI",
+                    "for automatic reporting."
+                ]
+            }
+        ]
+    },
+    "service": {
+        "title": "Cryptocurrencies AI Market Detection",
+        "brand": "COSIGN",
+        "desktop": [
+            "Lab2AI secures information from all areas that investors need to know.",
+            "Our AI analyzes this data and provides real-time detection, offering timely information",
+            "This enables investors to understand the market at a glance.",
+            "Considering the unique characteristics of each investor, we also provide customized",
+            "prediction information with a fast pace and real-time market interpretation through our AI reports.",
+            "This enables investors to understand the market at a glance."
+        ],
+        "mobile": [
+            "Lab2AI secures information from all areas",
+            "that investors need to know.",
+            "Our AI analyzes this data and provides real-time detection,",
+            "offering timely information",
+            "This enables investors to understand",
+            "Considering the unique characteristics of each investor,",
+            "we also provide customized",
+            "prediction information with a fast pace",
+            "and real-time market interpretation through our AI reports.",
+            "This enables investors to understand",
+            "the market at a glance."
+        ],
+        "link": "Link"
+    },
+    "portfolio": {
+        "items": [
+            {
+                "imgUrl": "https://kr.object.ncloudstorage.com/cosign/lab2ai/portfolio-image-1.png",
+                "title": {
+                    "deskTop": "<span>AI Auto</span> Investment Reports",
+                    "mobile": [
+                        "Utilizing ChatGPT",
+                        "AI Auto Investment Reports"
+                    ]
+                },
+                "desc": "Utilizing prompt engineering technology to collect and analyze digital assets and on-chain data, and create AI reports with automatic event extraction."
+            },
+            {
+                "imgUrl": "https://kr.object.ncloudstorage.com/cosign/lab2ai/portfolio-image-2-en.png",
+                "title": {
+                    "deskTop": "AI <span>Chatbot</span>",
+                    "mobile": [
+                        "Utilizing ChatGPT",
+                        "AI Chatbot"
+                    ]
+                },
+                "desc": "Creating chatbot modules with various features and characters using Prompt Engineering."
+            },
+            {
+                "imgUrl": "https://kr.object.ncloudstorage.com/cosign/lab2ai/portfolio-image-3.png",
+                "title": {
+                    "deskTop": "Data <span>analysis</span>",
+                    "mobile": [
+                        "Analyze data for",
+                        "real-time market detection"
+                    ]
+                },
+                "desc": "Developing a report on the health and trustworthiness of coins, collecting and analyzing keywords related to news, social media, and economic indicators."
+            },
+            {
+                "imgUrl": "https://kr.object.ncloudstorage.com/cosign/lab2ai/portfolio-image-4-en.png",
+                "title": {
+                    "deskTop": "<span>KOTRA AI</span> report",
+                    "mobile": [
+                        "KOTRA AI report"
+                    ]
+                },
+                "desc": "Participated in KOTRA's big data platform project, providing analysis of markets by country, promising overseas markets, and customized information for each company."
+            }
+        ]
+    },
+    "history": [
+        {
+            "date": "2023-11",
+            "text": [
+                {
+                    "title": "Selected as a research collaboration institution specializing in leading-edge deep tech startups (Bigglz)"
+                },
+                {
+                    "title": "Exported AI persona news content to the global exchange Zoomex"
+                },
+                {
+                    "title": "Awarded in the financial sector at the 2023 Korea AI Awards hosted by IT Chosun."
+                }
+            ]
+        },
+        {
+            "date": "2023-08",
+            "text": [
+                {
+                    "title": "Collaborated with Coinness to feature AI news and chart pattern capture content on the website."
+                }
+            ]
+        },
+        {
+            "date": "2023-05",
+            "text": [
+                {
+                    "title": "Participated in Seoul Money Show.",
+                    "desc": [
+                        "Registered with the Korea FinTech Industry Association, participated in the 2023 Seoul Money Show."
+                    ]
+                }
+            ]
+        },
+        {
+            "date": "2023-02",
+            "text": [
+                {
+                    "title": "Launched the COSIGN app",
+                    "desc": [
+                        "Launched of AI Market Detection Service, COSIGN Mobile App."
+                    ]
+                },
+                {
+                    "title": "Signed an MOU for collaborative research on Bigglz APP chatbot technology with a partner company."
+                }
+            ]
+        },
+        {
+            "date": "2023-01",
+            "text": [
+                {
+                    "title": "Filed a patent for an AI similar pattern algorithm"
+                }
+            ]
+        },
+        {
+            "date": "2022-12",
+            "text": [
+                {
+                    "title": "Selected as a beneficiary of the Data Industry Cultivation Support Program and recognized as an Excellent Company",
+                    "desc": [
+                        "Development of AI Reports for Cryptocurrencies Using Global News Data and On-chain Transaction Data."
+                    ]
+                }
+            ]
+        },
+        {
+            "date": "2022-11",
+            "text": [
+                {
+                    "title": "Won the Korea AI Awards in 2022",
+                    "desc": [
+                        "Awarded in the financial sector at the 2022 Korea AI Awards hosted by IT Chosun."
+                    ]
+                }
+            ]
+        },
+        {
+            "date": "2022-07",
+            "text": [
+                {
+                    "title": "Joined the Korea Fintech Industry Association (KORFIN)"
+                }
+            ]
+        },
+        {
+            "date": "2022-04",
+            "text": [
+                {
+                    "title": "Lab2AI and Asia Economy jointly organized a competition on Digital Asset Value AI Prediction Modeling",
+                    "desc": [
+                        "Conducted a digital asset value AI prediction modeling contest jointly organized by Lab2AI and Asia Economy."
+                    ]
+                }
+            ]
+        },
+        {
+            "date": "2022-03",
+            "text": [
+                {
+                    "title": "Selected as a support SeongNam Industry Promotion Agency",
+                    "desc": [
+                        "Selected by the Seongnam Industrial Promotion Agency for 'Online Platform Utilization for Product Sales and Marketing Support.'"
+                    ]
+                }
+            ]
+        },
+        {
+            "date": "2022-01",
+            "text": [
+                {
+                    "title": "Selected as Excellent Youth Employment Company"
+                }
+            ]
+        },
+        {
+            "date": "2021",
+            "text": [
+                {
+                    "title": "LG U+ Digital Dream 9 Wins the Grand Prize for 'AI Problem Solver' Platform",
+                    "desc": [
+                        "Proposed an exciting service upgrade to enhance the energy of the LG U+ mobile app dedicated to baseball broadcasting."
+                    ]
+                }
+            ]
+        },
+        {
+            "date": "2019",
+            "text": [
+                {
+                    "title": "KOTRA Automatic Basic Report on Overseas Market Trends",
+                    "desc": [
+                        "Launched services for AI-analyzed market insights, covering country-specific data, promising markets by product, and customized information for businesses in KOTRA's Big Data platform project."
+                    ]
+                }
+            ]
+        },
+        {
+            "date": "2018",
+            "text": [
+                {
+                    "title": "KBO Futures League (South Korea baseball second division league) Robot News",
+                    "desc": [
+                        "Published articles generated using robot journalism technology on the KBO website."
+                    ]
+                }
+            ]
+        },
+        {
+            "date": "2017",
+            "text": [
+                {
+                    "title": "Establishment of Lab2AI Company"
+                }
+            ]
+        }
+    ],
+    "media": {
+        "items": [
+            {
+                "date": "2024-01-23",
+                "text": "Lab2AI CEO, Appoints as New Member of ‘Gyeonggi Province Big Data Committee’",
+                "href": "http://www.kdpress.co.kr/news/articleView.html?idxno=126026"
+            },
+            {
+                "date": "2024-01-04",
+                "text": "Lab2AI AI Model Competes Against Humans in the ZOOMEX Digital Asset Investment Competition",
+                "href": "https://it.chosun.com/news/articleView.html?idxno=2023092107702"
+            },
+            {
+                "date": "2023-11-08",
+                "text": "Lab2AI Exports 'AI Persona News' to Global Cryptocurrency Exchanges",
+                "href": "https://it.chosun.com/news/articleView.html?idxno=2023092104046"
+            },
+            {
+                "date": "2023-08-28",
+                "text": "Lab2AI Provide cryptocurrencies News in an Easy and Entertaining Manner used ChatGPT",
+                "href": "https://it.chosun.com/news/articleView.html?idxno=2023082801836"
+            },
+            {
+                "date": "2023-06-15",
+                "text": "Lab2AI “AI Analyzing First-Half cryptocurrency Market, Achieving 95% Accuracy in Bearish”",
+                "href": "https://it.chosun.com/news/articleView.html?idxno=2023061501878"
+            },
+            {
+                "date": "2023-05-17",
+                "text": "Try cryptocurrency Predictions on COSIGN!",
+                "href": "http://www.sentv.co.kr/news/view/654948"
+            },
+            {
+                "date": "2023-04-14",
+                "text": "Lab2AI makes good use of ChatGPT for cryptocurrency predictions.",
+                "href": "https://www.mk.co.kr/news/business/10712728"
+            },
+            {
+                "date": "2023-03-22",
+                "text": "Lab2AI Found Correlation Between Consumer Price Index and BTC",
+                "href": "https://it.chosun.com/site/data/html_dir/2023/03/22/2023032201792.html"
+            },
+            {
+                "date": "2023-02-01",
+                "text": "Lab2AI Launches 'COSIGN' App Providing cryptocurrency Market Analysis and AI Information for Investment",
+                "href": "https://n.news.naver.com/mnews/article/022/0003779120?sid=101"
+            },
+            {
+                "date": "2022-12-25",
+                "text": "Gyeonggi Province's support for the development of the data industry is yielding visible results…",
+                "href": "https://www.aitimes.kr/news/articleView.html?idxno=26923"
+            },
+            {
+                "date": "2022-12-01",
+                "text": "Lab2AI Applies for a Patent for Stock and Cryptocurrency Price Prediction Algorithm",
+                "href": "https://it.chosun.com/site/data/html_dir/2022/12/01/2022120102409.html"
+            },
+            {
+                "date": "2022-11-24",
+                "text": "Lab2AI addresses information asymmetry in the cryptocurrency market through the use of AI",
+                "href": "https://it.chosun.com/site/data/html_dir/2022/11/24/2022112401492.html"
+            },
+            {
+                "date": "2022-09-18",
+                "text": "We aim to enhance in cryptocurrency price predictions through the use of AI",
+                "href": "https://n.news.naver.com/mnews/article/018/0005319743?sid=105"
+            },
+            {
+                "date": "2022-08-05",
+                "text": "Please refrain from trading cryptocurrencies while going to work",
+                "href": "https://n.news.naver.com/mnews/article/018/0005284875?sid=105"
+            },
+            {
+                "date": "2022-07-22",
+                "text": "Lab2I, an AI-based data analysis company",
+                "href": "https://it.chosun.com/site/data/html_dir/2022/07/22/2022072200473.html"
+            },
+            {
+                "date": "2022-07-19",
+                "text": "Kakao Pay and DooNaMu, Lab2AI joins the ranks of leading FinTech...",
+                "href": "https://n.news.naver.com/mnews/article/009/0004993407?sid=101"
+            },
+            {
+                "date": "2022-07-03",
+                "text": "AI Service for Predicting Cryptocurrency Prices Released... How Accurate Is It?",
+                "href": "https://n.news.naver.com/mnews/article/024/0000075909?sid=101"
+            },
+            {
+                "date": "2022-06-27",
+                "text": "Lab2AI Launches 'COSIGN' Platform Predicting Cryptocurrency with AI",
+                "href": "https://it.chosun.com/site/data/html_dir/2022/06/27/2022062701701.html"
+            },
+            {
+                "date": "2022-05-21",
+                "text": "Lab2AI CEO ‘There are Clearly Advantages to AI Analysis in the Cryptocurrency Market’",
+                "href": "https://n.news.naver.com/mnews/article/277/0005092082?sid=101"
+            },
+            {
+                "date": "2020-11-20",
+                "text": "Philips Collaborates with 'MEZU,' LG U+ Partners with 'Lab2AI'... Wins 'Digital Dream 9",
+                "href": "https://n.news.naver.com/mnews/article/421/0005003266?sid=101"
+            },
+            {
+                "date": "2018-07-24",
+                "text": "Baseball News in a Snap... Do You Know 'K-BOT' Reporter?",
+                "href": "https://sports.news.naver.com/news.nhn?oid=020&aid=0003159949"
+            }
+        ]
+    },
+    "youtube": [
+        {
+            "id": "O1kpvICe73E",
+            "label": "Does AI yield higher returns in investments?"
+        },
+        {
+            "id": "WFizfdOBXss",
+            "label": "All signs of the coin, COSIGN"
+        },
+        {
+            "id": "SGvWEOUiIZE",
+            "label": "AI Cryptocurrency Price Prediction, COSIGN"
+        }
+    ],
+    "company": {
+        "title": [
+            "A company that makes valuable information",
+            "<span class='gradient-text'>through AI technology.</span>"
+        ],
+        "ceo": {
+            "title": "CEO",
+            "name": "JongHwan Oh",
+            "image": "https://kr.object.ncloudstorage.com/cosign/lab2ai/ceo.png",
+            "moImage": "https://kr.object.ncloudstorage.com/cosign/lab2ai/mo-ceo.png",
+            "education": [
+                "Seoul National University | Graduated with a degree in Electrical Engineering",
+                "Seoul National University | Master's degree in Communication",
+                "Seoul National University | Completed a Ph.D. in Engineering at the School of Convergence Science (Human-Computer Interaction)",
+                "Lecturer in the Department of Media and Information at Seoul National University",
+                "Developed AI-based automated fact-checking technology for the Viewer Media Foundation.",
+                "Created 'SBS Nari-bot', a real-time chatbot providing election information.",
+                "Pioneered the use of robot journalism technology in South Korea for disseminating securities articles.",
+                "Announced baseball articles applying robot journalism technology."
+            ],
+            "thesis": {
+                "title": "Papers",
+                "items": [
+                    [
+                        "A Research on Developing a Card News System Based",
+                        "on News Generation Algorithm (2020)"
+                    ],
+                    [
+                        "A Research on Developing a Card News System based on News Generation Algorithm (2020)"
+                    ],
+                    [
+                        "Automated news generation for tv program ratings(2016)"
+                    ],
+                    [
+                        "Generating highlights automatically from text-reading",
+                        "behaviors on mobile devices (2014)"
+                    ]
+                ]
+            }
+        },
+        "idealTalent": {
+            "title": "Core Values",
+            "contents": [
+                {
+                    "icon": "https://kr.object.ncloudstorage.com/cosign/lab2ai/icon/i-talent-1.png",
+                    "label": "Communication",
+                    "desc": [
+                        "Someone who freely expresses opinions and communicates",
+                        "openly in a horizontal decision-making process."
+                    ]
+                },
+                {
+                    "icon": "https://kr.object.ncloudstorage.com/cosign/lab2ai/icon/i-talent-2.png",
+                    "label": "Responsibility",
+                    "desc": [
+                        "Someone who takes responsibility for performing",
+                        "tasks they have decided and taken on."
+                    ]
+                },
+                {
+                    "icon": "https://kr.object.ncloudstorage.com/cosign/lab2ai/icon/i-talent-3.png",
+                    "label": "Growth",
+                    "desc": [
+                        "Someone who strives for personal development",
+                        "while contributing to the organization's advancement."
+                    ]
+                }
+            ]
+        },
+        "workLife": {
+            "title": "Work & Life",
+            "subTitle": "Our Working Style",
+            "contents": [
+                {
+                    "label": "Support for recharging",
+                    "items": [
+                        "11-month working system",
+                        "Self-development support",
+                        "Long-term service leave",
+                        "Birthday leave, holiday gifts"
+                    ]
+                },
+                {
+                    "label": "Engaging Work Environment",
+                    "items": [
+                        "Flexible working hours, optional telecommuting",
+                        "Lunch and dinner provided",
+                        "Snacks provided, access to in-house café",
+                        "Parking support"
+                    ]
+                }
+            ]
+        }
+    },
+    "footer": {
+        "company": "Lab2AI Corp.",
+        "address": "41, Beolmal-ro 50beon-gil, Bundang-gu, Seongnam-si, Gyeonggi-do, Republic of Korea"
+    }
+}

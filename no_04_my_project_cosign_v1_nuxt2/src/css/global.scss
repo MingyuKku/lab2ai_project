@@ -1,0 +1,92 @@
+$black: #000;
+$main_font_color: #1D1D1D;
+$main_color0: #F53B57;  //사용중
+$main_color1: #CF3639;  //테스트
+$main_color2: #00D8D6;  //사용중
+
+$main_color3: #725CE4;
+
+$special_color: #E4E9E9;
+$white: #fff;
+$middleGray: #555;
+$middleGray2: #777;
+$lightGray: #999;
+$lightGray2: #ddd;
+$lightBeige: #f3f3f3;
+$lightBeige2: #f1f1f1;
+$whiteBeige: #fafafa;
+$backgroundColor: #F2F3F6;
+
+@mixin flex_aline_center {
+  display: flex;
+  align-items: center;
+}
+@mixin flex_aline_justify_center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin notoSans {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+@mixin radiusHidden {
+  border-radius: 50%;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+
+
+
+
+//스위트얼럿 css
+.swal2-container.swal2-center {
+  .swal2-popup.swal2-modal {
+    padding: 30px 24px;
+    .swal2-header {
+      >h2 {
+        font-size: 19px;
+        >span {
+          margin-left: 5px;
+          color: $main_color0;
+        }
+      }
+    }
+    .swal2-content {
+      @include notoSans();
+      font-size: 16px;
+      line-height: 1.7;
+      font-weight: 400;
+      color: $main_font_color;
+    }
+    .swal2-actions {
+      >button {
+        @include notoSans();
+        width: 100px;
+        white-space: nowrap;
+        text-align: center;
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 15px;
+        &:hover {
+          opacity: 0.85;
+        }
+      }
+      .swal2-confirm {
+        margin-right: 20px;
+        background: $main_color0;
+        color: $white;
+      }
+      .swal2-cancel {
+        background: $lightGray2;
+        color: $middleGray2;
+      }
+    }
+  }
+}
+
+
+  

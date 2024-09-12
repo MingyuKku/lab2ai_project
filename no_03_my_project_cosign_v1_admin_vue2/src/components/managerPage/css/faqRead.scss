@@ -1,0 +1,104 @@
+.faqRead_wrap {
+  background: $white;
+  @include boxShadow();
+  .header {
+    padding: 34px;
+    text-align: center;
+    background: rgba($color: $main_color0, $alpha: 0.6);
+    h1 {
+      font-size: 19px;
+      font-weight: 600;
+      color: $white;
+    }
+  }
+  .content {
+    padding: 40px;
+    .table_wrap {
+      border-top: 2px solid $lightGray2;
+      border-bottom: 2px solid $lightGray2;
+      >table {
+        width: 100%;
+        border-collapse: collapse;
+        >tr {
+          border-bottom: 1px solid $lightGray2;
+          &:last-child {
+            border-bottom: none;
+          }
+          &.cont {
+            >td {
+              padding: 5px 0;
+              >div {
+                width: 100%;
+                height: 100%;
+                padding: 16px;
+                background: $backgroundColor;
+              }
+            }
+          }
+          >td {
+            padding: 16px 0;
+            font-size: 14px;
+            font-weight: 400;
+            color: $middleGray;
+            &:not(.td_tit .td_viewer) {
+              width: 80%;
+              padding-left: 14px;
+              font-weight: 500;
+            }
+            &.td_tit {
+              width: 20%;
+              text-align: center;
+              font-weight: 400;
+              color: $main_font_color;
+            }
+            &.td_tit_cont {
+              text-align: justify;
+            }
+            &.td_viewer {
+              .viewer_wrap {
+                table {
+                  @include notoSans();
+                  thead {
+                    tr {
+                      th {
+                        background-color: $lightGray2;
+                        p {
+                          color: $main_font_color;
+                        }
+                      }
+                    }
+                  }
+                  tbody {
+                    tr {
+                      td {
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .buttons {
+      margin-top: 14px;
+      button {
+        @include notoSans();
+        @include btn_sub();
+        float: right;
+        &:first-child {
+          margin-left: 14px;
+        }
+        &:last-child {
+          padding: 8px 12px;
+        }
+      }
+    }
+    >button {
+      @include notoSans();
+      @include btn_main($margin: 20px auto 0 auto);
+    }
+  }
+}
+

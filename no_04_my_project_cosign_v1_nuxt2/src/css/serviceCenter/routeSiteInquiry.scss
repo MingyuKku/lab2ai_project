@@ -1,0 +1,184 @@
+.routeSiteInquiry_wrap {
+  .header {
+    padding: 34px;
+    text-align: center;
+    background: rgba($color: $main_color0, $alpha: 0.6);
+    h1 {
+      font-size: 21px;
+      font-weight: 600;
+      color: $white;
+    }
+  }
+  .content {
+    padding: 40px 40px 50px 40px;
+    .form {
+      >div {
+        margin-bottom: 30px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        >h2 {
+          font-size: 17px;
+          font-weight: 500;
+          margin-bottom: 14px;
+        }
+        &.email {
+          input {
+            @include notoSans();
+            display: block;
+            width: 400px;
+            padding: 12px 10px;
+            font-size: 16px;
+            font-weight: 400;
+            color: $main_font_color;
+            border: none;
+            border: 1px solid $lightGray2;
+            border-radius: 4px;
+            outline-color: $main_color2;
+            &::placeholder {
+              color: $lightGray;
+            }
+          }
+          .error {
+            text-indent: 10px;
+            font-size: 12px;
+            color: $main_color0;
+            i {
+              font-size: 14px;
+              vertical-align: -1px;
+            }
+          }
+        }
+        &.inquiry_cont {
+          textarea {
+            @include notoSans();
+            display: block;
+            width: 100%;
+            padding: 10px;
+            font-size: 15px;
+            color: $main_font_color;
+            border: none;
+            border: 1px solid $lightGray2;
+            outline-color: $main_color2;
+            resize: vertical;
+            &::placeholder {
+              color: $lightGray;
+            }
+          }
+          .error {
+            text-indent: 10px;
+            font-size: 12px;
+            color: $main_color0;
+            i {
+              font-size: 14px;
+              vertical-align: -1px;
+            }
+          }
+        }
+        &.attachfile_area {
+          .title {
+            @include flex_aline_center();
+            margin-bottom: 14px;
+            h2 {
+              font-size: 17px;
+              font-weight: 500;
+            }
+            >label {
+              display: block;
+              margin-left: 20px;
+              padding:  3px 6px;
+              border: 1px solid $lightGray2;
+              font-size: 13px;
+              color: $middleGray;
+              cursor: pointer;
+            }
+            >input {
+              display: none;
+            }
+            .error {
+              margin-left: 8px;
+              font-size: 12px;
+              color: $lightGray;
+              &.on {
+                color: $main_color0;
+              }
+              i {
+                font-size: 14px;
+                vertical-align: -1px;
+              }
+            }
+          }
+          .attachfileList {
+            @include flex_aline_center();
+            justify-content: space-between;
+            width: 100%;
+            margin-bottom: 5px;
+            padding: 12px;
+            border: 1px solid $lightGray2;
+            .fileName {
+              font-size: 15px;
+              color: $middleGray;
+            }
+            .right {
+              @include flex_aline_center();
+              .fileVolume {
+                font-size: 15px;
+                color: $middleGray2;
+              }
+              .deleteFile {
+                margin: 0 5px 0 20px;
+                color: $middleGray;
+                cursor: pointer;
+              }
+            }
+            
+          }
+        }
+        &.note {
+          @include flex_aline_center();
+          padding: 20px;
+          background: $backgroundColor;
+          .text {
+            width: 25%;
+            p {
+              font-size: 14px;
+              color: $middleGray2;
+              i {
+                margin-right: 3px;
+                font-size: 17px;
+                vertical-align: -2px;
+              }
+            }
+          }
+          >ul {
+            width: 75%;
+            li {
+              list-style: disc;
+              list-style-position: inside;
+              font-size: 13px;
+              line-height: 1.7;
+              color: $middleGray;
+            }
+          }
+        }
+      }
+      button {
+        @include notoSans();
+        display: block;
+        margin: 0 auto;
+        padding: 10px 20px;
+        font-size: 17px;
+        border: none;
+        border-radius: 100px;
+        background: $main_color0;
+        color: $white;
+        cursor: pointer;
+        &:active, &:hover {
+          opacity: 0.9;
+        }
+      }
+    }
+  }
+  
+  
+}

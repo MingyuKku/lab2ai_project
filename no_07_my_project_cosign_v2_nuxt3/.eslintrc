@@ -1,0 +1,31 @@
+{
+    "root": true, // 이 설정 파일이 프로젝트의 최상위에 있음을 ESLint에 알립니다. 이것은 ESLint가 더 상위 디렉토리의 설정 파일을 찾는 것을 중지하게 만듭니다.
+    "extends": [
+        "@nuxtjs/eslint-config-typescript", // Nuxt.js 팀이 제공하는 TypeScript용 ESLint 기본 설정을 확장합니다. 이 설정은 TypeScript 코드를 린트하는 데 필요한 규칙과 설정을 포함합니다.
+        "vue" 
+    ],
+    "env": {
+        // 코드가 실행되는 환경 설정
+        "browser": true, // 브라우저 환경에서 실행
+        "node": true // 노드 환경에서 실행
+    },
+    "rules": {
+        "no-console": "warn", // 콘솔 로그를 사용할 때 경고를 표시합니다.
+        "indent": "off", // 코드의 들여쓰기에 대한 규칙을 비활성화합니다. 개발자가 선호하는 들여쓰기 스타일을 자유롭게 사용할 수 있습니다.
+        "vue/html-indent": "off", // Vue.js의 템플릿 내에서 HTML 태그의 들여쓰기와 자체 닫힘 태그 사용에 대한 규칙을 비활성화합니다
+        "vue/html-self-closing": "off", // Vue.js의 템플릿 내에서 HTML 태그의 들여쓰기와 자체 닫힘 태그 사용에 대한 규칙을 비활성화합니다
+        "space-before-function-paren": "off", // 함수 선언에서 괄호 앞의 공백 사용과 괄호 내부의 공백 사용에 대한 규칙을 비활성화합니다.
+        "space-in-parens": "off", // 함수 선언에서 괄호 앞의 공백 사용과 괄호 내부의 공백 사용에 대한 규칙을 비활성화합니다.
+        "no-lonely-if": "off", // 단독 if 문 사용에 대한 규칙을 비활성화합니다. 이는 if 문이 다른 조건문 내에 포함되지 않고 단독으로 사용될 수 있음을 의미합니다.
+        "import/no-unresolved": "off",
+        "import/no-default-export": "off",
+        "import/default": "off",
+        "import/no-named-as-default-member": "off",
+        "func-call-spacing": "off",
+        "vue/first-attribute-linebreak ": "off",
+        "vue/html-closing-bracket-newline": "off",
+        "vue/multi-word-component-names": "off",
+        "vue/no-v-html": "off",
+        "vue/first-attribute-linebreak": "off"
+    }
+}

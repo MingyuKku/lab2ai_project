@@ -1,0 +1,146 @@
+.progressStateUI_wrap {
+  width: calc(100% - 120px); //양쪽에 60px 여유주기 위해
+  margin: 30px auto 0 auto;
+  height: calc(26px + 45px + 10px); //26 = 아이콘 / 45 = text / 10 = top
+  .inner {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    >div:not(.progressBar) {
+      position: relative;
+      @include flex_aline_center();
+      flex-direction: column;
+      .icon_wrap {
+        background: $white;
+        // border: 6px solid $white;
+        // border-radius: 50%;
+        .icon {
+          @include flex_aline_justify_center();
+          width: 26px;
+          height: 26px;
+          border: 2px solid $lightGray2;
+          border-radius: 50%;
+          img {
+            display: block;
+            width: 16px;
+            height: 16px;
+          }
+          &.on {
+            background: $main_color0;
+            border-color: $main_color0;
+            img {
+
+            }
+          }
+        }
+      }
+      .text_wrap {
+        position: absolute;
+        top: calc(100% + 10px);
+        left: 50%;
+        transform: translateX(-50%);
+        // min-width: 130px;
+        white-space: nowrap;
+        .text {
+          text-align: center;
+          &.revenue {
+            span {
+              color: $main_color0;
+            }
+          }
+          &.ready {
+            span {
+              color: $middleGray;
+            }
+          }
+          &.loss {
+            span {
+              color: #2058EA;
+            }
+          }
+          p {
+            color: $main_font_color;
+            font-size: 15px;
+          }
+          span {
+            color: $middleGray;
+            font-weight: 500;
+            font-size: 14px;
+          }
+        }
+      }
+      &.enter {
+      }
+      &.enter_startPrice {
+        
+      }
+      &.end {
+
+      }
+    }
+    .progressBar {
+      @include flex_aline_center();
+      width: 100%;
+      margin: 0 3px;
+      .dots {
+        position: relative;
+        @include flex_aline_center();
+        justify-content: space-between;
+        width: 100%;
+        height: 6px;
+        transform: skewX(-38deg);
+        background: $lightGray2;
+        // -webkit-background-clip: text;
+        // color: transparent;
+        // background-clip: text;
+        .dot {
+          display: block;
+          width: 5px;
+          height: 100%;
+          background: $white;
+          // font-size: 10px;
+          // text-size-adjust : none;
+          // -webkit-text-size-adjust : none;  /* 크롬, 사파리, 오페라 신버전 */
+          // -ms-text-size-adjust : none;  /* IE */
+          // -moz-text-size-adjust : none;  /* 파이어폭스 */
+          // -o-text-size-adjust : none;  /* 오페라 구버전 */
+          // -webkit-transform: scale(0.9);
+          // color: transparent;
+          &:first-child {
+            position: absolute;
+            left: -1px;
+          }
+          &:last-child {
+            position: absolute;
+            right: -1px;
+          }
+        }
+        
+      }
+      &.beforeEnter {
+        .dots {
+          &.on {
+            background: $main_color0;
+            // -webkit-background-clip: text;
+            // color: transparent;
+            // background-clip: text;
+          }
+        }
+      }
+      &.afterEnter {
+        .dots {
+          // background: linear-gradient(90deg, #f00 0%, #f00 50%, #ddd 50%, #ddd 100%);
+          // -webkit-background-clip: text !important;
+          // color: transparent;
+          // background-clip: text !important;
+          .dot {
+            // &:nth-child(2) {
+            //   position: absolute;
+            //   left: 0px;
+            // }
+          }
+        }
+      }
+    }
+  }
+}

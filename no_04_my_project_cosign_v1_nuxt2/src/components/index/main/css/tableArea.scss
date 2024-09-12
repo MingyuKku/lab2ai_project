@@ -1,0 +1,78 @@
+.tableArea_wrap {
+  width: 100%;
+  background: $white;
+  border-radius: 10px;
+  overflow: hidden;
+  .tabMenuArea {
+    position: relative;
+    padding: 24px 20px calc(24px - 3px) 20px;
+    &::before {
+      position: absolute;
+      display: block;
+      content: '';
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: $main_color2;
+    }
+    ul {
+      li {
+        display: inline-block;
+        margin-right: 16px;
+        border: 1px solid $lightGray2;
+        border-radius: 40px;
+        overflow: hidden;
+        box-shadow: 0 0 0 rgba($color: $main_color0, $alpha: 0.0);
+        transition: all 0.2s ease-in-out;
+        cursor: pointer;
+        &.active {
+          background: $main_color0;
+          border-color: $main_color0;
+          color: $white;
+          box-shadow: 0 8px 24px rgba($color: $main_color0, $alpha: 0.4);
+          .inner_btn {
+            i {
+              color: $white;
+            }
+            h1 {
+              color: $white;
+            }
+          }
+          
+        }
+        .inner_btn {
+          @include flex_aline_center();
+          width: 100%;
+          padding: 14px;
+          i {
+            position: relative;
+            z-index: 1;
+            pointer-events: none;
+            vertical-align: -1px;
+            font-size: 19px;
+            color: $middleGray;
+            transition: 0.2s ease-in-out;
+          }
+          h1 {
+            position: relative;
+            z-index: 1;
+            pointer-events: none;
+            font-size: 16px;
+            font-weight: 500;
+            color: $middleGray2;
+            transition: 0.2s ease-in-out;
+          }
+        }
+      }
+    }
+  }
+  .signListArea {
+    .newPredictSignList {
+
+    }
+    .hitSignList {
+
+    }
+  }
+}

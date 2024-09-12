@@ -1,0 +1,14 @@
+{
+    // https://nuxt.com/docs/guide/concepts/typescript
+    "extends": "./.nuxt/tsconfig.json",
+    // "compilerOptions": {
+    //     "baseUrl": ".",
+    //     "paths": {
+    //         "sockjs-client": ["types/sockjs-client.d.ts"]
+    //     },
+    //     "typeRoots": [
+    //         "./node_modules/@types",
+    //         "./types"
+    //     ],
+    // }
+}

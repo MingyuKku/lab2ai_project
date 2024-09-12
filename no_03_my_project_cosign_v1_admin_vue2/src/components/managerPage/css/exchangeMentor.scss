@@ -1,0 +1,236 @@
+.exchangeMentor_wrap {
+  background: $white;
+  @include boxShadow();
+    .header {
+      padding: 34px;
+      text-align: center;
+      background: rgba($color: $main_color0, $alpha: 0.6);
+      h1 {
+        font-size: 19px;
+        font-weight: 600;
+        color: $white;
+      }
+    }
+    .content {
+      padding: 20px 40px 40px 40px;
+      .filter_wrap {
+        @include flex_aline_center();
+        margin-bottom: 20px;
+        .exchangeRadio {
+          margin-right: 10px;
+          padding: 8px 14px;
+          border: 1px solid $lightGray2;
+          transition: border 0.2s ease-in-out;
+          &:hover {
+            border-color: $lightGray;
+          }
+          label {
+            margin-right: 14px;
+            cursor: pointer;
+            &:last-child {
+              margin-right: 0;
+            }
+            input {
+              width: 13px;
+              height: 13px;
+              margin-right: 4px;
+              cursor: pointer;
+              &:checked + span {
+                color: $middleGray;
+              }
+            }
+            span {
+              vertical-align: 1px;
+              font-size: 14px;
+              font-weight: 500;
+              color: $lightGray;
+              user-select: none;
+            }
+          }
+        }
+        .select_wrap {
+          position: relative;
+          select {
+            @include notoSans();
+            width: 100%;
+            padding: 10px 28px 10px 14px;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            border-color: $lightGray2;
+            outline-color: $lightGray;
+            color: $lightGray;
+            font-size: 14px;
+            font-weight: 500;
+            option {
+              width: 100%;
+              background: $backgroundColor;
+            }
+            &:focus {
+              color: $middleGray;
+              & + i {
+                color: $lightGray;
+              }
+              
+            }
+          }
+          i {
+            position: absolute;
+            pointer-events: none;
+            top: 15px;
+            right: 10px;
+            font-size: 14px;
+            color: $lightGray2;
+          }
+        }
+      }
+      .exchange_table_wrap {
+        position: relative;
+        .shadow {
+          position: absolute;
+          width: 50px;
+          height: 100%;
+          top: 0;
+          user-select: none;
+          &.left {
+            left: 0;
+            background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+            &.off {
+              background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 100%);
+            }
+          }
+          &.right {
+            right: 0;
+            background: linear-gradient(270deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+            &.off {
+              background: linear-gradient(270deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 100%);
+            }
+          }
+        }
+        .exchange_table {
+          overflow-x: auto;
+          border-bottom: 1px solid $lightGray2;
+          &::-webkit-scrollbar {
+            height: 5px;
+          }
+          &::-webkit-scrollbar-thumb {
+            background: $lightGray2;
+            border-radius: 10px;
+            &:hover {
+              background: $lightGray;
+            }
+          }
+          
+          .table_title {
+              min-width: 1200px;
+              // position: sticky;
+              // position: -webkit-sticky;
+              // top: 59px;
+              // z-index: 10;
+              white-space: nowrap;
+              border-top: 1px solid $lightGray;
+              border-bottom: 1px solid $lightGray;
+              ul {
+                padding: 16px;
+                font-size: 15px;
+                font-weight: 500;
+                color: $main_font_color;
+                li {
+                  display: inline-block;
+                  // overflow: hidden;
+                  // text-overflow: ellipsis;
+                  // white-space: nowrap;
+                  text-align: center;
+                    
+                  &.tit_subSeqId {
+                      width: 6%;
+                  }
+                  &.tit_mentor {
+                      width: 11%;
+                  }
+                  &.tit_exchange {
+                      width: 7%;
+                  }
+                  &.tit_coin {
+                      width: 12%;
+                  }
+                  &.tit_startPrice {
+                      width: 8%;
+                  }
+                  &.tit_targetPrice {
+                      width: 8%;
+                  }
+                  &.tit_cutPrice {
+                      width: 8%;
+                  }
+                  &.tit_startTime {
+                      width: 11%;  
+                  }
+                  &.tit_endTime {
+                      width: 11%;  
+                  }
+                  &.tit_expiration {
+                      width: 6%;
+                  }
+                  &.tit_state {
+                      width: 6%;
+                  }
+                  &.tit_earning {
+                      width: 6%;
+                  }
+                }
+              }
+            } //main_head
+            .table_list {
+              // position: relative;
+              min-width: 1200px;
+              .totalSignList_wrap {
+                width: 100%;
+                .totalSignList {
+                  &:nth-child(2n) {
+                  //   background: $lightBeige2;
+                  }
+                }
+              }
+            }
+        }
+      }
+      .notResigtSignItem {
+        text-align: center
+      }
+      
+      .pagination_wrap {
+        @include flex_aline_justify_center();
+        margin-top: 24px;
+        .pagination_qna {
+          @include flex_aline_center();
+          .page_num {
+            display: block;
+            margin: 3px;
+            &:not(.disabled) {
+              a {
+                @include flex_aline_justify_center();
+                min-width: 28px;
+                min-height: 28px;
+                padding: 2px;
+                font-size: 15px;
+                font-weight: 400;
+                color: $lightGray;
+              }
+            }
+            &.active {
+              a {
+                font-weight: 600;
+                color: $main_font_color;
+              }
+            }
+          }
+        }
+        .nav {
+          a {
+            color: $lightGray;
+          }
+        }
+      }
+    }
+}

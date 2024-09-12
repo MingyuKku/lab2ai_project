@@ -1,0 +1,187 @@
+.routeMyQuestion_wrap {
+  .header {
+    padding: 34px;
+    text-align: center;
+    background: rgba($color: $main_color0, $alpha: 0.6);
+    h1 {
+      font-size: 21px;
+      font-weight: 600;
+      color: $white;
+    }
+  }
+  .loginUser {
+    padding: 40px;
+    .inner {
+      opacity: 0;
+      min-height: calc(58px * 5);
+      &.show {
+        opacity: 1;
+        transition: opacity 0.3s ease-in-out;
+      }
+      .list {
+        &:last-child {
+          .clickContent {
+            border-bottom-color: $lightGray2;
+          }
+        }
+        .clickContent {
+          @include flex_aline_center();
+          border-top: 1px solid $lightGray2;
+          border-bottom: 1px solid transparent;
+          transition: all 0.3s ease-in-out;
+          cursor: pointer;
+          >p {
+            display: block;
+            padding: 16px 0;
+            text-align: center;
+            font-size: 15px;
+            font-weight: 500;
+            color: $main_font_color;
+            &.tit {
+              width: 62%;
+              text-align: left;
+              text-indent: 16px;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+              span {
+                font-size: 16px;
+                font-weight: 500;
+                color: $main_color0;
+              }
+            }
+            &.time {
+              width: 15%;
+              color: $middleGray;
+              font-weight: 400;
+            }
+            &.ck {
+              width: 15%;
+              font-weight: 500;
+              color: $middleGray2
+              ;
+              &.yes {
+                color: $main_color0;
+              }
+            }
+            &.accordion_btn {
+              width: 8%;
+              i {
+                transition: transform 0.3s ease-in-out;
+              }
+            }
+          }
+          &.show {
+            // background: $lightBeige;
+            border-bottom-color: $lightGray2;
+            .accordion_btn {
+              i {
+                transform: rotate(180deg);
+              }
+            }
+          }
+        }
+        .accordionContent {
+          height: 0;
+          padding: 0 14px;
+          margin: 0;
+          overflow: hidden;
+          background: transparent;
+          transition: all 0.3s ease-in-out;
+          &.show {
+            margin: 5px 0;
+            background: $backgroundColor;
+          }
+          .viewer_wrap {
+            // padding-bottom: 12px;
+            .viewer {
+              margin: 14px 0;
+              &.qnaViewer {
+                padding-bottom: 14px;
+                border-bottom: 1px solid $lightGray2;
+              }
+              &.anwViewer {
+  
+              }
+            }
+            .nonAnswer {
+              margin: 14px 0;
+              >p {
+                font-size: 14px;
+                color: $middleGray2;
+              }
+            }
+          }
+          .attachFiles {
+            @include flex_aline_center();
+            margin: 14px 0;
+            &:nth-child(2) {
+              padding-top: 14px;
+              border-top: 1px solid $lightGray2;
+            }
+            h2 {
+              font-size: 14px;
+              font-weight: 500;
+              color: $lightGray;
+            }
+            p {
+              margin-left: 10px;
+              font-size: 14px;
+              font-weight: 400;
+              a {
+                text-decoration: underline;
+                color: $middleGray2;
+              }
+            }
+          }
+        }
+      }
+    }
+    
+    .nonList {
+      padding: 14px;
+      border-top: 1px solid $lightGray2;
+      border-bottom: 1px solid $lightGray2;
+      font-weight: 400;
+      font-size: 15px;
+      color: $middleGray;
+    }
+
+    .pagination_wrap {
+      @include flex_aline_justify_center();
+      margin-top: 24px;
+      .pagination_qna {
+        @include flex_aline_center();
+        .page_num {
+          display: block;
+          margin: 3px;
+          &:not(.disabled) {
+            a {
+              @include flex_aline_justify_center();
+              min-width: 28px;
+              min-height: 28px;
+              padding: 2px;
+              font-size: 15px;
+              font-weight: 400;
+              color: $lightGray;
+            }
+          }
+          &.active {
+            a {
+              font-weight: 600;
+              color: $main_font_color;
+            }
+          }
+        }
+      }
+    }
+  }
+  .nonlogin {
+    @include flex_aline_justify_center();
+    padding: 120px 0;
+    .inner {
+      width: 450px;
+      padding: 50px 50px 30px 50px;
+    }
+  }
+}

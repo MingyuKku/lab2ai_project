@@ -1,0 +1,27 @@
+@font-face {
+	font-family: 'SpoqaHanSansNeo';
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+	src: local('SpoqaHanSansNeo-Regular'),
+		 url('./SpoqaHanSansNeo-Regular.woff2') format('woff2'),
+		 url('./SpoqaHanSansNeo-Regular.woff') format('woff');
+}
+@font-face {
+	font-family: 'SpoqaHanSansNeo';
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+	src: local('SpoqaHanSansNeo-Medium'),
+		 url('./SpoqaHanSansNeo-Medium.woff2') format('woff2'),
+		 url('./SpoqaHanSansNeo-Medium.woff') format('woff');
+}
+@font-face {
+	font-family: 'SpoqaHanSansNeo';
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+	src: local('SpoqaHanSansNeo-Bold'),
+		 url('./SpoqaHanSansNeo-Bold.woff2') format('woff2'),
+		 url('./SpoqaHanSansNeo-Bold.woff') format('woff');
+}

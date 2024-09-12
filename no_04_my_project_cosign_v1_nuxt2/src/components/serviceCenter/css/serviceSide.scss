@@ -1,0 +1,39 @@
+.serviceSide_wrap {
+  .title {
+    padding-right: 40px;
+    h1 {
+      padding: 24px;
+      font-size: 24px;
+      font-weight: 600;
+      border-bottom: 1px solid $lightGray2;
+      color: $main_font_color;
+      cursor: pointer;
+      // a {
+      //   color: $main_font_color;
+      // }
+    }
+  }
+  .side_menu {
+    padding: 20px 40px 30px 40px;
+    ul {
+      li {
+        padding: 10px 0;
+        font-size: 17px;
+        font-weight: 500;
+        color: $main_font_color;
+        cursor: pointer;
+        // a {
+        //   font-size: 17px;
+        //   font-weight: 500;
+        //   color: $main_font_color;
+        // }
+        &.active {
+          color: $main_color0;
+          // a {
+          //   color: $main_color0;
+          // }
+        }
+      }
+    }
+  }
+}

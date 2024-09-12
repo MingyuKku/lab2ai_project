@@ -1,0 +1,15 @@
+version: '3.0'
+services:
+  view:
+    build:
+      context: .
+      args:
+        API_URL: https://qa-api.cosign.cc
+        GTM_ID: G-2KN7EEDS2P
+        AUTH_API_URL: https://qa-auth-api.cosign.cc
+    volumes:
+      - ./build:/www/build
+    ports:
+      - 20001:20001
+    environment:
+      - TZ=ETC/UTC

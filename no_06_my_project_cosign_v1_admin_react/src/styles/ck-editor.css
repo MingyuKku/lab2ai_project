@@ -1,0 +1,33 @@
+.ckeditor-wrapper
+.ck.ck-editor
+.ck.ck-editor__main
+.ck.ck-content {
+    border: none;
+}
+
+.ck.ck-editor
+.ck.ck-editor__main
+.ck.ck-content.ck-focused {
+    border-color: #f3475d;
+}
+
+.ckeditor-wrapper
+.ck.ck-editor
+.ck.ck-editor__top {
+    display: none;
+}
+
+
+.ck.ck-content.ck-editor__editable_inline {
+    padding: 4px 12px;
+}
+
+.ck-content {
+    font-size: 0.875em;
+}
+
+.ck-content
+.image.ck-widget
+img {
+    max-width: 500px;
+}

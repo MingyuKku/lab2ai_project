@@ -1,0 +1,15 @@
+version: '3.0'
+services:
+  view:
+    build:
+      context: .
+      args:
+        API_URL: https://dev-api.cosign.cc
+        GTM_ID: G-DQ27XJPBPY
+        AUTH_API_URL: https://token-auth-api.cosign.cc
+    volumes:
+      - ./build:/www/build
+    ports:
+      - 20001:20001
+    environment:
+      - TZ=ETC/UTC

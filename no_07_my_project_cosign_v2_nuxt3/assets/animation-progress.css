@@ -1,0 +1,682 @@
+/* 홈화면 프로그래스바 */
+/* 프로그래스 화살표 2개일 때 */
+.home-sign-progressbar-opacity-change-animation-9step-1 {
+    animation: home-progressbar-opacity-change-animation-9s-1 linear infinite;
+}
+.home-sign-progressbar-opacity-change-animation-9step-2 {
+    animation: home-progressbar-opacity-change-animation-9s-1 linear infinite;
+}
+.home-sign-progressbar-opacity-change-animation-9step-3 {
+    animation: home-progressbar-opacity-change-animation-9s-1 linear infinite;
+}
+.home-sign-progressbar-opacity-change-animation-9step-4 {
+    animation: home-progressbar-opacity-change-animation-9s-2 linear infinite;
+}
+.home-sign-progressbar-opacity-change-animation-9step-5 {
+    animation: home-progressbar-opacity-change-animation-9s-2 linear infinite;
+}
+.home-sign-progressbar-opacity-change-animation-9step-6 {
+    animation: home-progressbar-opacity-change-animation-9s-2 linear infinite;
+}
+.home-sign-progressbar-opacity-change-animation-9step-7 {
+    animation: home-progressbar-opacity-change-animation-9s-3 linear infinite;
+}
+.home-sign-progressbar-opacity-change-animation-9step-8 {
+    animation: home-progressbar-opacity-change-animation-9s-3 linear infinite;
+}
+.home-sign-progressbar-opacity-change-animation-9step-9 {
+    animation: home-progressbar-opacity-change-animation-9s-3 linear infinite;
+}
+
+
+@keyframes home-progressbar-opacity-change-animation-9s-1 {
+    0% {
+        opacity: 1;
+    }
+    33.33% {
+        opacity: 1;
+    }
+    34% {
+        opacity: 0.2;
+    }
+    100% {
+        opacity: 0.2;
+    }   
+}
+@keyframes home-progressbar-opacity-change-animation-9s-2 {
+    0% {
+        opacity: 0.2;
+    }
+    33.33% {
+        opacity: 0.2;
+    }
+    34% {
+        opacity: 1;
+    }
+    66.66% {
+        opacity: 1;
+    }
+    67% {
+        opacity: 0.2;
+    }
+    100% {
+        opacity: 0.2;
+    } 
+}
+@keyframes home-progressbar-opacity-change-animation-9s-3 {
+    0% {
+        opacity: 0.2;
+    }
+    66.66% {
+        opacity: 0.2;
+    }
+    67% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    } 
+}
+
+
+
+/* 프로그래스 화살표 2개일 때 */
+.long-progressbar-color-change-animation-2step-1 {
+    animation: long-progressbar-color-change-animation-3s-1 linear infinite;
+}
+.long-progressbar-color-change-animation-2step-2 {
+    animation: long-progressbar-color-change-animation-3s-2 linear infinite;
+}
+
+.short-progressbar-color-change-animation-2step-1 {
+    animation: short-progressbar-color-change-animation-3s-1 linear infinite;
+}
+.short-progressbar-color-change-animation-2step-2 {
+    animation: short-progressbar-color-change-animation-3s-2 linear infinite;
+}
+
+@keyframes long-progressbar-color-change-animation-2s-1 {
+    0% {
+        color: #D2D4D8;
+    }
+    50% {
+        color: #00B287;
+    }
+    100% {
+        color: #00B287;
+    }   
+}
+
+@keyframes long-progressbar-color-change-animation-2s-2 {
+    0% {
+        color: #D2D4D8;
+    }
+    50% {
+        color: #D2D4D8;
+    }
+    100% {
+        color: #00B287;
+    } 
+}
+
+
+@keyframes short-progressbar-color-change-animation-2s-1 {
+    0% {
+        color: #D2D4D8;
+    }
+    50% {
+        color: #F3475D;
+    }
+    100% {
+        color: #F3475D;
+    }  
+}
+
+@keyframes short-progressbar-color-change-animation-2s-2 {
+    0% {
+        color: #D2D4D8;
+    }
+    50% {
+        color: #D2D4D8;
+    }
+    100% {
+        color: #F3475D;
+    }  
+}
+
+
+/* 프로그래스 화살표 3개일 때 */
+.long-progressbar-color-change-animation-3step-1 {
+    animation: long-progressbar-color-change-animation-3s-1 linear infinite;
+}
+.long-progressbar-color-change-animation-3step-2 {
+    animation: long-progressbar-color-change-animation-3s-2 linear infinite;
+}
+.long-progressbar-color-change-animation-3step-3 {
+    animation: long-progressbar-color-change-animation-3s-3 linear infinite;
+}
+
+
+.short-progressbar-color-change-animation-3step-1 {
+    animation: short-progressbar-color-change-animation-3s-1 linear infinite;
+}
+.short-progressbar-color-change-animation-3step-2 {
+    animation: short-progressbar-color-change-animation-3s-2 linear infinite;
+}
+.short-progressbar-color-change-animation-3step-3 {
+    animation: short-progressbar-color-change-animation-3s-3 linear infinite;
+}
+
+
+@keyframes long-progressbar-color-change-animation-3s-1 {
+    0% {
+        color: #D2D4D8;
+    }
+    33.33% {
+        color: #00B287;
+    }
+    66.66% {
+        color: #00B287;
+    }
+    100% {
+        color: #00B287;
+    }   
+}
+
+@keyframes long-progressbar-color-change-animation-3s-2 {
+    0% {
+        color: #D2D4D8;
+    }
+    33.33% {
+        color: #D2D4D8;
+    }
+    66.66% {
+        color: #00B287;
+    }
+    100% {
+        color: #00B287;
+    } 
+}
+
+@keyframes long-progressbar-color-change-animation-3s-3 {
+    0% {
+        color: #D2D4D8;
+    }
+    33.33% {
+        color: #D2D4D8;
+    }
+    66.66% {
+        color: #D2D4D8;
+    }
+    100% {
+        color: #00B287;
+    }  
+}
+
+
+@keyframes short-progressbar-color-change-animation-3s-1 {
+    0% {
+        color: #D2D4D8;
+    }
+    33.33% {
+        color: #F3475D;
+    }
+    66.66% {
+        color: #F3475D;
+    }
+    100% {
+        color: #F3475D;
+    }  
+}
+
+@keyframes short-progressbar-color-change-animation-3s-2 {
+    0% {
+        color: #D2D4D8;
+    }
+    33.33% {
+        color: #D2D4D8;
+    }
+    66.66% {
+        color: #F3475D;
+    }
+    100% {
+        color: #F3475D;
+    }  
+}
+
+@keyframes short-progressbar-color-change-animation-3s-3 {
+    0% {
+        color: #D2D4D8;
+    }
+    33.33% {
+        color: #D2D4D8;
+    }
+    66.66% {
+        color: #D2D4D8;
+    }
+    100% {
+        color: #F3475D;
+    }  
+}
+
+
+
+/* 프로그래스 화살표 4개일 때 */
+.long-progressbar-color-change-animation-4step-1 {
+    animation: long-progressbar-color-change-animation-4s-1 linear infinite;
+}
+.long-progressbar-color-change-animation-4step-2 {
+    animation: long-progressbar-color-change-animation-4s-2 linear infinite;
+}
+.long-progressbar-color-change-animation-4step-3 {
+    animation: long-progressbar-color-change-animation-4s-3 linear infinite;
+}
+.long-progressbar-color-change-animation-4step-4 {
+    animation: long-progressbar-color-change-animation-4s-4 linear infinite;
+}
+
+.short-progressbar-color-change-animation-4step-1 {
+    animation: short-progressbar-color-change-animation-4s-1 linear infinite;
+}
+.short-progressbar-color-change-animation-4step-2 {
+    animation: short-progressbar-color-change-animation-4s-2 linear infinite;
+}
+.short-progressbar-color-change-animation-4step-3 {
+    animation: short-progressbar-color-change-animation-4s-3 linear infinite;
+}
+.short-progressbar-color-change-animation-4step-4 {
+    animation: short-progressbar-color-change-animation-4s-4 linear infinite;
+}
+
+
+@keyframes long-progressbar-color-change-animation-4s-1 {
+    0% {
+        color: #D2D4D8;
+    }
+    25% {
+        color: #00B287;
+    }
+    50% {
+        color: #00B287;
+    }
+    75% {
+        color: #00B287;
+    }
+    100% {
+        color: #00B287;
+    }   
+}
+
+@keyframes long-progressbar-color-change-animation-4s-2 {
+    0% {
+        color: #D2D4D8;
+    }
+    25% {
+        color: #D2D4D8;
+    }
+    50% {
+        color: #00B287;
+    }
+    75% {
+        color: #00B287;
+    }
+    100% {
+        color: #00B287;
+    }   
+}
+
+@keyframes long-progressbar-color-change-animation-4s-3 {
+    0% {
+        color: #D2D4D8;
+    }
+    25% {
+        color: #D2D4D8;
+    }
+    50% {
+        color: #D2D4D8;
+    }
+    75% {
+        color: #00B287;
+    }
+    100% {
+        color: #00B287;
+    }   
+}
+
+@keyframes long-progressbar-color-change-animation-4s-4 {
+    0% {
+        color: #D2D4D8;
+    }
+    25% {
+        color: #D2D4D8;
+    }
+    50% {
+        color: #D2D4D8;
+    }
+    75% {
+        color: #D2D4D8;
+    }
+    100% {
+        color: #00B287;
+    }   
+}
+
+
+@keyframes short-progressbar-color-change-animation-4s-1 {
+    0% {
+        color: #D2D4D8;
+    }
+    25% {
+        color: #F3475D;
+    }
+    50% {
+        color: #F3475D;
+    }
+    75% {
+        color: #F3475D;
+    }
+    100% {
+        color: #F3475D;
+    }   
+}
+
+@keyframes short-progressbar-color-change-animation-4s-2 {
+    0% {
+        color: #D2D4D8;
+    }
+    25% {
+        color: #D2D4D8;
+    }
+    50% {
+        color: #F3475D;
+    }
+    75% {
+        color: #F3475D;
+    }
+    100% {
+        color: #F3475D;
+    }   
+}
+
+@keyframes short-progressbar-color-change-animation-4s-3 {
+    0% {
+        color: #D2D4D8;
+    }
+    25% {
+        color: #D2D4D8;
+    }
+    50% {
+        color: #D2D4D8;
+    }
+    75% {
+        color: #F3475D;
+    }
+    100% {
+        color: #F3475D;
+    }   
+}
+
+@keyframes short-progressbar-color-change-animation-4s-4 {
+    0% {
+        color: #D2D4D8;
+    }
+    25% {
+        color: #D2D4D8;
+    }
+    50% {
+        color: #D2D4D8;
+    }
+    75% {
+        color: #D2D4D8;
+    }
+    100% {
+        color: #F3475D;
+    }   
+}
+
+
+
+/* 프로그래스 화살표 5개일 때 */
+.long-progressbar-color-change-animation-5step-1 {
+    animation: long-progressbar-color-change-animation-5s-1 linear infinite;
+}
+.long-progressbar-color-change-animation-5step-2 {
+    animation: long-progressbar-color-change-animation-5s-2 linear infinite;
+}
+.long-progressbar-color-change-animation-5step-3 {
+    animation: long-progressbar-color-change-animation-5s-3 linear infinite;
+}
+.long-progressbar-color-change-animation-5step-4 {
+    animation: long-progressbar-color-change-animation-5s-4 linear infinite;
+}
+.long-progressbar-color-change-animation-5step-5 {
+    animation: long-progressbar-color-change-animation-5s-5 linear infinite;
+}
+
+
+.short-progressbar-color-change-animation-5step-1 {
+    animation: short-progressbar-color-change-animation-5s-1 linear infinite;
+}
+.short-progressbar-color-change-animation-5step-2 {
+    animation: short-progressbar-color-change-animation-5s-2 linear infinite;
+}
+.short-progressbar-color-change-animation-5step-3 {
+    animation: short-progressbar-color-change-animation-5s-3 linear infinite;
+}
+.short-progressbar-color-change-animation-5step-4 {
+    animation: short-progressbar-color-change-animation-5s-4 linear infinite;
+}
+.short-progressbar-color-change-animation-5step-5 {
+    animation: short-progressbar-color-change-animation-5s-5 linear infinite;
+}
+
+
+@keyframes long-progressbar-color-change-animation-5s-1 {
+    0% {
+        color: #D2D4D8;
+    }
+    20% {
+        color: #00B287;
+    }
+    40% {
+        color: #00B287;
+    }
+    60% {
+        color: #00B287;
+    }
+    80% {
+        color: #00B287;
+    }   
+    100% {
+        color: #00B287;
+    }
+}
+
+@keyframes long-progressbar-color-change-animation-5s-2 {
+    0% {
+        color: #D2D4D8;
+    }
+    20% {
+        color: #D2D4D8;
+    }
+    40% {
+        color: #00B287;
+    }
+    60% {
+        color: #00B287;
+    }
+    80% {
+        color: #00B287;
+    }   
+    100% {
+        color: #00B287;
+    }
+}
+
+@keyframes long-progressbar-color-change-animation-5s-3 {
+    0% {
+        color: #D2D4D8;
+    }
+    20% {
+        color: #D2D4D8;
+    }
+    40% {
+        color: #D2D4D8;
+    }
+    60% {
+        color: #00B287;
+    }
+    80% {
+        color: #00B287;
+    }   
+    100% {
+        color: #00B287;
+    }
+}
+
+@keyframes long-progressbar-color-change-animation-5s-4 {
+    0% {
+        color: #D2D4D8;
+    }
+    20% {
+        color: #D2D4D8;
+    }
+    40% {
+        color: #D2D4D8;
+    }
+    60% {
+        color: #D2D4D8;
+    }
+    80% {
+        color: #00B287;
+    }   
+    100% {
+        color: #00B287;
+    }
+}
+
+@keyframes long-progressbar-color-change-animation-5s-5 {
+    0% {
+        color: #D2D4D8;
+    }
+    20% {
+        color: #D2D4D8;
+    }
+    40% {
+        color: #D2D4D8;
+    }
+    60% {
+        color: #D2D4D8;
+    }
+    80% {
+        color: #D2D4D8;
+    }   
+    100% {
+        color: #00B287;
+    }
+}
+
+@keyframes short-progressbar-color-change-animation-5s-1 {
+    0% {
+        color: #D2D4D8;
+    }
+    20% {
+        color: #F3475D;
+    }
+    40% {
+        color: #F3475D;
+    }
+    60% {
+        color: #F3475D;
+    }
+    80% {
+        color: #F3475D;
+    }   
+    100% {
+        color: #F3475D;
+    }
+}
+
+@keyframes short-progressbar-color-change-animation-5s-2 {
+    0% {
+        color: #D2D4D8;
+    }
+    20% {
+        color: #D2D4D8;
+    }
+    40% {
+        color: #F3475D;
+    }
+    60% {
+        color: #F3475D;
+    }
+    80% {
+        color: #F3475D;
+    }   
+    100% {
+        color: #F3475D;
+    }
+}
+
+@keyframes short-progressbar-color-change-animation-5s-3 {
+    0% {
+        color: #D2D4D8;
+    }
+    20% {
+        color: #D2D4D8;
+    }
+    40% {
+        color: #D2D4D8;
+    }
+    60% {
+        color: #F3475D;
+    }
+    80% {
+        color: #F3475D;
+    }   
+    100% {
+        color: #F3475D;
+    }
+}
+
+@keyframes short-progressbar-color-change-animation-5s-4 {
+    0% {
+        color: #D2D4D8;
+    }
+    20% {
+        color: #D2D4D8;
+    }
+    40% {
+        color: #D2D4D8;
+    }
+    60% {
+        color: #D2D4D8;
+    }
+    80% {
+        color: #F3475D;
+    }   
+    100% {
+        color: #F3475D;
+    }
+}
+
+@keyframes short-progressbar-color-change-animation-5s-5 {
+    0% {
+        color: #D2D4D8;
+    }
+    20% {
+        color: #D2D4D8;
+    }
+    40% {
+        color: #D2D4D8;
+    }
+    60% {
+        color: #D2D4D8;
+    }
+    80% {
+        color: #D2D4D8;
+    }   
+    100% {
+        color: #F3475D;
+    }
+}

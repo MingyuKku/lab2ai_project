@@ -1,0 +1,26 @@
+[
+    {
+        "relation": [
+            "delegate_permission/common.handle_all_urls"
+        ],
+        "target": {
+            "namespace": "android_app",
+            "package_name": "co.hiing.hiing.dev",
+            "sha256_cert_fingerprints": [
+            "05:6C:BE:25:47:69:DB:C2:C5:B3:DE:BA:45:7D:C7:3F:EA:de:CD:72:84:D5:DE:8F:C7:B9:5D:98:63:22:7C:E5"
+            ]
+        }
+    },
+    {
+        "relation": [
+            "delegate_permission/common.handle_all_urls"
+        ],
+        "target": {
+            "namespace": "android_app",
+            "package_name": "co.hiing.hiing",
+            "sha256_cert_fingerprints": [
+                "3C:7E:8B:84:5B:1D:4B:1C:EC:0C:91:26:20:2E:28:25:A7:28:7F:29:0A:D6:79:12:68:CD:96:BA:F2:31:7A:DE"
+            ]
+        }
+    }
+]

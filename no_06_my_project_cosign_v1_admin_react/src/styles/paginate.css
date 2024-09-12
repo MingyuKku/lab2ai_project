@@ -1,0 +1,5 @@
+a[aria-label="Jump forward"],
+a[aria-label="Jump backward"] {
+    user-select: none;
+    pointer-events: none;
+}

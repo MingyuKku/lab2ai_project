@@ -1,0 +1,39 @@
+.serviceCenter_wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: $backgroundColor;
+  padding-top: calc(74px + 16px);
+  min-height: 100vh;
+  overflow: hidden;
+  main {
+    // min-height: calc(100vh - 148px - 66px);
+    .center {
+      display: flex;
+      align-items: flex-start;
+      width: 1200px;
+      margin: 0 auto;
+      .side {
+        width: 25%;
+        margin-right: 16px;
+        background: $white;
+        box-shadow: 1px 1px 4px rgba($color: #000000, $alpha: 0.2);
+        border-radius: 10px;
+      }
+      .service_main {
+        width: 75%;
+        background: $white;
+        box-shadow: 1px 1px 4px rgba($color: #000000, $alpha: 0.2);
+        border-radius: 10px;
+        overflow: hidden; 
+      }
+    }
+  }
+  .footer_wrap {
+    margin-top: calc(74px + 16px);
+    background: $lightGray2;
+    .foot_wrap {
+      background: $lightGray2;
+    }
+  } 
+}

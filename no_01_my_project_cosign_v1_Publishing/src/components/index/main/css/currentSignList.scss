@@ -1,0 +1,103 @@
+$main_font_color: #1E272E;
+$main_color1: #F53B57;
+$main_color2: #00D8D6;
+
+@mixin flex_aline_center {
+  display: flex;
+  align-items: center;
+}
+@mixin flex_aline_justify_center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.currentSignList_wrap {
+  position: relative;
+  width: 100%;
+  .currentSignList_pagination {
+    position: static;
+    display: flex;
+    left: auto;
+    bottom: auto;
+    >span {
+      position: relative;
+      @include flex_aline_justify_center();
+      width: 210px;
+      height: 54px;
+      margin: 0 10px 0 0;
+      background: #eee;
+      border-radius: 8px 8px 0 0;
+      opacity: 1;
+      overflow: hidden;
+      box-shadow: 1px 1px 4px rgba($color: #000000, $alpha: 0.2);
+      transition: all 0.2s ease-in-out;
+      &::before {
+        position: absolute;
+        display: block;
+        content: '';
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 0;
+        height: 3px;
+        background: $main_color2;
+        transition: width 0.4s cubic-bezier(0.33, 1, 0.68, 1);
+      }
+      &::after {
+        position: absolute;
+        display: block;
+        content: '';
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background: #D2DAE2;
+      }
+      &.swiper-pagination-bullet-active {
+        background: #fff;  
+        &::before {
+          width: 100%;
+        }
+        p {
+          color: $main_font_color;
+        }
+      }
+      >img {
+        display: block;
+        width: 23px;
+        margin-right: 5px;
+      }
+      p {
+        font-size: 16px;
+        font-weight: 500;
+        color: #888;
+      }
+    }
+  } //currentSignList_pagination
+  .swiper {
+    width: 100%;
+    padding: 20px;
+    background: #fff;
+    border-radius: 0 8px 8px 8px;
+    box-shadow: 1px 4px 4px rgba($color: #000000, $alpha: 0.2);
+    .swiper-slide.swiper_currentSignList {
+      width: 100%;
+      &.swiper-slide-active {
+        .inner {
+          display: block;
+        }
+      }
+      &.currectSignList {
+       
+      }
+      &.doingSignList {
+
+      }
+      .inner {
+        display: none;
+      }
+    }
+  } //swiper
+  
+}

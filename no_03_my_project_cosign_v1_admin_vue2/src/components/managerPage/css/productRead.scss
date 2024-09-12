@@ -1,0 +1,154 @@
+.productRead_wrap {
+  background: $white;
+  @include boxShadow();
+  .header {
+    padding: 34px;
+    text-align: center;
+    background: rgba($color: $main_color0, $alpha: 0.6);
+    h1 {
+      font-size: 21px;
+      font-weight: 600;
+      color: $white;
+    }
+  }
+  .content {
+    padding: 40px;
+    .table_wrap {
+      border-top: 2px solid $lightGray2;
+      border-bottom: 2px solid $lightGray2;
+      >table {
+        width: 100%;
+        border-collapse: collapse;
+        >tr {
+          display: block;
+          border-bottom: 1px solid $lightGray2;
+          &:last-child {
+            border-bottom: none;
+          }
+          >div {
+            @include flex_aline_center();
+            td {
+              display: inline-block;
+              &.td_tit {
+                width: 22%;
+                margin-right: 12%;
+                text-align: center;
+                font-size: 15px;
+                font-weight: 500;
+                color: $main_font_color;
+              }
+              &.td_cont {
+                width: 66%;
+                color: $middleGray;
+                font-size: 14px;
+                font-weight: 400;
+                input {
+                  @include notoSans();
+                }
+                button {
+                  @include notoSans();
+                }
+              }
+            }
+            &.read {
+              td {
+                padding: 16px 0;
+              }
+            }
+            
+            &.input {
+              td {
+                padding: 8px 0;
+                &.td_cont {
+                  input {
+                    display: block;
+                    width: 100%;
+                    padding: 10px;
+                    border: none;
+                    outline: none;
+                    border: 1px solid $lightGray2;
+                    border-radius: 4px;
+                  }
+                }
+              }
+            }
+
+            &.radio {
+              td {
+                padding: 5px 0;
+                &.td_cont {
+                  label {
+                    display: block;
+                    font-size: 14px;
+                    margin-bottom: 2px;
+                    &:last-child {
+                      margin-bottom: 0;
+                    }
+                    input {
+                      vertical-align: middle;
+                      margin-right: 4px;
+                    }
+                    span {
+                      vertical-align: middle;
+                    }
+                  }
+                }
+              }
+            }
+
+            &.read-search {
+              td {
+                padding: 5px 0;
+                &.td_cont {
+                  @include flex_aline_center();
+                  justify-content: space-between;
+                  .search {
+                    @include flex_aline_center();
+                    input {
+                      display: block;
+                      padding: 8px 10px;
+                      border: none;
+                      outline: none;
+                      border: 1px solid $lightGray2;
+                      border-radius: 4px;
+                      &.disabled::placeholder {
+                        color: $lightGray2;
+                        user-select: none;
+                      }
+                    }
+                    button {
+                      @include btn_sub($margin: 0 0 0 10px);
+                      &.disabled {
+                        color: $lightGray2;
+                        pointer-events: none;
+                        user-select: none;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+    }
+    .buttons {
+      margin-top: 14px;
+      >button {
+        @include notoSans();
+        @include btn_sub();
+        float: right;
+        &:first-child {
+          margin-left: 14px;
+        }
+        
+      }
+    }
+    >button {
+      @include notoSans();
+      @include btn_main($margin: 20px auto 0 auto);
+    }
+  }
+}
+

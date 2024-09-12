@@ -1,0 +1,38 @@
+$main_font_color: #1E272E;
+$main_color1: #F53B57;
+$main_color2: #00D8D6;
+$white: #fff;
+$middleGray: #555;
+$lightGray: #999;
+
+@mixin flex_aline_center {
+  display: flex;
+  align-items: center;
+}
+@mixin flex_aline_justify_center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.mentorPage_main_wrap {
+  .sign_now {
+    margin-bottom: 16px;
+  }
+  .mobileTabMenu {
+    display: none;
+  }
+} //.main
+
+// @media screen and (max-width: 480px) {
+//   .mentorPage_main_wrap {
+//     padding-bottom: 0px;
+//     .sign_now {
+//       margin-bottom: 12px;
+//     }
+//     .mobileTabMenu {
+//       display: block;
+//     }
+//   }
+// }

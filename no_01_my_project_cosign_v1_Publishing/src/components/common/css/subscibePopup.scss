@@ -1,0 +1,108 @@
+$main_font_color: #1E272E;
+$main_color1: #F53B57;
+$main_color2: #00D8D6;
+$white: #fff;
+$middleGray: #555;
+$lightGray: #999;
+
+@mixin flex_aline_center {
+  display: flex;
+  align-items: center;
+}
+@mixin flex_aline_justify_center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 31;
+  background: rgba($color: #000000, $alpha: 0.8);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  .subscribePopup_wrap {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 32;
+    transform: translate(-50%,-50%);
+    border-radius: 10px;
+    box-shadow: 0 8px 30px rgba($color: #000000, $alpha: 0.2);
+    background: #fff;
+    padding: 30px 40px;
+    .box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .title {
+        text-align: center;
+        h1 {
+          width: 90px;
+          margin: 0 auto 10px auto;
+          img {
+            display: block;
+            width: 100%;
+          }
+        }
+        h2 {
+          font-size: 19px;
+          font-weight: 700;
+          font-weight: 500;//노토산스
+          margin-bottom: 30px;
+        }
+      } //.title
+      .body {
+        p {
+          font-size: 16px;
+          font-weight: 400;
+        }
+      }
+      .buttons {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        margin-top: 50px;
+        button {
+          font-family: 'Noto Sans KR', sans-serif;//노토산스
+          flex: 1;
+          display: block;
+          width: 50%;
+          border: none;
+          font-size: 19px;
+          font-weight: 400;
+          width: 200px;
+          padding: 16px;
+          border-radius: 8px;
+          cursor: pointer;
+          &:first-child {
+            background: #0B35FD;
+            color: #fff;
+          }
+          &:nth-child(2) {
+            background: #fff;
+            margin-left: 16px;
+            border: 1px solid #0B35FD;
+            color: #555;
+          }
+        }
+      } //.buttons
+    } //.box
+    .close {
+      position: absolute;
+      top: 0;
+      right: -50px;
+      font-size: 45px;
+      cursor: pointer;
+      color: #999;
+      transition: color 0.3s ease-in-out;
+      &:hover {
+        color: #fff;
+      }
+    }
+  } //.popup_wrap
+}

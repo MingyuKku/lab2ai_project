@@ -1,0 +1,91 @@
+$main_font_color: #1E272E;
+$main_color1: #F53B57;
+$main_color2: #00D8D6;
+$white: #fff;
+$middleGray: #555;
+$lightGray: #999;
+
+@mixin flex_aline_center {
+  display: flex;
+  align-items: center;
+}
+@mixin flex_aline_justify_center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.blurOut_popup_wrap {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 30px;
+  border-radius: 10px;
+  background: #666666;
+  // &.close {
+  //   display: none;
+  // }
+  .box {
+    display: flex;
+    align-items: center;
+    .bell_img {
+      width: 36px;
+      margin-right: 10px;
+      img {
+        width: 100%;
+        display: block;
+        animation: bell 4s ease-in-out both infinite;
+      }
+    }
+    .body {
+      h2 {
+        font-size: 17px;
+        color: #FFC241;
+        font-weight: 600;
+        font-weight: 500;//노토산스
+        margin-bottom: 6px;
+        br {
+          display: none;
+        }
+      }
+      p {
+        font-size: 14px;
+        color: #FFC241;
+        font-weight: 400;
+      }
+    } //.body
+  }//.box
+  button {
+    font-family: 'Noto Sans KR', sans-serif;
+    display: block;
+    border: none;
+    background: #FFC241;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    font-weight: 500;//노토산스
+    color: #666;
+    display: block;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+    &:hover {
+      background: #fff8e9;
+      color: #666;
+    }
+  }
+} //.blurOut_popup_wrap
+
+@keyframes bell {
+  from {transform: rotate(0);}
+  20% {transform: rotate(6deg);}
+  24% {transform: rotate(-6deg);}
+  28% {transform: rotate(6deg);}
+  32% {transform: rotate(-6deg);}
+  36% {transform: rotate(6deg);}
+  40% {transform: rotate(-6deg);}
+  60% {transform: rotate(6deg);}
+  80% {transform: rotate(-6deg);}
+  to {transform: rotate(0);}
+}

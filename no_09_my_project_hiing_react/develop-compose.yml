@@ -1,0 +1,19 @@
+version: '3.0'
+services:
+  view:
+    image: 834125769529.dkr.ecr.ap-northeast-2.amazonaws.com/test_hiing_webview
+    build: 
+      context: .
+      dockerfile: Dockerfile
+      args:
+        REACT_APP_API_URL: https://test-persona-api.hiing.co/v1.11/
+        REACT_APP_API_CHAT_URL: https://test-persona-chat.hiing.co/
+        REACT_APP_IMAGE_URL: https://d25qtvpmz7kl1a.cloudfront.net
+        # REACT_APP_IMAGE_URL: https://d1cjmzvi2cjhlg.cloudfront.net
+         
+    volumes:
+      - ./build:/www/build
+    ports:
+      - 8090:80
+    environment:
+      - TZ=ETC/UTC

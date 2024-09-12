@@ -1,0 +1,42 @@
+.error_wrap {
+  @include flex_aline_justify_center();
+  width: 100%;
+  min-height: 100vh;
+  background: $backgroundColor;
+  .inner_box {
+    background: $white;
+    padding: 80px 40px;
+    .title {
+      margin-bottom: 40px;
+      text-align: center;
+      .bi_img {
+        display: inline-block;
+        vertical-align: middle;
+        width: 170px;
+        img {
+          display: block;
+          width: 100%;
+        }
+      }
+      h1 {
+        display: inline-block;
+        vertical-align: -6px;
+        // vertical-align: middle;
+        margin-left: 12px;
+        font-size: 36px;
+        font-weight: 600;
+        color: $main_font_color;
+      }
+    }
+    .info_content {
+      background: $backgroundColor;
+      padding: 40px;
+      p {
+        line-height: 2;
+        font-size: 15px;
+        font-weight: 500;
+        color: $middleGray;
+      }
+    }
+  }
+}

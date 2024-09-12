@@ -1,0 +1,179 @@
+.noticeRegist_wrap {
+  background: $white;
+  @include boxShadow();
+  .header {
+    padding: 34px;
+    text-align: center;
+    background: rgba($color: $main_color0, $alpha: 0.6);
+    h1 {
+      font-size: 19px;
+      font-weight: 600;
+      color: $white;
+    }
+  }
+  .content {
+    padding: 40px;
+    .inner {
+      >div {
+        margin-bottom: 30px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        >h2 {
+          margin-bottom: 14px;
+          font-size: 16px;
+          font-weight: 500;
+          color: $main_font_color;
+        }
+        >span {
+          display: block;
+          margin-top: 5px;
+          text-indent: 5px;
+          color: $main_color0;
+          font-size: 11px;
+          font-weight: 400;
+          >i {
+            margin-right: 2px;
+            font-size: 14px;
+            vertical-align: -1px;
+          }
+        }
+        &.title {
+          >input {
+            @include notoSans();
+            display: block;
+            width: 100%;
+            border: none;
+            border: 1px solid $lightGray2;
+            border-radius: 4px;
+            outline-color: $lightGray;
+            padding: 12px;
+            font-size: 14px;
+            font-weight: 500;
+            color: $main_font_color;
+            &::placeholder {
+              color: $lightGray;
+              font-weight: 400;
+            }
+          }
+        }
+        &.noticeContent {
+          .toastEditor_wrap {
+            width: 100%;
+            padding: 0;
+            .toastEditor {
+              width: 100%;
+              height: 100%;
+              border: 1px solid $lightGray2;
+              border-radius: 4px;
+              overflow: hidden;
+              &.focus {
+                border-color: rgba($color: #000000, $alpha: 0);
+                outline: 2px solid $lightGray;
+              }
+              .toastui-editor-toolbar-group {
+                align-items: center;
+                button {
+                  margin-top: 0;
+                }
+              }
+              .toastui-editor-defaultUI {
+                border: none;
+                .toastui-editor-defaultUI-toolbar {
+                  padding: 0 14px;
+                }
+                .toastui-editor-main {
+                  .toastui-editor-main-container {
+                    .toastui-editor-contents {
+                      padding: 14px;
+                      text-indent: 0;
+                      table {
+                        @include notoSans();
+                        thead {
+                          tr {
+                            th {
+                              background-color: $backgroundColor;
+                              p {
+                                color: $main_font_color;
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        &.attachfile_area {
+          .title {
+            @include flex_aline_center();
+            margin-bottom: 14px;
+            h2 {
+              font-size: 16px;
+              font-weight: 500;
+            }
+            >label {
+              display: block;
+              margin-left: 20px;
+              padding:  3px 6px;
+              border: 1px solid $lightGray2;
+              font-size: 13px;
+              color: $middleGray;
+              cursor: pointer;
+            }
+            >input {
+              display: none;
+            }
+            .error {
+              margin-left: 8px;
+              font-size: 11px;
+              color: $lightGray;
+              &.on {
+                color: $main_color0;
+              }
+              i {
+                font-size: 14px;
+                vertical-align: -1px;
+              }
+            }
+          }
+          .attachfileList {
+            @include flex_aline_center();
+            justify-content: space-between;
+            width: 100%;
+            margin-bottom: 5px;
+            padding: 12px;
+            border: 1px solid $lightGray2;
+            .fileName {
+              font-size: 14px;
+              color: $middleGray;
+            }
+            .right {
+              @include flex_aline_center();
+              .fileVolume {
+                font-size: 14px;
+                color: $middleGray2;
+              }
+              .deleteFile {
+                margin: 0 5px 0 20px;
+                color: $middleGray;
+                cursor: pointer;
+              }
+            }
+            
+          }
+        }
+      }
+    }
+
+    >button {
+      @include notoSans();
+      @include btn_main();
+    }
+  }
+  
+}

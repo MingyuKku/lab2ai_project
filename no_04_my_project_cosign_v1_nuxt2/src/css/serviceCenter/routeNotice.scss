@@ -1,0 +1,119 @@
+.routeNotice_wrap {
+  .header {
+    padding: 34px;
+    text-align: center;
+    background: rgba($color: $main_color0, $alpha: 0.6);
+    h1 {
+      font-size: 21px;
+      font-weight: 600;
+      color: $white;
+    }
+  }
+  .content {
+    padding: 40px 40px 50px 40px;
+    .notice_table {
+      .table_title {
+        @include flex_aline_center();
+        border-top: 1px solid $lightGray;
+        border-bottom: 1px solid $lightGray;
+        >div {
+          text-align: center;
+          padding: 16px 0;
+          font-size: 16px;
+          font-weight: 500;
+          color: $main_font_color;
+          &.no {
+            width: 10%;
+          }
+          &.tit {
+            width: 70%;
+          }
+          &.registDate {
+            width: 20%;
+          }
+        }
+      }
+      .table_list {
+        position: relative;
+        ul {
+          opacity: 0;
+          min-height: calc(58px * 5);
+          &.show {
+            opacity: 1;
+            transition: opacity 0.3s ease-in-out;
+          }
+          &.itList {
+            min-height: calc(10 * 64px);
+          }
+          li {
+            font-size: 15px;
+            border-bottom: 1px solid $lightGray2;
+            cursor: pointer;
+            .inner {
+              @include flex_aline_center();
+              >div {
+                padding: 20px 0;
+                &.list_no {
+                  width: 10%;
+                  text-align: center;
+                  font-weight: 400;
+                  font-size: 16px;
+                  color: $main_color0;
+                }
+                &.list_tit {
+                  width: 70%;
+                  text-indent: 16px;
+                  font-weight: 500;
+                  color: $main_font_color;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  white-space: nowrap;
+                }
+                &.list_time {
+                  width: 20%;
+                  text-align: center;
+                  color: $middleGray;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  
+    .pagination_wrap {
+      @include flex_aline_justify_center();
+      margin-top: 24px;
+      .pagination_qna {
+        @include flex_aline_center();
+        .page_num {
+          display: block;
+          margin: 3px;
+          &:not(.disabled) {
+            a {
+              @include flex_aline_justify_center();
+              min-width: 28px;
+              min-height: 28px;
+              padding: 2px;
+              font-size: 15px;
+              font-weight: 400;
+              color: $lightGray;
+            }
+          }
+          &.active {
+            a {
+              font-weight: 600;
+              color: $main_font_color;
+            }
+          }
+        }
+      }
+      .nav {
+        a {
+          color: $lightGray;
+        }
+      }
+    }
+  }
+  
+}

@@ -1,0 +1,96 @@
+.chartDataBoard_wrap {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  z-index: 11;
+  pointer-events: none;
+  padding: 10px;
+  background: rgba($color: $white, $alpha: 0.7);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  // border-radius: 10px;
+  box-shadow: 0 1px 4px rgba($color: #000000, $alpha: 0.15);
+  // .title {
+  //   @include flex_aline_center();
+  //   margin-bottom: 5px;
+  //   >div {
+  //     font-size: 12px;
+  //     font-weight: 500;
+  //     color: $main_font_color;
+  //     &.name {
+  //       width: 40px;
+  //     }
+  //     &.date {
+  //       width: 110px;
+  //     }
+  //   }
+  // }//title
+  .mainData {
+    @include flex_aline_center();
+    .name {
+      span {
+        display: block;
+        width: 6px;
+        height: 6px;
+        margin-right: 4px;
+        background: $main_color0;
+        background: linear-gradient(90deg, $main_color2 0%, $main_color2 50%, $main_color0 50%, $main_color0 100%);
+      }
+      p {
+        width: 28px;
+        font-size: 12px;
+        font-weight: 500;
+        color: $main_font_color;
+      }
+    }
+    .date {
+      margin: 0 8px 0 5px;
+      font-size: 12px;
+      font-weight: 400;
+      color: $main_font_color;
+    }
+    .price {
+      font-size: 12px;
+      font-weight: 500;
+      color: $main_font_color;
+      span {
+        font-size: 10px;
+        color: $middleGray2;
+      }
+    }
+  }//mainData
+  .patternData {
+    li {
+      @include flex_aline_center();
+      margin-top: 5px;
+      span {
+        display: block;
+        width: 6px;
+        height: 6px;
+        margin-right: 4px;
+      }
+      .name {
+        width: 28px;
+        font-size: 11px;
+        font-weight: 500;
+        color: $middleGray;
+      }
+      .date {
+        margin: 0 8px 0 5px;
+        font-size: 12px;
+        font-weight: 400;
+        color: $middleGray;
+      }
+      .price {
+        font-size: 12px;
+        font-weight: 500;
+        color: $main_font_color;
+        span {
+          display: inline-block;
+          font-size: 10px;
+          color: $middleGray2;
+        }
+      }
+    }
+  }//patternData
+}

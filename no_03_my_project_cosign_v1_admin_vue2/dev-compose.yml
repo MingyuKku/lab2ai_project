@@ -1,0 +1,10 @@
+version: '3.0'
+services:
+  view:
+    build: .
+    volumes:
+      - ./build:/www/build
+    ports:
+      - 20005:80
+    environment:
+      - TZ=ETC/UTC

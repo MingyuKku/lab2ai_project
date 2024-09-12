@@ -1,0 +1,389 @@
+.feed-regist-wrap {
+    background: $white;
+    @include boxShadow();
+    .header {
+      padding: 34px;
+      text-align: center;
+      background: rgba($color: $main_color0, $alpha: 0.6);
+      h1 {
+        font-size: 21px;
+        font-weight: 600;
+        color: $white;
+      }
+    }
+    .contents {
+      position: relative;
+      padding: 40px;
+      .table_wrap {
+        table {
+          border-collapse: collapse;
+          tbody {
+            tr {
+              border-bottom: 35px solid rgba($color: #000000, $alpha: 0);
+              &.no-layout {
+                border-bottom: 10px solid rgba($color: #000000, $alpha: 0);
+                td {
+                  span {
+                    font-size: 14px;
+                    color: $middleGray2;
+                  }
+                }
+              }
+              &.more-border-1 {
+                border-bottom: calc(35px + 20px) solid rgba($color: #000000, $alpha: 0);
+              }
+              &.more-border-2 {
+                border-bottom: calc(35px + 40px) solid rgba($color: #000000, $alpha: 0);
+              }
+              th {
+                width: 35%;
+                white-space: nowrap;
+                span.require {
+                  color: $main_color0;
+                }
+              }
+              td {
+                .content {
+                  white-space: nowrap;
+                  span.error {
+                    position: absolute;
+                    color: $main_color0;
+                    font-size: 14px;
+                  }
+                  .info-list {
+                    position: absolute;
+                    bottom: -5px;
+                    transform: translateY(100%);
+                    span {
+                      display: block;
+                      color: $lightGray;
+                      font-size: 14px;
+                    }
+                  }
+
+                  &.input {
+                    position: relative;
+                    input {
+                      @include notoSans();
+                      display: block;
+                      width: 100%;
+                      border: none;
+                      border: 1px solid $lightGray2;
+                      border-radius: 4px;
+                      outline-color: $lightGray;
+                      padding: 12px;
+                      font-size: 14px;
+                      color: $main_font_color;
+                      &::placeholder {
+                        color: $lightGray;
+                        font-weight: 400;
+                      }
+                    }
+                    .info-list {
+                      span.error {
+                        color: $main_color0;
+                      }
+                    }
+                  }
+
+                  &.textarea {
+                    position: relative;
+                    textarea {
+                      @include notoSans();
+                      display: block;
+                      width: 100%;
+                      border: none;
+                      border: 1px solid $lightGray2;
+                      border-radius: 4px;
+                      outline-color: $lightGray;
+                      padding: 12px;
+                      font-size: 14px;
+                      color: $main_font_color;
+                      &::placeholder {
+                        color: $lightGray2;
+                        font-weight: 400;
+                      }
+                    }
+                  }
+
+                  &.image {
+                    position: relative;
+                    .image-input {
+                      @include flex_aline_center();
+                      label {
+                        font-size: 15px;
+                        padding: 8px 16px;
+                        border: 1px solid $lightGray;
+                        border-radius: 4px;
+                        color: $middleGray2;
+                        cursor: pointer;
+                        opacity: 0.8;
+                        &:hover {
+                          opacity: 1;
+                          border-color: $lightGray2;
+                          background: $lightGray2;
+                        }
+                      }
+                      input {
+                        display: none;
+                      }
+                      .input-image-list {
+                        padding: 4px 12px;
+                        width: 100%;
+                        max-width: 600px;
+                        min-width: 200px;
+                        min-height: 38px;
+                        border: 1px solid $lightGray2;
+                        border-radius: 4px;
+                        margin: 0 20px;
+                        overflow: hidden;
+                        i {
+                          font-size: 20px;
+                          vertical-align: middle;
+                          cursor: pointer;
+                          color: $lightGray;
+                          margin-right: 5px;
+                          &:hover {
+                            color: $main_font_color;
+                            ~ span {
+                              color: $main_font_color;
+                            }
+                          }
+                        }
+                        span {
+                          vertical-align: middle;
+                          color: $lightGray;
+                          font-size: 14px;
+                        }
+                      }
+                      .prev-btn {
+                        @include notoSans();
+                        font-size: 15px;
+                        padding: 8px 16px;
+                        border: 0;
+                        border: 1px solid $lightGray;
+                        background: rgba($color: #000000, $alpha: 0);
+                        border-radius: 200px;
+                        color: $middleGray2;
+                        cursor: pointer;
+                        opacity: 0.8;
+                        &:hover:not(.disabled) {
+                          background: $lightGray2;
+                          border-color: $lightGray2;
+                          opacity: 1;
+                        }
+                        &.disabled {
+                          opacity: 0.3;
+                          cursor: auto;
+                          background: $lightGray2;
+                          border-color: $lightGray2;
+                        }
+                      }
+                    }
+                  }
+
+                  &.link {
+                    input[type=text] {
+                      width: 75%;
+                      min-width: 200px;
+                      max-width: 600px;
+                      border: none;
+                      border: 1px solid $lightGray2;
+                      border-radius: 4px;
+                      outline-color: $lightGray;
+                      padding: 12px;
+                      font-size: 14px;
+                      font-weight: 500;
+                      color: $main_font_color;
+                    }
+                    input[type=checkbox] {
+                      vertical-align: middle;
+                      margin-left: 16px;
+                    }
+                    label {
+                      padding-left: 5px;
+                      font-size: 14px;
+                      color: $middleGray;
+                    }
+                  }
+                  &.radio {
+                    @include flex_aline_center();
+                    .radio-wrap {
+                      &:first-child {
+                        margin-right: 30px;
+                      }
+                      input {
+                        display: none;
+                        &:checked ~label {
+                          .outer-circle {
+                            border-color: #F9899A;
+                            .inner-circle {
+                              display: block;
+                            }
+                          }
+                          .text {
+                            color: $main_color0;
+                          }
+                        }
+                      }
+                      label {
+                        @include flex_aline_center();
+                        cursor: pointer;
+                        .outer-circle {
+                          position: relative;
+                          width: 20px;
+                          height: 20px;
+                          border-radius: 50%;
+                          border: 2px solid #FFCFD8;
+                          margin-right: 8px;
+                          .inner-circle {
+                            display: none;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%,-50%);
+                            width: 8px;
+                            height: 8px;
+                            background: #F9899A;
+                            border-radius: 50%;
+                          }
+                        }
+                        .text {
+                          font-size: 15px;
+                        }
+                      }
+                    }
+                    .mx-datepicker { // datepicker 커스터마이징
+                      margin-left: 10px;
+                      input {
+                        @include notoSans();
+                        &::placeholder {
+                          color: $lightGray;
+                        }
+                        &:hover {
+                          border-color: $main_color0;
+                        }
+                      }
+                    }
+                    .reservation-time {
+                      @include flex_aline_center();
+                      .text {
+                        font-size: 15px;
+                        color: $middleGray2;
+                      }
+                      .date-wrap {
+                        @include flex_aline_justify_center();
+                        margin-left: 10px;
+                        span {
+                          padding: 8px 10px;
+                          font-size: 14px;
+                          color: $middleGray2;
+                          background: $lightGray2;
+                          border-radius: 3px;
+                          opacity: 0.6;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .buttons {
+        @include flex_aline_justify_center();
+        >button {
+          @include notoSans();
+          @include btn_main($margin: 0);
+          &:first-child {
+            @include btn_main($margin: 0 25px 0 0, $back: white, $color: $middleGray2);
+            border: 1px solid $middleGray2;
+          }
+        }
+      }
+      .delete-btn {
+        position: absolute;
+        @include notoSans();
+        cursor: pointer;
+        bottom: 50px;
+        right: 40px;
+        font-size: 15px;
+        color: $main_color0;
+        appearance: none;
+        -webkit-appearance: none;
+        border: 0;
+        background: rgba($color: #000000, $alpha: 0);
+      }
+    }
+  }
+  
+
+// datepicker 커스터마이징 (달력)
+.mx-datepicker-main.mx-datepicker-popup {
+  button {
+    &:hover {
+      color: $main_color0;
+    }
+  }
+  table {
+    &.mx-table,
+      &.mx-table-year,
+      &.mx-table-month {
+      td {
+        &:hover {
+          background: #FFE9ED;
+        }
+        &.cell.active {
+          background: $main_color0;
+        }
+      }
+    }
+    thead {
+      tr {
+        th {
+          &:first-child { // 일요일
+            color: $main_color0;
+          }
+          &:last-child {  // 월요일
+            color: #0075ff;
+          }
+        }
+      }
+    }
+    tbody {
+      tr {
+        td {
+          border-radius: 50%;
+          &.cell.today {
+            font-weight: 700;
+            color: $main_font_color;
+          }
+          &.cell.active {
+            color: white;
+            background: $main_color0;
+          }
+          &:hover {
+            background: #FFE9ED;
+          }
+        }
+      }
+    }
+  }
+}
+
+// datepicker 커스터마이징 (타임)
+.mx-time.mx-calendar-time {
+  ul {
+    li {
+      font-size: 14px;
+      &.mx-time-item.active {
+        color: $main_font_color;
+        background: #FFE9ED;
+      }
+      &:hover {
+        background: $lightBeige2;
+      }
+    }
+  }
+}

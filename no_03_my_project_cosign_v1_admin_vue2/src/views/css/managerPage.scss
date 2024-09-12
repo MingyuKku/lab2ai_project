@@ -1,0 +1,28 @@
+.managerPage_wrap {
+  .center {
+    display: flex;
+    // width: 1200px;
+    // margin: calc(74px + 16px) auto;
+    .side {
+      width: 15%;
+      min-width: 220px;
+      min-height: 100vh;
+      // margin-right: 16px;
+      padding-top: 65px;  //해더 높이만큼
+      background: linear-gradient(90deg, rgba($color: $darkBackColor, $alpha: 0.9) 0%, rgba($color: $darkBackColor, $alpha: 0.8) 100%);
+      // box-shadow: 1px 1px 4px rgba($color: #000000, $alpha: 0.2);
+      // border-radius: 10px;
+    }
+    .manager_main {
+      width: 85%;
+      padding-top: calc(65px + 30px);  //해더 높이만큼
+      padding-left: 30px;
+      padding-right: 30px;
+      padding-bottom: 30px;
+      background: $backgroundColor;
+      // box-shadow: 1px 1px 4px rgba($color: #000000, $alpha: 0.2);
+      // border-radius: 10px;
+      // overflow: hidden;
+    }
+  }
+}

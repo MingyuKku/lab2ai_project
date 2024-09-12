@@ -1,0 +1,142 @@
+@import url('./reset.css');
+@import url('../public/fonts/noto-sans-kr/NotoSansKR.css');
+@import url('./tailwind-text.css');
+@import url('./transition.css');
+@import url('./animation.css');
+/* @import url('./tailwind-util.css'); */
+/* @import url('./custom.css'); */
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    /* 버튼 */
+    .d-button-st {
+        @apply h-14 appearance-none outline-none cursor-pointer 
+        flex items-center justify-center bg-button-default text-white text-[18px] font-medium
+        hover:bg-opacity-90
+    }
+
+
+    .login-button-st {
+        @apply flex items-center justify-center w-full h-11
+        border-none appearance-none outline-none bg-system-mint rounded-[3px] font-medium text-white cursor-pointer;
+    }
+    .login-button-st.disable,
+    .login-button-st.disabled {
+        @apply pointer-events-none select-none bg-[#eee] text-achromatic-03;
+    }
+    .login-button-st:not(:disabled):hover {
+        @apply opacity-90;
+    }
+
+
+    .login-input-st {
+        @apply flex items-center justify-center w-full h-11
+        border-none appearance-none outline-none bg-none rounded-none text-body-3;
+    }
+    .login-input-st::placeholder {
+        @apply text-border-gray-01 font-normal;
+    }
+    .login-input-st ~label {
+        @apply relative block w-full border-b-2 border-solid border-border-gray-04;
+    }
+    .login-input-st ~label .bar {
+        @apply absolute block w-full scale-0;
+    }
+    .login-input-st:focus ~label .bar {
+        @apply transition-transform scale-100 ease-in-out duration-300;
+    }
+
+
+
+     /* 인풋 텍스트에어리어 등 */
+     .none-st {
+        @apply appearance-none outline-none bg-none bg-transparent;
+    }
+    .input-default-st {
+        @apply w-full h-10 p-2.5 text-body-3 font-normal none-st rounded
+        border border-border-gray-02 border-solid focus:border-system-mint;
+    }
+    .input-default-st::placeholder {
+        @apply text-achromatic-03;
+    }
+
+
+    /* 트랜스폼 */
+    .xy-center {
+        @apply top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
+    }
+    .x-center {
+        @apply left-1/2 -translate-x-1/2;
+    }
+    .y-center {
+        @apply top-1/2 -translate-y-1/2;
+    }
+
+
+    /* 박스(box) */
+    .box-ssm {
+        @apply py-[3px] px-1 rounded-sm;
+    }
+    .box-ssm6 {
+        @apply p-1.5 rounded;
+    }
+    .box-ssm p,
+    .box-ssm span {
+        @apply leading-none;
+    }
+    .box-sm4 {
+        @apply py-1 px-2 rounded;
+    }
+    .box-sm4 p,
+    .box-sm4 span {
+        @apply leading-none;
+    }
+    .box-sm6 {
+        @apply py-1.5 px-2 rounded;
+    }
+    .box-sm6 p,
+    .box-sm6 span {
+        @apply leading-none;
+    }
+
+
+    /* 탭 */
+    .tab-nav {
+        @apply block px-3 py-2 border-[1px] border-border-gray-04 rounded-full min-w-[74px] text-center text-body-3 text-achromatic-03
+    }
+    .tab-nav.active,
+    .tab-nav.router-link-active {
+        @apply border-system-mint bg-bg-green text-system-mint;
+    }
+
+
+
+    /* 로딩 인디케이터 */
+    .rotate-loader {
+        @apply w-12 h-12 border-[5px] border-solid border-system-mint border-b-transparent rounded-full inline-block box-border animate-rotate-loader;
+    }
+}
+
+
+@layer utilities {
+    /* 스크롤바 유틸리티 */
+    .no-scrollbar {
+        -ms-overflow-style: none; /* 인터넷 익스플로러 */
+        scrollbar-width: none; /* 파이어폭스 */
+    }
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+    .scrolling-touch {
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* 텍스트 */
+    .break-word {
+        word-break: break-word;
+    }
+}

@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    
+    .title-lg {
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 111.429%;
+    }
+
+    .title-md {
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 140%;
+    }
+
+    .title-sm {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 140%;
+    }
+
+    .body-lg-m {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 150%;
+    }
+
+    .body-lg-b {
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 150%;
+    }
+
+    .body-md-b {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 150%;
+    }
+    
+    .body-md {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 156%;
+    }
+
+    .body-md-m {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 156%;
+    }
+
+    .body-sm-b {
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 150%;
+    }
+
+    .body-sm-m {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 150%;
+    }
+
+    .body-sm {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 157%;
+    }
+
+    .body-ss {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 140%;
+    }
+}

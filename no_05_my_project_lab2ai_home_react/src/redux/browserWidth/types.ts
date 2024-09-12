@@ -1,0 +1,1 @@
+export const SET_WIDTH:string = 'SET-WIDTH' as const;

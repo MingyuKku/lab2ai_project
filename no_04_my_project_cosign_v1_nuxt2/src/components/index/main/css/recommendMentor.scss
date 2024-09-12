@@ -1,0 +1,173 @@
+.recommendMentor_wrap {
+  .title {
+    .title_list_wrap {
+      position: relative;
+      white-space: nowrap;
+      .title_list {
+        display: inline-block;
+        margin-right: 20px;
+        padding: 10px;
+        font-size: 19px;
+        font-weight: 500;
+        color: $lightGray;
+        cursor: pointer;
+        &.active {
+          color: $main_font_color;
+        }
+      }
+      .activeStick {
+        position: absolute;
+        display: block;
+        bottom: 0;
+        width: 176px;
+        height: 3px;
+        background: $main_font_color;
+        transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+    }
+  }
+  .mentorList {
+    &.show {
+      margin-top: 20px;
+    }
+    .swiper_wrap {
+      position: relative;
+      min-height: 272px;
+      .swiper {
+        animation: opacity 0.5s ease-in-out;
+        overflow: hidden;
+        .swiper-wrapper {
+          // gap: 0 20px;
+          .swiper-slide {
+            flex: 1;
+            // width: calc((100% / 3) - 20px);
+            margin-right: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            &:last-child {
+              margin-right: 0;
+            }
+            .inner {
+              a {
+                position: relative;
+                display: block;
+                width: 100%;
+                .mentorImg {
+                  width: 100%;
+                  height: 272px;
+                  img {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                  }
+                  &.opacity {
+                    background: black;
+                    filter: blur(1px);
+                    img {
+                      opacity: 0.35;
+                      // filter: blur(1px);
+                    }
+                  }
+                }
+
+                .textContent {
+                  position: absolute;
+                  @include flex_aline_justify_center();
+                  top: 0;
+                  left: 0;
+                  width: 100%;
+                  height: 100%;
+                  padding: 20px;
+                  color: $white;
+                  .title {
+                    text-align: center;
+                    overflow: hidden;
+                    h1 {
+                      width: 100%;
+                      font-size: 21px;
+                      font-weight: 500;
+                      overflow: hidden;
+                      white-space: nowrap;
+                      text-overflow: ellipsis;
+                    }
+                  }
+                  .sideInfo {
+                    position: absolute;
+                    bottom: 20px;
+                    right: 20px;
+                    >span {
+                      &.agency {
+                        &::after {
+                          content: '';
+                          display: inline-block;
+                          width: 1px;
+                          height: 14px;
+                          margin: 0 10px;
+                          background: $lightBeige;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+              
+              h2 {
+                margin-top: 12px;
+                text-align: center;
+                font-size: 15px;
+                font-weight: 500;
+                color: $middleGray;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+              }
+            }
+          }
+        }
+      }
+      >.button {
+        display: block;
+        width: auto;
+        height: auto;
+        background: transparent;
+        margin: 0;
+        top: -48px;
+        &:active {
+          i {
+            color: $lightGray;
+          }
+        }
+        &.recommendMentor-button-prev {
+          left: auto;
+          right: 50px;
+        }
+        &.recommendMentor-button-next {
+          right: 0;
+        }
+        i {
+          font-size: 28px;
+          color: $main_font_color;
+        }
+      }
+
+      &.instagram {
+        .swiper {
+          .swiper-wrapper {
+            .swiper-slide {
+              .inner {
+                a {
+                  .mentorImg {
+                    img {
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }//swiper_wrap
+  }//mentorList
+}

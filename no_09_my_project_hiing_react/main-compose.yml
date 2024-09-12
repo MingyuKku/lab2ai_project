@@ -1,0 +1,21 @@
+version: '3.0'
+services:
+  view:
+    image: 834125769529.dkr.ecr.ap-northeast-2.amazonaws.com/real_hiing_webview
+    build: 
+      context: .
+      dockerfile: Dockerfile
+      args:
+        REACT_APP_API_URL: https://api-server.hiing.co/v1.11/
+        REACT_APP_API_CHAT_URL: https://chat-server.hiing.co/
+        REACT_APP_IMAGE_URL: https://dwra84tqfa60a.cloudfront.net
+        # REACT_APP_CHARACTER_CHAT_SOCKET_URL: https://test-persona-chat.hiing.co/
+        # REACT_APP_TOKEN_KEY: /JY/qGY6WNI5Fl9XzZHstL42g5YfuTWTf6DwXzWiMJJn5/cYDTz6NcE8MSN+boji
+        # REACT_APP_REFRESH_TOKEN_KEY: qwVRINsDCCr2iojXl2csLPlPK0425ZVPnIV9SsPuNN33ZC77gAsZMNZim5aZeyyo
+      # platform: linux/amd64
+    volumes:
+      - ./build:/www/build
+    ports:
+      - 8090:80
+    environment:
+      - TZ=ETC/UTC

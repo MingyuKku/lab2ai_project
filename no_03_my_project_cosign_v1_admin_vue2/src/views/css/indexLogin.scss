@@ -1,0 +1,197 @@
+.indexLogin_wrap {
+  position: relative;
+  @include flex_aline_justify_center();
+  width: 100%;
+  padding: 80px 0;
+  min-height: 100vh;
+  // background: rgba($color: $white, $alpha: 0.5);
+  &::after {
+    position: absolute;
+    content: '';
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: url('https://kr.object.ncloudstorage.com/cosign/project-images/cosign-manager/managerLogin_bg.png') no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    // filter: saturate(70%);
+  }
+  &::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba($color: $white, $alpha: 0.6);
+  }
+  .partnerLoginForm {
+    width: 550px;
+    padding: 50px 40px;
+    background: rgba($color: #fff, $alpha: 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 0px 24px rgba($color: #000000, $alpha: 0.1);
+    border-radius: 16px;
+    .form_head {
+      .title {
+        @include flex_aline_center();
+        .loginLogo {
+          width: 120px;
+          margin: 0 auto;
+          img {
+            width: 100%;
+            display: block;
+          }
+        }
+        h2 {
+          font-size: 24px;
+          font-weight: 600;
+          margin-left: 16px;
+          color: $main_font_color;
+        }
+      }
+      p {
+        margin-top: 10px;
+        font-size: 14px;
+        font-weight: 400;
+        color: $middleGray;
+      }
+    }
+    .form_body {
+      margin-top: 40px;
+      .input_wrap {
+        @include flex_aline_center();
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        margin-bottom: 10px;
+        padding: 0 16px;
+        transition: all 0.3s cubic-bezier(0.33, 1, 0.68, 1);
+        outline: 1px solid transparent;
+        &.focus {
+          border-color: $main_color2;
+          outline-color: $main_color2;
+        }
+        input {
+          position: relative;
+          order: 2;
+          display: block;
+          width: 100%;
+          height: 60px;
+          border: none;
+          outline: none;
+          -webkit-appearance: none;
+          -webkit-border-radius: 0;
+          border-radius: 0;
+          appearance: none;
+          background: transparent;
+          font-size: 16px;
+          color: $middleGray;
+          &::placeholder {
+            font-family: 'Noto Sans KR', sans-serif;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: all 0.3s cubic-bezier(0.33, 1, 0.68, 1);
+            font-size: 15px;
+            color: $lightGray;
+          }
+          &:focus {
+            &::placeholder {
+              top: 4px;
+              transform: none;
+              font-size: 12px;
+              color: $middleGray2;
+            }
+            ~label {
+              i {
+                color: $lightGray;
+              }
+            }
+          }
+        }
+        label {
+          margin-right: 16px;
+          i {
+            font-size: 24px;
+            color: #cacaca;
+            transition: color 0.3s cubic-bezier(0.33, 1, 0.68, 1);
+          }
+        }
+      }//input_wrap
+      button {
+        font-family: 'Noto Sans KR', sans-serif;
+        display: block;
+        width: 100%;
+        height: 60px;
+        margin-top: 50px;
+        background: $main_color0;
+        border: none;
+        border-radius: 8px;
+        color: $white;
+        font-size: 19px;
+        font-weight: 500;
+        cursor: pointer;
+        &:active, &:hover {
+          opacity: 0.9;
+        }
+      }
+    }//form_body
+  }
+}
+
+
+// =============================== 반응형 css =========================================
+@media screen and (max-width: 700px) {
+  .partnerLoginPage_wrap {
+    padding: 40px 16px;
+    .partnerLoginForm {
+      width: 100%;
+      padding: 40px 16px;
+      .form_head {
+        .title {
+          .loginLogo {
+            width: 100px;
+          }
+          h2 {
+            font-size: 19px;
+            margin-left: 10px;
+          }
+        }
+        p {
+          margin-top: 8px;
+          font-size: 12px;
+        }
+      }
+      .form_body {
+        margin-top: 40px;
+        .input_wrap {
+          padding: 0 10px;
+          input {
+            height: 58px;
+            font-size: 15px;
+            color: $middleGray;
+            &:focus {
+              &::placeholder {
+                top: 2px;
+                font-size: 11px;
+              }
+            }
+          }
+          label {
+            margin-right: 10px;
+            i {
+              font-size: 21px;
+            }
+          }
+        }//input_wrap
+        button {
+          height: 58px;
+          font-size: 16px;
+        }
+      }//form_body
+    }
+  }
+}

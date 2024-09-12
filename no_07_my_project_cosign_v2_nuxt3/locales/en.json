@@ -1,0 +1,60 @@
+{
+    "pages": {
+        "news": {
+            "title": "AI News",
+            "content": {
+                "aiCommend": "AI Pick",
+                "lookAtRecentTitle_1": "View More News by "
+            }
+        },
+        "autotrade": {
+            "title": "Futures AI Model",
+            "content": {
+                "popup": {
+                    "showTotalModel": "자동매매 모델 전체보기",
+                    "transactionHistoryTotalView": "View all trade histories"
+                },
+                "profile": {
+                    "currentAmount": "Margin Balance",
+                    "originalAmount": "lnitial Blanace",
+                    "earningAmount": "PnL"
+                },
+                "yieldTrend": {
+                    "label": {
+                        "transite": "PnL Trend",
+                        "assets": "Asset Allocation",
+                        "modelEarning": "AI Model's PnL",
+                        "changeRate": "BTC Trend"
+                    }
+                },
+                "assetConfigure": {
+                    "label": {
+                        "position": "Positions",
+                        "coinName": "Symbol"
+                    }
+                },
+                "fallbackText": {
+                    "assets": "No current investments."
+                }
+            }
+        }
+    },
+    "labels": {
+        "more": "See More",
+        "startPrice": "Entry Price",
+        "targetPrice": "목표가",
+        "earning": "PnL",
+        "goodNews": "Bullish",
+        "badNews": "Bearish",
+        "ad": "AD",
+        "buy": "Buy",
+        "sell": "Sell"
+    },
+    "footer": {
+        "warning": "The data and information provided by this service are for reference in investment decisions and do not guarantee profits. All investment decisions and responsibilities are on the user. The user is not permitted to redistribute the information from this service without permission.",
+        "company": "Lab2AI Corp",
+        "ceo": "CEO",
+        "ceoName": "JongHwan Oh",
+        "companyNumber": "Business Registration No"
+    }
+}

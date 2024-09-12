@@ -1,0 +1,146 @@
+$main_font_color: #1E272E;
+$main_color1: #F53B57;
+$main_color2: #00D8D6;
+
+@mixin flex_aline_center {
+  display: flex;
+  align-items: center;
+}
+@mixin flex_aline_justify_center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.IntroduceMentorElement_wrap {
+  padding: 20px;
+  border-radius: 16px;
+  background: #FAF7F7;
+  margin-bottom: 10px;
+  .mentorInfomation {
+    @include flex_aline_center();
+    .mentorProfile {
+      @include flex_aline_center();
+      margin-right: 40px;
+      .profile_img {
+        width: 50px;
+        margin-right: 8px;
+        img {
+          display: block;
+          width: 100%;
+        }
+      }
+      h1 {
+        font-size: 15px;
+        font-weight: 400;
+        color: $main_font_color;
+      }
+    } //.mentorProfile
+    .mentor_earning {
+      @include flex_aline_center();
+      .donut_graph {
+        @include flex_aline_justify_center();
+        position: relative;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-right: 8px;
+        animation: movingGraph 1s cubic-bezier(0.16, 1, 0.3, 1);
+        .donut_graph_bg {
+          position: absolute;
+          width: 38px;
+          height: 38px;
+          border-radius: 50%;
+          background: #fafafa;
+          // top: 50%;
+          // left: 50%;
+          // transform: translate(-50%,-50%);
+        }
+        i {
+          position: absolute;
+          font-size: 21px;
+          color: $main_color1;
+        }
+      } //.donut_graph
+      .earning_data {
+        h2 {
+          font-size: 15px;
+          font-weight: 400;
+          color: #555;
+        }
+        p {
+          font-size: 15px;
+          font-weight: 400;
+          color: $main_color1;
+        }
+      }
+    } //.mentor_earning
+  } //.mentorInfomation
+  .handleCoins {
+    position: relative;
+    margin-top: 16px;
+    h2 {
+      font-size: 13px;
+      font-weight: 400;
+      color: $main_font_color;
+      margin-bottom: 6px;
+    }
+    .coinImg {
+      position: relative;
+      z-index: 1;
+      float: left;
+      &:hover {
+        opacity: 0;
+      }
+      &:hover ~ .coinName {
+        z-index: 0;
+        transform: none;
+      }
+      &:hover ~ .coinName >li {
+        opacity: 1;
+      }
+      li {
+        width: 24px;
+        display: inline-block;
+        margin-left: -6px;
+        border-radius: 50%;
+        background: #fafafa;
+        cursor: pointer;
+        &:first-child {
+          margin-left: 0;
+        }
+        img {
+          display: block;
+          width: 100%;
+        }
+      }
+    } //.coinImg
+    .coinName {
+      position: absolute;
+      top: 24px;
+      z-index: -1;
+      padding: 5px 8px 8px 8px;
+      border-radius: 8px;
+      background: #fafafa;
+      box-shadow: 0 2px 8px rgba($color: #000000, $alpha: 0.2);
+      transform: translateY(8px);
+      transition: transform 0.3s ease-in-out;
+      li {
+        display: inline-block;
+        font-size: 13px;
+        font-weight: 400;
+        color: $main_font_color;
+        margin-right: 10px;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    } //.coinName
+  } //.handleCoins
+}
+
+@keyframes movingGraph {
+  0% {background: conic-gradient(#F53B57 0%, #ddd 0%)}
+}

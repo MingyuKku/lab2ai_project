@@ -1,0 +1,94 @@
+/* 홈화면 캐릭터 스와이프 */
+.home-character-effect-left-side-cloud {
+    animation-name: left-cloud;
+    animation-fill-mode: forwards;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+}
+.home-character-effect-right-side-cloud {
+    animation-name: right-cloud;
+    animation-fill-mode: forwards;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+}
+
+.home-character-image {
+    animation-name: up-image;
+    animation-fill-mode: forwards;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-delay: 0.2s;
+    opacity: 0;
+}
+
+.character-tt-bubble {
+    animation-name: up-bubble;
+    animation-fill-mode: forwards;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-delay: 0.4s;
+    opacity: 0;
+}
+
+
+@keyframes up-image {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 20%, 0);
+    }
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@keyframes up-bubble {
+    0% {
+        opacity: 0;
+        left: 50%;
+        transform: translate(-50%, 20%);
+    }
+    100% {
+        opacity: 1;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+}
+
+@keyframes right-cloud {
+    0% {
+        opacity: 0;
+        /* transform: translate3d(100%, -50%, 0); */
+        transform: translate3d(100%, -86%, 0);
+    }
+    100% {
+        opacity: 1;
+        /* transform: translate3d(50%, -50%, 0); */
+        transform: translate3d(50%, -86%, 0);
+    }
+}
+
+@keyframes left-cloud {
+    0% {
+        opacity: 0;
+        /* transform: translate3d(-130%, -50%, 0) rotateY(180deg); */
+        transform: translate3d(-130%, -86%, 0) rotateY(180deg);
+    }
+    100% {
+        opacity: 1;
+        /* transform: translate3d(-50%, -50%, 0) rotateY(180deg); */
+        transform: translate3d(-50%, -86%, 0) rotateY(180deg);
+    }
+}
+
+
+
+/* 캐릭터 프로필 화면 */
+.profile-image-swiper-wrap
+.swiper-pagination {
+    top: 18px;
+    bottom: auto;
+    color: white;
+    font-size: 14px;
+    font-family: "Pretendard", sans-serif;
+}

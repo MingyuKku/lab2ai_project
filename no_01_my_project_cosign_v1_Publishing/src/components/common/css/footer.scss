@@ -1,0 +1,208 @@
+$main_font_color: #1E272E;
+$main_color1: #F53B57;
+$main_color2: #00D8D6;
+$white: #fff;
+$middleGray: #555;
+$lightGray: #999;
+
+@mixin flex_aline_center {
+  display: flex;
+  align-items: center;
+}
+@mixin flex_aline_justify_center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.foot_wrap {
+  width: 100%;
+  margin: 0 auto;
+  padding: 80px;
+  .foot_gnb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    li {
+      display: flex;
+      align-items: center;
+      white-space: nowrap;
+      color: #555;
+      font-size: 14px;
+      font-weight: 400;
+      cursor: pointer;
+      &::before {
+        display: block;
+        content: '';
+        width: 1px;
+        height: 14px;
+        background: #ddd;
+        margin: 0 12px;
+      }
+      &:first-child::before {
+        display: none;
+      }
+      span {
+        color: #111;
+        margin-left: 8px;
+      }
+    }
+  } //.foot_gnb
+  .responsive_foot_info {
+    display: none;
+  }
+  .foot_info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 24px 0 12px 0;
+    li {
+      display: flex;
+      align-items: center;
+      white-space: nowrap;
+      color: #555;
+      font-size: 14px;
+      font-weight: 400;
+      &::before {
+        display: block;
+        content: '';
+        width: 1px;
+        height: 14px;
+        background: #ddd;
+        margin: 0 10px;
+      }
+      &:first-child::before {
+        display: none;
+      }
+      span {
+        margin-left: 2px;
+      }
+    }
+  } //.foot_info
+  .foot_bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    li {
+      display: flex;
+      align-items: center;
+      color: #888;
+      font-size: 14px;
+      font-weight: 400;
+    }
+  } //.foot_bottom
+
+} //.foot_wrap
+
+
+
+
+
+// 폭 480px 이하 시작 =========================================================
+// @media screen and (max-width: 480px) {
+//   .foot_wrap {
+//     width: 100%;
+//     margin: 0;
+//     padding: 30px 20px 0 20px;
+//     border-top: 1px solid #eee;
+//     margin-top: 30px;
+//     .foot_gnb {
+//       display: flex;
+//       align-items: center;
+//       justify-content: center;
+//       li {
+//         display: flex;
+//         align-items: center;
+//         color: #555;
+//         font-size: 13px;
+//         font-weight: 400;
+//         &::before {
+//           display: block;
+//           content: '';
+//           width: 1px;
+//           height: 14px;
+//           background: #ddd;
+//           margin: 0 8px;
+//         }
+//         &:first-child::before {
+//           display: none;
+//         }
+//         &:last-child {
+//           display: none;
+//         }
+//         span {
+//           color: #111;
+//           margin-left: 8px;
+//         }
+//       }
+//     } //.foot_gnb
+//     .responsive_foot_info {
+//       display: flex;
+//       align-items: center;
+//       justify-content: center;
+//       margin-top: 20px;
+//       li {
+//         display: flex;
+//         align-items: center;
+//         color: #555;
+//         font-size: 13px;
+//         font-weight: 400;
+//         span {
+//           color: #111;
+//           margin-left: 8px;
+//         }
+//         &::before {
+//           display: block;
+//           content: '';
+//           width: 1px;
+//           height: 14px;
+//           background: #ddd;
+//           margin: 0 8px;
+//         }
+//         &:first-child::before {
+//           display: none;
+//         }
+//       }
+//     }
+//     .foot_info {
+//       display: flex;
+//       align-items: center;
+//       justify-content: center;
+//       margin: 12px 0;
+//       li {
+//         display: flex;
+//         align-items: center;
+//         color: #555;
+//         font-size: 13px;
+//         font-weight: 400;
+//         // white-space: nowrap;
+//         &:first-child {
+//           display: none;
+//         }
+//         &::before {
+//           display: none;
+//         }
+//         &:first-child::before {
+//           display: none;
+//         }
+//         span {
+//           margin-left: 2px;
+//         }
+//       }
+//     } //.foot_info
+//     .foot_bottom {
+//       display: flex;
+//       align-items: center;
+//       justify-content: center;
+//       li {
+//         display: flex;
+//         align-items: center;
+//         color: #888;
+//         font-size: 13px;
+//         font-weight: 400;
+//       }
+//     } //.foot_bottom
+
+//   } //.foot_wrap
+// }
+// 폭 480px 이하 끝 =========================================================

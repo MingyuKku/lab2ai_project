@@ -1,0 +1,96 @@
+.routeNoticeRead_wrap {
+  .header {
+    padding: 34px;
+    text-align: center;
+    background: rgba($color: $main_color0, $alpha: 0.6);
+    h1 {
+      font-size: 21px;
+      font-weight: 600;
+      color: $white;
+    }
+  }
+  .inner {
+    padding: 40px 40px 50px 40px;
+    .content_wrap {
+      border-top: 2px solid $lightGray2;
+      border-bottom: 2px solid $lightGray2;
+      padding-bottom: 5px;
+      .title {
+        @include flex_aline_center();
+        justify-content: space-between;
+        padding: 16px;
+        border-bottom: 1px solid $lightGray;
+        h1 {
+         width: 100%;
+         font-size: 16px; 
+         font-weight: 500;
+         color: $main_font_color;
+         overflow: hidden;
+         text-overflow: ellipsis;
+         white-space: nowrap;
+        }
+        p {
+          white-space: nowrap;
+          margin-left: 20px;
+          font-size: 14px;
+          color: $middleGray;
+        }
+      }
+      .content {
+        margin-top: 5px;
+        background: $backgroundColor;
+        font-size: 15px;
+        font-weight: 400;
+        color: $middleGray;
+        .viewer {
+          padding: 10px 16px;
+        }
+      }
+      .attach {
+        padding: 8px 16px;
+        border-top: 1px solid $lightGray2;
+        background: $backgroundColor;
+        .list {
+          @include flex_aline_center();
+          line-height: 1.9;
+          >h2 {
+            font-size: 14px;
+            font-weight: 400;
+            color: $middleGray2;
+          }
+          >p {
+            margin-left: 5px;
+            font-size: 14px;
+            font-weight: 400;
+            a {
+              color: $middleGray;
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+    
+    .goBackList {
+      @include notoSans();
+      display: block;
+      margin: 50px auto 0 auto;
+      padding: 10px 20px;
+      font-size: 17px;
+      color: $white;
+      // a {
+      //   display: block;
+      //   padding: 10px 20px;
+      //   font-size: 17px;
+      //   color: $white;
+      // }
+      border: none;
+      border-radius: 100px;
+      background: $main_color0;
+      cursor: pointer;
+      &:active, &:hover {
+        opacity: 0.9;
+      }
+    }
+  }
+}

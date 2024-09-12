@@ -1,0 +1,143 @@
+.productRegist_wrap {
+  .header {
+    padding: 34px;
+    text-align: center;
+    background: rgba($color: $main_color0, $alpha: 0.6);
+    h1 {
+      font-size: 21px;
+      font-weight: 600;
+      color: $white;
+    }
+  }
+  .content {
+    padding: 40px;
+    .inner {
+      >div {
+        margin-bottom: 30px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        .list_inner {
+          >h2 {
+            margin-bottom: 14px;
+            font-size: 17px;
+            font-weight: 500;
+            color: $main_font_color;
+          }
+          >span {
+            display: block;
+            margin-top: 5px;
+            text-indent: 5px;
+            color: $main_color0;
+            font-size: 12px;
+            font-weight: 400;
+            >i {
+              margin-right: 2px;
+              font-size: 14px;
+              vertical-align: -1px;
+            }
+          }
+          input:not(.radio) {
+            @include notoSans();
+            display: block;
+            width: 100%;
+            border: none;
+            border: 1px solid $lightGray2;
+            border-radius: 4px;
+            outline-color: $lightGray;
+            padding: 12px;
+            font-size: 15px;
+            font-weight: 500;
+            color: $main_font_color;
+            &::placeholder {
+              color: $lightGray2;
+              font-weight: 400;
+            }
+          }
+          button {
+            @include notoSans();
+            display: block;
+            border: none;
+            border: 1px solid $lightGray2;
+            color: $middleGray;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            &:hover, &:active {
+              opacity: 0.9;
+            }
+          }
+        }
+        
+        &.product {
+
+        }
+        &.mentor {
+          .list_inner {
+            .data_area {
+              @include flex_aline_center();
+              justify-content: space-between;
+              >input {
+                width: 60%;
+                margin-right: 20px;
+              }
+              .search_wrap {
+                @include flex_aline_center();
+                input {
+                  &:first-child {
+                    width: 100%;
+                  }
+                }
+                button {
+                  white-space: nowrap;
+                  padding: 12px;
+                  margin-left: 10px;
+                }
+              }
+            }
+          }
+          
+        }
+
+        &.validateDate {
+          
+        }
+
+        &.payCk, &.deleteCk {
+          .list_inner {
+            .radio_wrap {
+              label {
+                cursor: pointer;
+                input {
+                  margin-right: 5px;
+                  cursor: pointer;
+                }
+                span {
+                  font-size: 15px;
+                  color: $middleGray;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    >button {
+      @include notoSans();
+      display: block;
+      margin: 40px auto 0 auto;
+      padding: 10px 20px;
+      font-size: 17px;
+      border: none;
+      border-radius: 100px;
+      background: $main_color0;
+      color: $white;
+      cursor: pointer;
+      &:active, &:hover {
+        opacity: 0.9;
+      }
+    }
+  }
+  
+}

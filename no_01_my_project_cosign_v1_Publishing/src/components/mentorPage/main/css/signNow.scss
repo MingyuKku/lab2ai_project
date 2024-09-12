@@ -1,0 +1,442 @@
+$main_font_color: #1E272E;
+$main_color1: #F53B57;
+$main_color2: #00D8D6;
+$white: #fff;
+$middleGray: #555;
+$lightGray: #999;
+
+@mixin flex_aline_center {
+  display: flex;
+  align-items: center;
+}
+@mixin flex_aline_justify_center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.sign_now_wrap {
+  background: #fff;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 1px 1px 4px rgba($color: #000000, $alpha: 0.2);
+  margin-right: 16px;
+}
+
+.sign_now_head_tit {
+  padding: 24px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid $lightGray2;
+  .sign_now_head_tit_info {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    h1 {
+      margin-right: 36px;
+      font-size: 21px;
+      color: #0B35FD;
+      font-weight: 600;
+    }
+    .signNow_menu_slide {
+      width: 72%;
+    }
+  }
+  span {
+    display: block;
+    color: #999;
+    font-size: 22px;
+  }
+}
+
+
+.sign_now_body {
+  padding: 24px 30px 30px 30px;
+}
+
+.mobile_sign_now_head_info_state {
+  display: none;
+}
+
+.sign_now_body_head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.coin_title {
+  display: flex;
+  align-items: center;
+}
+
+.coin_logo {
+  width: 40px;
+}
+
+.coin_logo img {
+  display: block;
+  width: 100%;
+}
+
+.coin_name {
+  display: flex;
+  align-items: center;
+  margin: 0 16px 0 4px;
+}
+
+.coin_name>h2 {
+  font-size: 19px;
+  font-weight: 600;
+  font-weight: 500;//노토산스
+  color: #333;
+  margin-right: 4px;
+}
+
+.coin_name>p {
+  font-size: 17px;
+  font-weight: 600;
+  font-weight: 500;//노토산스
+  color: #999;
+}
+
+.predict_time {
+  @include flex_aline_center();
+  .predictMin {
+    font-size: 15px;
+    // height: 100%;
+    padding: 10px;
+    background: #0B35FD;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 14px;
+    color: $white;
+    font-weight: 500;
+    margin-right: 16px;
+    span {
+      color: $white;
+    }
+  }
+  
+  .time_zone {
+    p {
+      margin-bottom: 4px;
+      font-size: 13px;
+      font-weight: 400;
+      color: $lightGray;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      span {
+        color: $main_font_color;
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+
+.current_price {
+  display: flex;
+  align-items: center;
+}
+
+.current_price>p {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  color: #333;
+  font-weight: 600;
+  font-weight: 500;//노토산스
+  margin: 0 10px 0 5px;
+}
+
+.current_price>p>span {
+  font-size: 11px;
+  font-weight: 600;
+  font-weight: 500;//노토산스
+  color: #555;
+  margin-left: 3px;
+}
+
+.current_price>h4 {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-weight: 500;//노토산스
+  font-size: 15px;
+}
+
+.current_price>h4>p {
+  margin: 0 12px 0 2px;
+}
+
+
+.sign_now_body_main_info {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0 30px 0;
+}
+
+.price_head {
+  display: flex;
+  align-items: center;
+}
+
+.price_head>div {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  &.predict_img {
+    i {
+      color: #D60000;
+    }
+  }
+  i {
+    font-size: 22px;
+  }
+  img {
+    display: block;
+  }
+}
+
+.entry_price_img {
+  background: #FEF1E7;
+}
+
+.target_price_img {
+  background: #FBE8E8;
+  img {
+    width: 19px;
+  }
+}
+
+.predict_img {
+  background: #FBE8E8;
+  &.earning_minus {
+    background: #DEE8F7;
+  }
+  &.earning_middle {
+    background: #ECE2F8;
+  }
+  i {
+    color: #D60000;
+    &.earning_minus {
+      color: #0051C7;
+    }
+    &.earning_middle {
+      color: #8E43E7;
+    }
+  }
+}
+
+.price_head>h2 {
+  font-size: 16px;
+  font-weight: 600;
+  font-weight: 500;//노토산스
+  color: #333;
+  margin-left: 5px;
+}
+
+.priceBox_outer {
+  display: flex;
+  flex-direction: column;
+  .current_price_info {
+    display: flex;
+    align-items: center;
+    margin: 16px 0;
+    h2 {
+      display: inline-block;
+      font-size: 14px;
+      font-weight: 600;
+      font-weight: 500;//노토산스
+      padding: 4px 10px;
+      background: #f3f3f3;
+      color: #555;
+      border-radius: 4px;
+    }
+    P {
+      font-size: 14px;
+      span {
+        font-size: 14px;
+        font-weight: 400;
+      }
+    }
+    h4 {
+      font-size: 14px;
+    }
+    .current_price > * {
+      color: #D60000;
+    }
+  
+    .current_price.down > * {
+      color: #0051C7;
+    }
+  
+    .current_price.zero > * {
+      color: #000000;
+    }
+  }
+  .priceBox_area {
+    @include flex_aline_center();
+    .price_box {
+      padding: 20px;
+      border-radius: 16px;
+      border: 1px solid #ddd;
+      box-shadow: 0 0 0 rgba(11, 53, 253, 0);
+      transition: all 0.4s ease-in-out;
+      margin-left: 24px;
+      &:first-child {
+        margin-left: 0;
+      } 
+      &:hover {
+        // box-shadow: 0 16px 30px rgba(11, 53, 253, 0.2);
+        border: 1px solid rgba(11, 53, 253, 0.2);
+      }
+      p {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 17px;
+        letter-spacing: -0.5px;
+        font-weight: 600;//노토산스
+        color: $white;
+        width: 150px;
+        height: 36px;
+        border-radius: 32px;
+        margin-top: 16px;
+        padding-bottom: 2px;//노토산스
+        &.blur {
+          filter: blur(4px);
+        }
+        span {
+          font-size: 14px;
+          margin-left: 3px;
+        }
+      }
+    }
+  }
+}
+
+
+
+.price_box:first-child {
+  margin-left: 0;
+} 
+
+.entry_price>p {
+  background: #FB8A2E;
+}
+
+.target_price>p {
+  background: #D60000;
+}
+
+.predict_price>p {
+  background: #D60000;
+  &.earning_minus {
+    background: #0051C7;
+  }
+  &.earning_middle {
+    background: #8E43E7;
+  }
+}
+
+
+.stop_price_area {
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  div {
+    display: flex;
+    align-items: center;
+    span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      height: 30px;
+      background: #eee;
+      border-radius: 50%;
+      i {
+        font-size: 19px;
+        color: #888;
+      }
+    }
+    h3 {
+      font-size: 16px;
+      color: #555;
+      font-weight: 500;
+      margin-left: 4px;
+    }
+  }
+  p {
+    font-size: 16px;
+    letter-spacing: -0.5px;
+    color: #333;
+    font-weight: 600;
+    font-weight: 500;//노토산스
+    margin-left: 10px;
+    &.blur {
+      filter: blur(4px);
+      user-select: none;
+    }
+    span {
+      font-size: 14px;
+      margin-left: 2px;
+    }
+  }
+}
+
+.sub_line {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: #ddd;
+  margin: 30px 0;
+}
+
+.sign_now_body_sub p:nth-child(4) {
+  margin: 24px 0;
+}
+
+.sign_now_body_sub p {
+  text-align: justify;
+  font-weight: 400;
+  font-size: 15px;
+  color: #333;
+  margin-bottom: 24px;
+  line-height: 1.7;
+  &.blur {
+    filter: blur(4px);
+    user-select: none;
+  }
+}
+
+.sign_now_body_sub .sub_img {
+  border: 2px solid rgba(221, 221, 221, 0.7);
+  border-radius: 10px;
+  overflow: hidden;
+  &.blur {
+    filter: blur(4px);
+    user-select: none;
+  }
+}
+.sign_now_body_sub .sub_img img {
+  display: block;
+  width: 100%;
+}
+
+.sign_now_news {
+  &.blur {
+    filter: blur(4px);
+    pointer-events: none;
+    user-select: none;
+  }
+}

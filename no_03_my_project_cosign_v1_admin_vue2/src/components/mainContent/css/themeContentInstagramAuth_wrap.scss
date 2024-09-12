@@ -1,0 +1,26 @@
+.themeContentInstagramAuth_wrap {
+    .update_btn {
+        @include btn_sub();
+        display: inline-block;
+    }
+    ul {
+      @include flex_aline_center();
+      margin-top: 20px;
+      li {
+        flex: 1;
+        margin-right: 10px;
+        &:last-child {
+          margin-right: 0;
+        }
+        a {
+          display: block;
+          width: 100%;
+          height: 100%;
+          img {
+            display: block;
+            width: 100%;
+          }
+        }
+      }
+    }
+}

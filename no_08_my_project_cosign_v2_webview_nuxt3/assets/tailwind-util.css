@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    /* 코인 이미지 */
+    .crypto-image-lg {
+        @apply w-8 h-8;
+    }
+    .crypto-image-md {
+        @apply w-6 h-6;
+    }
+    .crypto-image-sm {
+        @apply w-4 h-4;
+    }
+
+
+    /* 모델 이미지 */
+    .model-image-sm {
+        @apply w-6 h-[20px] overflow-hidden;
+    }
+    .model-image-md {
+        @apply w-10 h-[33px] overflow-hidden;
+    }
+    .model-image-lg {
+        @apply w-[68px] h-14 overflow-hidden;
+    }
+    .model-image-sm img,
+    .model-image-md img,
+    .model-image-lg img {
+        @apply h-full object-cover;
+    }
+}

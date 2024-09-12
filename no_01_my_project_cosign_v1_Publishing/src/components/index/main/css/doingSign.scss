@@ -1,0 +1,131 @@
+$main_font_color: #1E272E;
+$main_color1: #F53B57;
+$main_color2: #00D8D6;
+
+@mixin flex_aline_center {
+  display: flex;
+  align-items: center;
+}
+@mixin flex_aline_justify_center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.doingSign_wrap {
+  width: 100%;
+  @include flex_aline_center();
+  padding: 16px 16px;
+  border-bottom: 1px solid #f1f1f1;
+  -webkit-animation: showLineUp 0.4s ease-in-out;
+  -moz-animation: showLineUp 0.4s ease-in-out;
+  -ms-animation: showLineUp 0.4s ease-in-out;
+  -o-animation: showLineUp 0.4s ease-in-out;
+  animation: showLineUp 0.4s ease-in-out;
+  &:last-child {
+    border-bottom: none;
+  }
+  &:hover {
+    background: #fbfbfb;
+  }
+  >.coin {
+    width: 30%;
+    @include flex_aline_center();
+    .coin_img {
+      width: 32px;
+      margin-right: 5px;
+      img {
+        display: block;
+        width: 100%;
+      }
+    }
+    .coin_name {
+      h2 {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        font-size: 14px;
+        font-weight: 400;
+        color: #555;
+      }
+      p {
+        font-size: 12px;
+        font-weight: 400;
+        color: #888;
+      }
+    }
+  } //coin
+  >.mentor {
+    width: 30%;
+    @include flex_aline_center();
+    .profile_img {
+      width: 32px;
+      margin-right: 5px;
+      img {
+        width: 100%;
+        display: block;
+      }
+    }
+    h2 {
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      font-size: 14px;
+      font-weight: 400;
+      color: $main_font_color;
+    }
+  } //mentor
+  >.buy_price {
+    width: 22%;
+    h2 {
+      font-size: 13px;
+      font-weight: 400;
+      color: #555;
+    }
+    p {
+      font-size: 14px;
+      font-weight: 400;
+      color: $main_font_color;
+    }
+  } //buy_price
+  >.predict_earning {
+    width: 20%;
+    h2 {
+      font-size: 13px;
+      font-weight: 400;
+      color: #555;
+    }
+    p {
+      @include flex_aline_center();
+      font-size: 15px;
+      font-weight: 400;
+      color: $main_color1;
+      i {
+        font-size: 19px;
+        font-weight: 500;
+        margin-right: 4px;
+      }
+      &.deficit {
+        color: #0051C7;
+      }
+    }
+ 
+  } //predict_earning
+  >.remaing_time {
+    width: 18%;
+    font-size: 14px;
+    font-weight: 400;
+    color: #888;
+    h2 {
+      font-size: 13px;
+      font-weight: 400;
+      color: #555;
+    }
+    p {
+      font-size: 14px;
+      font-weight: 400;
+      color: $main_font_color;
+    }
+  } //remaing_time
+}

@@ -1,0 +1,41 @@
+.sideGnbMenu_wrap {
+  .title {
+    background: url('https://kr.object.ncloudstorage.com/cosign/project-images/cosign-manager/forest-g13c9e4f35_1280.jpg') no-repeat center;
+    background-size: cover;
+    h1 {
+      padding: 30px;
+      font-size: 19px;
+      font-weight: 600;
+      // border-bottom: 1px solid $lightGray2;
+      color: $white;
+      cursor: pointer;
+      // a {
+      //   color: $main_font_color;
+      // }
+    }
+  }
+  .side_menu {
+    // padding: 30px;
+    ul {
+      li {
+        padding: 16px 30px;
+        font-size: 16px;
+        font-weight: 500;
+        color: $lightGray;
+        cursor: pointer;
+        // a {
+        //   font-size: 17px;
+        //   font-weight: 500;
+        //   color: $main_font_color;
+        // }
+        &.active {
+          color: $white;
+          background: $darkBackColor;
+          // a {
+          //   color: $main_color0;
+          // }
+        }
+      }
+    }
+  }
+}

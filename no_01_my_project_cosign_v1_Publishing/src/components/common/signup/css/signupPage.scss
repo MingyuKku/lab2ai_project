@@ -1,0 +1,257 @@
+.signupPage_wrap {
+  @include flex_aline_justify_center();
+  width: 100%;
+  min-height: 100vh;
+  padding: 120px 0;
+  background: $backgroundColor;
+  .signup_body {
+    width: 450px;
+    .title {
+      margin-bottom: 34px;
+      text-align: center;
+      font-size: 32px;
+      font-weight: 500;
+      color: $main_font_color;
+    }
+    .signupForm {
+      >div:not(.signupBtn) {
+        margin-bottom: 21px;
+        h2 {
+          margin-bottom: 4px;
+          font-size: 16px;
+          font-weight: 500;
+          color: $main_font_color;
+        }
+        input {
+          display: block;
+          width: 100%;
+          height: 50px;
+          padding: 0 19px;
+          appearance: none;
+          -webkit-appearance: none;
+          border: none;
+          border: 2px solid transparent;
+          border-radius: 10px;
+          font-size: 14px;
+          outline: none;
+          outline: 1px solid $lightGray2;
+          transition: all 0.3s cubic-bezier(0.33, 1, 0.68, 1);
+          &:focus {
+            border-color: $main_color2;
+            border-width: 2px;
+            outline-color: transparent;
+          }
+          &::placeholder {
+            font-size: 14px;
+            @include notoSans();
+            color: $lightGray;
+          }
+        }
+        .input_tips {
+          margin-top: 8px;
+          font-size: 12px;
+          color: $main_font_color;
+          text-indent: 8px;
+          i {
+            margin-right: 4px;
+            font-size: 15px;
+            vertical-align: -1px;
+          }
+        }
+        .validation {
+          display: block;
+          margin-top: 8px;
+          font-size: 12px;
+          color: $main_color1;
+          text-indent: 8px;
+          i {
+            margin-right: 4px;
+            font-size: 15px;
+            vertical-align: -1px;
+          }
+        }
+        &.password_area {
+          margin-bottom: 34px;
+          .password_input_wrap {
+            margin-bottom: 8px;
+            input {
+              width: 100%;
+            }
+          }
+          
+        }
+
+        &.agreementCheck_area {
+          margin-bottom: 8px;
+          padding: 16px;
+          border-radius: 10px;
+          border: 1px solid $lightGray2;
+          background: $white;
+          .allCheck_area {
+            padding-bottom: 16px;
+            border-bottom: 1px solid $lightGray2;
+            input {
+              display: none;
+              &:checked +label {
+                .allCheckBox {
+                  background: $main_color2;
+                  border-color: transparent;
+                  i {
+                    color: $white
+                  }
+                }
+              }
+            }
+            label {
+              @include flex_aline_center();
+              .allCheckBox {
+                @include flex_aline_justify_center();
+                width: 18px;
+                height: 18px;
+                border: 1px solid $lightGray2;
+                border-radius: 50%;
+                background: $white;
+                margin-right: 6px;
+                i {
+                  font-size: 12px;
+                  color: $lightGray2;
+                }
+              }
+              p {
+                font-size: 14px;
+                font-weight: 500;
+                color: $main_font_color;
+              }
+            }
+            >p {
+              font-size: 12px;
+              font-weight: 400;
+              color: $main_font_color;
+              text-indent: 26px;
+              margin-top: 6px;
+            }
+          }//allCheck_area
+          .checkList {
+            padding-top: 16px;
+            li {
+              position: relative;
+              @include flex_aline_center();
+              margin-bottom: 12px;
+              &:last-child {
+                margin-bottom: 0;
+              }
+              >input {
+                display: none;
+                &:checked +label {
+                  div {
+                    background: $main_color2;
+                    border-color: transparent;
+                    i {
+                      color: $white;
+                    }
+                  }
+                  p {
+                    color: $main_font_color;
+                  }
+                }                
+              }
+              >label {
+                @include flex_aline_center();
+                div {
+                  @include flex_aline_justify_center();
+                  width: 15px;
+                  height: 15px;
+                  border-radius: 50%;
+                  border: 1px solid $lightGray2;
+                  background: $white;
+                  margin-right: 6px;
+                  i {
+                    font-size: 10px;
+                    color: $lightGray2;
+                  }
+                }
+                p {
+                  font-size: 12px;
+                  font-weight: 400;
+                  color: $lightGray;
+                }
+                span {
+                  font-size: 12px;
+                  font-weight: 400;
+                  margin-left: 4px;
+                  &.required {
+                    color: $main_color1;
+                  }
+                  &.choose {
+                    color: $lightGray;
+                  }
+                }
+              }
+              .more {
+                position: absolute;
+                right: 0;
+                width: 20px;
+                height: 20px;
+                &:hover {
+                  a {
+                    i {
+                      color: $middleGray2;
+                    }
+                  }
+                }
+                a {
+                  @include flex_aline_justify_center();
+                  width: 100%;
+                  i {
+                    font-size: 17px;
+                    color: $lightGray;
+                  }
+                }
+              }
+            }//li
+          }//checkList
+        } //agreementCheck_area
+      }//>div
+      .validation {
+        display: block;
+        font-size: 12px;
+        color: $main_color1;
+        text-indent: 8px;
+        i {
+          margin-right: 4px;
+          font-size: 15px;
+          vertical-align: -1px;
+        }
+      }
+      .signupBtn {
+        width: 100%;
+        height: 50px;
+        margin-top: 34px;
+        background: $white;
+        button {
+          @include notoSans();
+          display: block;
+          width: 100%;
+          height: 100%;
+          font-size: 19px;
+          color: $white;
+          font-weight: 500;
+          background: rgba($color: $main_color1, $alpha: 1.0);
+          border: none;
+          border-radius: 10px;
+          cursor: pointer;
+          &:active {
+            background: rgba($color: $main_color1, $alpha: 1.0);
+          }
+          &:not(:disabled):hover {
+            background: rgba($color: $main_color1, $alpha: 0.9);
+          }
+          &:disabled {
+            opacity: 0.5;
+            cursor: auto;
+          }
+        }
+      }
+    }//signupForm
+  }//signup_body
+}
