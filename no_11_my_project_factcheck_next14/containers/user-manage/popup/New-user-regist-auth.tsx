@@ -3,6 +3,7 @@
 import React from 'react';
 import Radio from '@/components/form/Radio';
 import { RadioList } from '@/components/form/_types';
+import { Authority } from '@/services/auth/_types';
 
 
 interface Props {
@@ -18,15 +19,15 @@ const NewUserRegistAuth: React.FC<Props> = ({ label, inputName, borderPos, input
     const ITEMS: RadioList[] = [
         {
             label: '일반',
-            value: 'normal'
+            value: 'MEMBER'
         },
         {
             label: '관리자',
-            value: 'admin'
+            value: 'ADMIN'
         },
     ]
 
-    const [ checkedItem, updateItem ] = React.useState(ITEMS[0].value);
+    const [ checkedItem, updateItem ] = React.useState(ITEMS[0]);
 
 
     const borderStyleClassName = React.useMemo(() => {

@@ -7,28 +7,14 @@ import React from "react";
 import { useResetRecoilState, useSetRecoilState } from "recoil";
 import { useSWRConfig } from "swr";
 
-export const useSubmitCheck = (setSidePopupFlag: React.Dispatch<React.SetStateAction<boolean>>) => {
+export const useSubmitCheck = (items: RadioList<DocType>[], setSidePopupFlag: React.Dispatch<React.SetStateAction<boolean>>) => {
 
-    const ITEMS: RadioList<DocType>[] = [
-        {
-            label: '텍스트',
-            value: 'text',
-        },
-        {
-            label: '인터넷 문서',
-            value: 'url',
-        },
-        {
-            label: '문서 파일',
-            value: 'file',
-        },
-    ]
-    
     const { mutate } = useSWRConfig();
     const setAlertState = useSetRecoilState(alertState);
     const resetAlertState = useResetRecoilState(alertState);
-    const { requestTextParser, requestFileParser, requestUrlParser } = useFetchRequestCheckParser();
-    const [ checkedItem, updateItem ] = React.useState<DocType>(ITEMS[0].value);
+    
+    // const [ checkedItem, updateItem ] = React.useState<DocType>(items[0].value);
+    const [ checkedItem, updateItem ] = React.useState<RadioList<DocType>>(items[0]);
     const [ submitFlag, setSubmitFlag ] = React.useState(false);
 
     const MIN_TEXT_LENGTH = 20;
@@ -41,10 +27,10 @@ export const useSubmitCheck = (setSidePopupFlag: React.Dispatch<React.SetStateAc
 
         setSubmitFlag(true);
         const formData = new FormData(e.currentTarget);
-        const inputValue = formData.get(checkedItem) as string | File;
+        const inputValue = formData.get(checkedItem.value) as string | File;
 
 
-        if (checkedItem === 'text') {
+        if (checkedItem.value === 'text') {
             if (typeof inputValue !== 'string') return setSubmitFlag(false);
             if (inputValue.length <= MIN_TEXT_LENGTH) {
                 setAlertState({
@@ -64,14 +50,16 @@ export const useSubmitCheck = (setSidePopupFlag: React.Dispatch<React.SetStateAc
                 return setSubmitFlag(false);;
             }
             
-            const { isSuccess } = await requestTextParser(inputValue);
+            // const { isSuccess } = await requestTextParser(inputValue);
+            if (!checkedItem.submitApi) return setSubmitFlag(false);
+            const { isSuccess } = await checkedItem.submitApi(inputValue);
             if (isSuccess === 'success') {
                 setSidePopupFlag(false);
                 mutate(GET_CHECK_HISTORY_LIST);
             }
         }
 
-        if (checkedItem === 'file') {
+        if (checkedItem.value === 'file') {
             if (typeof inputValue === 'string') return setSubmitFlag(false);
             if (inputValue.size === 0) {
                 setAlertState({
@@ -92,14 +80,16 @@ export const useSubmitCheck = (setSidePopupFlag: React.Dispatch<React.SetStateAc
             }
             const formData = new FormData();
             formData.append('file', inputValue);
-            const { isSuccess } = await requestFileParser(formData);
+            if (!checkedItem.submitApi) return setSubmitFlag(false);
+            // const { isSuccess } = await requestFileParser(formData);
+            const { isSuccess } = await checkedItem.submitApi(formData);
             if (isSuccess === 'success') {
                 setSidePopupFlag(false);
                 mutate(GET_CHECK_HISTORY_LIST);
             }
         }
 
-        if (checkedItem === 'url') {
+        if (checkedItem.value === 'url') {
             if (typeof inputValue !== 'string') return setSubmitFlag(false);
             if (!inputValue) {
                 setAlertState({
@@ -119,7 +109,9 @@ export const useSubmitCheck = (setSidePopupFlag: React.Dispatch<React.SetStateAc
                 return setSubmitFlag(false);
             }
 
-            const { isSuccess } = await requestUrlParser(inputValue);
+            if (!checkedItem.submitApi) return setSubmitFlag(false);
+            // const { isSuccess } = await requestUrlParser(inputValue);
+            const { isSuccess } = await checkedItem.submitApi(inputValue);
             if (isSuccess === 'success') {
                 setSidePopupFlag(false);
                 mutate(GET_CHECK_HISTORY_LIST);
@@ -133,7 +125,6 @@ export const useSubmitCheck = (setSidePopupFlag: React.Dispatch<React.SetStateAc
     
     
     return {
-        ITEMS,
         checkedItem,
         updateItem,
         onSubmitRequestCheck,

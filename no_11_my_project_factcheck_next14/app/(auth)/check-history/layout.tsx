@@ -11,6 +11,10 @@ import { useFetchCheckHistory } from '@/services/check-history/use-fetch-check-h
 import { GET_CHECK_HISTORY_LIST } from '@/lib/swr/keys';
 import CheckHistoryItemProvider from '@/context/Check-history-item-provider';
 import CommonLoader from '@/components/fallback/Loader';
+import { RadioList } from '@/components/form/_types';
+import { DocType } from '@/services/check-history/_types';
+import { useFetchRequestCheckParser } from '@/services/check-history/use-fetch-request-check-parser';
+import Paginate from '@/components/Paginate';
 
 
 interface Props {
@@ -20,11 +24,37 @@ interface Props {
 
 const CheckHistoryLayout: NextPage<Props> = ({ children }) => {
 
+    const { requestTextParser, requestFileParser, requestUrlParser } = useFetchRequestCheckParser();
+
+    const ITEMS: RadioList<DocType>[] = [
+        {
+            label: '텍스트',
+            value: 'text',
+            submitApi: requestTextParser
+        },
+        {
+            label: '인터넷 문서',
+            value: 'url',
+            submitApi: requestUrlParser,
+        },
+        {
+            label: '문서 파일',
+            value: 'file',
+            submitApi: requestFileParser
+        },
+    ]
+
+
     const { getList } = useFetchCheckHistory();
     const { data, error, isLoading, isValidating } = useSWR(GET_CHECK_HISTORY_LIST, getList, {
         revalidateOnFocus: true,
         // refreshInterval: 1000 * 60,
     })
+
+    const handlePageClick = React.useCallback(({ selected }: { selected: number }) => {
+        console.log('헤헤', selected)
+    }, [])
+
 
 
     if (error) {
@@ -35,7 +65,7 @@ const CheckHistoryLayout: NextPage<Props> = ({ children }) => {
         <div className='px-side py-10'>
             <div className="head">
                 <h1 className='title-lg text-center'>체크 히스토리</h1>
-                <RequestCheckButton />
+                <RequestCheckButton items={ ITEMS } label='팩트 체크 요청' />
             </div>
             <div className='content-wrap relative min-h-[200px]'>
                 {
@@ -55,10 +85,15 @@ const CheckHistoryLayout: NextPage<Props> = ({ children }) => {
                             <div className='table-wrapper mt-4'>
                                 <table className='border-collapse w-full'>
                                     <TableHead />
-                                    <TableBody data={ data } />
+                                    <TableBody data={ data.list } />
                                 </table>
+                                <Paginate
+                                    page={ 0 }
+                                    totalPages={ data.totalPage }
+                                    onChangePage={ handlePageClick }
+                                />
                             </div>
-                            <CheckHistoryItemProvider historyItems={ data } >
+                            <CheckHistoryItemProvider historyItems={ data.list } >
                                 { children }
                             </CheckHistoryItemProvider>
                         </React.Fragment>

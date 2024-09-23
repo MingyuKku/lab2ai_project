@@ -4,7 +4,40 @@ const DocList = ["url", "file", "text"] as const;
 
 export type DocType = typeof DocList[number];
 
+export interface DocsHistoryResponse {
+    message: string;
+    result: DocsHistory
+}
 
+export interface DocsHistory {
+    list: DocsList[];
+    page: number;
+    pageSize: number;
+    totalElements: number;
+    totalPage: number;
+}
+
+export interface DocsList {
+    bottomDetailsInfoList: DocsBottomDetailsInfo[];
+    createdDateTime: string;
+    docsId: number;
+    format: string; // 'PDF'
+    inactive: boolean;
+    objectId: ObjectId;
+    originalText: string | null;
+    requesterId: number;
+    requesterName: string;
+    status: FactValuesType; // 'TRUE'
+    title: string;
+    topDetailInfo: TopDetailInfo;
+    updatedDateTime: string;
+}
+
+interface TopDetailInfo {
+    topDetailFactCheckResult: DocsTopDetailFactCheckResult | null;
+    topDetailReport: string | null;
+    topDetailTitle: string | null;
+}
 
 export interface HistoryDocumentJsonData {
     docsBottomDetailsInfos: DocsBottomDetailsInfo[];

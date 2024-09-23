@@ -11,7 +11,7 @@ const SummaryText = () => {
         <div>
             {/* <h2 className='title-md'>120개 문장(이슈) 중 80%가 <span className='text-secondary-degree-05'>사실</span>로 판단됨</h2> */}
             <div className='border border-achromatic-03 rounded p-5 mt-5'>
-                <p className='body-md'>{ item.docsTopDetailInfo.docsTopDetailReport }</p>
+                <p className='body-md'>{ item.topDetailInfo.topDetailReport }</p>
             </div>
         </div>
     )

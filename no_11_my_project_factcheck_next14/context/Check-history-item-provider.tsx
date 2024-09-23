@@ -1,13 +1,13 @@
 'use client'
 
-import { HistoryDocumentJsonData } from '@/services/check-history/_types';
+import { DocsList, HistoryDocumentJsonData } from '@/services/check-history/_types';
 import React, { createContext, useContext } from 'react'
 
-const CheckHistoryItemContext = createContext<HistoryDocumentJsonData[]>([]);
+const CheckHistoryItemContext = createContext<DocsList[]>([]);
 
 
 interface Props {
-    historyItems: HistoryDocumentJsonData[];
+    historyItems: DocsList[];
     children?: React.ReactNode;
 }
 

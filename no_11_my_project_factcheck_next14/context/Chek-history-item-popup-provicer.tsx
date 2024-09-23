@@ -1,24 +1,24 @@
 'use client'
 
-import { HistoryDocumentJsonData } from '@/services/check-history/_types';
+import { DocsList, HistoryDocumentJsonData } from '@/services/check-history/_types';
 import React, { createContext, useContext } from 'react'
 
 const CheckHistoryItemPopupContext = createContext<{
-    item: HistoryDocumentJsonData | null;
-    scrollElem: React.RefObject<HTMLDivElement> | null;
-    scrollElemHeight: number;
-    updatePopupScrollElemHeight?: React.Dispatch<React.SetStateAction<number>>;
+    item: DocsList | null;
+    scrollElem?: React.RefObject<HTMLDivElement> | null;
+    scrollElemHeight?: number;
+    updatePopupScrollElemHeight?: React.Dispatch<React.SetStateAction<number | undefined>>;
 }>({
     item: null,
-    scrollElem: null,
-    scrollElemHeight: 0,
+    // scrollElem: null,
+    // scrollElemHeight: 0,
 });
 
 
 interface Props {
-    detailInfoitem: HistoryDocumentJsonData;
-    scrollElem: React.RefObject<HTMLDivElement>;
-    scrollElemHeight: number;
+    detailInfoitem: DocsList;
+    scrollElem?: React.RefObject<HTMLDivElement>;
+    scrollElemHeight?: number;
     children?: React.ReactNode;
 }
 
@@ -32,17 +32,40 @@ const CheckHistoryItemPopupProvider: React.FC<Props> = ({ detailInfoitem, scroll
     React.useEffect(() => {
         if (!scrollElemHeight) return;
 
-        updatePopupScrollElemHeight(scrollElemHeight)
+        updatePopupScrollElemHeight(scrollElemHeight);
     }, [scrollElemHeight])
+
+
+    const returnProviderValue = React.useCallback(() => {
+        if (!scrollElem && !scrollElemHeight) {
+            return {
+                item,
+                scrollElem: popupScrollElem,
+                scrollElemHeight: popupScrollElemHeight,
+                updatePopupScrollElemHeight: updatePopupScrollElemHeight
+            }
+        }
+        if (!scrollElem) {
+            return {
+                item,
+                scrollElem: popupScrollElem,
+            }
+        }
+        if (!scrollElemHeight) {
+            return {
+                item,
+                scrollElemHeight: popupScrollElemHeight,
+                updatePopupScrollElemHeight: updatePopupScrollElemHeight
+            }
+        }
+        return {
+            item,
+        }
+    }, [])
 
     
     return (
-        <CheckHistoryItemPopupContext.Provider value={{
-            item,
-            scrollElem: popupScrollElem,
-            scrollElemHeight: popupScrollElemHeight,
-            updatePopupScrollElemHeight: updatePopupScrollElemHeight
-        }}>
+        <CheckHistoryItemPopupContext.Provider value={returnProviderValue()}>
             { children }
         </CheckHistoryItemPopupContext.Provider>
     )

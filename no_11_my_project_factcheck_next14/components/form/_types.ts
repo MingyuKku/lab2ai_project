@@ -8,4 +8,5 @@ export interface RadioList<T = any> {
     label: string;
     value: T,
     key?: string;
+    submitApi?: (...arg: any[]) => Promise<any>;
 }

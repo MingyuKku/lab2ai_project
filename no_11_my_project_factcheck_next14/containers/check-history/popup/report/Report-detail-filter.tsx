@@ -27,9 +27,9 @@ const ReportDetailFilter: React.FC<Props> = ({ selectedFilter, setFilter }) => {
      */
     const isHaveCheckResultValue = React.useCallback((key: CompletedFactMapping['value']) => {
         if (!item) return false;
+        if (!item.topDetailInfo.topDetailFactCheckResult) return;
 
-        const value = item.docsTopDetailInfo.docsTopDetailFactCheckResult[key];
-
+        const value = item.topDetailInfo.topDetailFactCheckResult[key];
         if (value === 0) return false;
         return true;
     }, [item])
@@ -63,7 +63,7 @@ const ReportDetailFilter: React.FC<Props> = ({ selectedFilter, setFilter }) => {
                         <div
                             className='flex items-center justify-center w-[34px] h-6 ml-2.5 rounded-full body-sm-b text-achromatic-white'
                             style={ boxStyle(fact.color) }
-                        >{ item.docsTopDetailInfo.docsTopDetailFactCheckResult[fact.value] }</div>
+                        >{ item.topDetailInfo.topDetailFactCheckResult ? item.topDetailInfo.topDetailFactCheckResult[fact.value] : '' }</div>
                         { selectedFilter === fact.value && <span className='absolute bottom-0 left-0 w-full h-[3px] bg-primary-blue-02'></span> }
                     </div>
                 ))

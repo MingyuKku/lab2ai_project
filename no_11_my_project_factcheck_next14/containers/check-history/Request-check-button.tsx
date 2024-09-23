@@ -5,6 +5,9 @@ import dynamic from 'next/dynamic';
 import ButtonMd from '@/components/buttons/Button-md';
 import IconUpload from '@/components/icon/Upload';
 import FullScreen from '@/components/fallback/Full-screen';
+import { RadioList } from '@/components/form/_types';
+import { DocType } from '@/services/check-history/_types';
+import { useFetchRequestCheckParser } from '@/services/check-history/use-fetch-request-check-parser';
 
 
 
@@ -18,9 +21,12 @@ const LazyCheckDocUrlForm = dynamic(() => import('@/containers/check-history/pop
 });
 
 
-
-const RequestCheckButton = () => {
-
+interface Props {
+    items: RadioList<DocType>[];
+    label: string;
+}
+const RequestCheckButton: React.FC<Props> = ({ items, label }) => {
+    
     const [ sidePopupFlag, setSidePopupFlag ] = React.useState(false);
 
     const onClickRegistButton = React.useCallback(() => {
@@ -39,7 +45,7 @@ const RequestCheckButton = () => {
                 setFlag={ setSidePopupFlag }
                 className=''
             >
-                <LazyCheckDocUrlForm setSidePopupFlag={ setSidePopupFlag } />
+                <LazyCheckDocUrlForm items={ items } title={ label } setSidePopupFlag={ setSidePopupFlag } />
             </LazySidePopup>
             <div className="button-area flex justify-end mt-8">
                 <ButtonMd
@@ -47,7 +53,7 @@ const RequestCheckButton = () => {
                     className='flex items-center justify-center w-[200px]'
                 >
                     <IconUpload />
-                    <span className='title-sm ml-2.5'>팩트 체크 요청</span>
+                    <span className='title-sm ml-2.5'>{ label }</span>
                 </ButtonMd>
             </div>
         </React.Fragment>

@@ -3,15 +3,26 @@ import Image from 'next/image';
 import FormInputMd from '@/components/form/Input-md';
 import ButtonLg from '@/components/buttons/Button-lg';
 import { useRouter } from 'next/navigation';
+import { useFetchSignin } from '@/services/auth/use-fetch-signin';
+import { TwofaParams } from '@/services/auth/_types';
 
 
 const TwoFactorAuthBox = () => {
 
     const { replace } = useRouter();
+    const { response2faAuthentication } = useFetchSignin();
 
-    const onSubmitCertComplete = React.useCallback((e: React.FormEvent<HTMLFormElement>) => {
+    const onSubmitCertComplete = React.useCallback(async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        replace('/check-history');
+
+        const formData = new FormData(e.currentTarget);
+
+        const param: TwofaParams = {
+            number: formData.get('cert') as string
+        }
+
+        const { isSuccess } = await response2faAuthentication(param);
+        if (isSuccess === 'success') replace('/check-history');
     }, [])
 
     return (

@@ -3,7 +3,7 @@ import type { Metadata, Viewport } from "next";
 import "@/styles/tailwind.css";
 import dynamic from 'next/dynamic';
 import CSRFTokenProvider from '@/context/CSRF-token-provider';
-import AppViewport from '@/components/app/App-viewport';
+import AppClient from '@/components/app/App-client';
 import RecoilWrapper from '@/lib/recoil/Recoil-wrapper';
 
 
@@ -30,18 +30,19 @@ const RootLayout = async ({
     children
 }: React.PropsWithChildren<{}>) => {
 
-    const token = 'temp';
+    // const token = 'temp';
 
     return (
         <html lang='en'>
             <body>
-                <div className='bg-achromatic-05'>
-                    <AppViewport />
+                <div className='bg-achromatic-05 min-w-desktop'>
+                    <AppClient />
                     <RecoilWrapper>
                         <LazyDefaultAlert />
-                        <CSRFTokenProvider token={ token }>
+                        { children }
+                        {/* <CSRFTokenProvider token={ token }>
                             { children }
-                        </CSRFTokenProvider>
+                        </CSRFTokenProvider> */}
                     </RecoilWrapper>
                 </div>
             </body>

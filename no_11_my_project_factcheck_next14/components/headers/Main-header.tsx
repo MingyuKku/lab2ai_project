@@ -14,7 +14,7 @@ const MainGnbMenu = () => {
         {
             label: '데이타 뱅크',
             href: '/data-bank',
-            disabled: true,
+            // disabled: true,
         },
         {
             label: '사용자 관리',
@@ -27,9 +27,11 @@ const MainGnbMenu = () => {
                 NAV.map((item,idx) => (
                     <NavLink
                         key={ idx }
-                        href={ !item?.disabled ? item.href : '#' }
+                        // href={ !item?.disabled ? item.href : '#' }
+                        href={ item.href }
                         activeClassName='title-sm text-primary-blue-02'
-                        inactiveClassName={`body-md ${ item?.disabled ? 'pointer-events-none text-achromatic-03' : 'text-achromatic-black' }`}
+                        // inactiveClassName={`body-md ${ item?.disabled ? 'pointer-events-none text-achromatic-03' : 'text-achromatic-black' }`}
+                        inactiveClassName={`body-md text-achromatic-black`}
                         className={`flex items-center justify-center h-main-header mr-6`}
                         isActiveBar={true}
                         scroll={ false }
@@ -49,7 +51,7 @@ const MainGnbMenu = () => {
 const MainHeader = () => {
 
     return (
-        <div className='fixed z-40 flex items-center justify-between bg-achromatic-white w-full h-main-header px-side border-b border-achromatic-03'>
+        <div className='fixed z-40 flex items-center justify-between bg-achromatic-white w-full min-w-desktop h-main-header px-side border-b border-achromatic-03'>
             <div className="left flex items-center">
                 <a href='' className="block gnb-bi w-[126px] mr-10">
                     <Image

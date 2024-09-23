@@ -38,11 +38,11 @@ const ReportDetailItem: React.FC<Props> = ({ detailInfo }) => {
                     <div
                         onClick={ () => updateFlag(!popupFlag) }
                         className={`
-                            shrink-0 w-[103px] h-[35px] ml-4 flex items-center justify-center shadow-02 border-[1.5px] border-achromatic-02 rounded-lg body-sm-m cursor-pointer
+                            shrink-0 w-[128px] h-[35px] ml-4 flex items-center justify-center shadow-02 border-[1.5px] border-achromatic-02 rounded-lg body-sm-m cursor-pointer
                             ${ popupFlag ? 'bg-achromatic-black text-achromatic-white' : 'bg-achromatic-white text-achromatic-black' }
                         `}
                     >
-                        원문 보기
+                        전체 문장 보기
                         <div className={`ml-1 ${ popupFlag ? 'rotate-180' : '' }`}>
                             { !popupFlag && <IconTriangle /> }
                             { popupFlag && <IconTriangle color='white' /> }

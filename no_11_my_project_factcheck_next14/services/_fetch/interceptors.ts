@@ -1,3 +1,6 @@
+import { returnFetch } from ".";
+import { DefaultRes } from "./_types";
+
 export const requestInterceptor = (option?: RequestInit): RequestInit => {
     const interceptor: RequestInit = {
         ...option
@@ -10,7 +13,20 @@ export const requestInterceptor = (option?: RequestInit): RequestInit => {
 export const responseInterceptor = async <T>(response: Response): Promise<T | null> => {
     if (!response.ok) {
         const errorData = await response.json();
-        console.error('응답 에러 인터셉터', errorData);
+        // console.error('응답 에러 인터셉터dd', errorData.error);
+
+        if (errorData.error.message === 'Access Denied') {
+            returnFetch<DefaultRes>(`logout`, {
+                method: 'post',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-Requested-With': 'XMLHttpRequest',
+                },
+            }).then(() => {
+                if (!window) return;
+                window.location.href = '/';
+            })
+        }
         
         throw new Error(errorData.message || 'Something went wrong');
     }

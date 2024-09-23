@@ -1,14 +1,16 @@
-import { FactValuesType } from '@/constants/_types';
-import { useTextTransform } from '@/hooks/check-history/use-text-transform';
-import { alertState } from '@/lib/recoil/atoms/alert-state';
-import { HistoryDocumentJsonData } from '@/services/check-history/_types';
 import Link from 'next/link';
 import React from 'react'
 import { useResetRecoilState, useSetRecoilState } from 'recoil';
+import ButtonSs from '@/components/buttons/Button-ss';
+import { FactValuesType } from '@/constants/_types';
+import { useTextTransform } from '@/hooks/check-history/use-text-transform';
+import { alertState } from '@/lib/recoil/atoms/alert-state';
+import { DocsList, HistoryDocumentJsonData } from '@/services/check-history/_types';
+import { useClickButtons } from '@/hooks/check-history/use-click-buttons';
 
 
 interface Props {
-    data: HistoryDocumentJsonData[];
+    data: DocsList[];
 }
 
 const TableBody: React.FC<Props> = ({ data }) => {
@@ -39,6 +41,9 @@ const TableBody: React.FC<Props> = ({ data }) => {
         })
     }, [])
 
+
+    const { onClickDelete } = useClickButtons();
+
     return (
         <tbody className='bg-achromatic-white'>
             {
@@ -46,54 +51,73 @@ const TableBody: React.FC<Props> = ({ data }) => {
                     <tr key={ idx } className=''>
                         <td className='border border-achromatic-03'>
                             <Link
-                                href={ isCompleted(item.docsStatus) ? `/check-history/${item.seq}` : '' }
-                                onClick={ () => isCompleted(item.docsStatus) ? undefined : openWaitAlert() }
+                                href={ isCompleted(item.status) ? `/check-history/${item.docsId}` : '' }
+                                onClick={ () => isCompleted(item.status) ? undefined : openWaitAlert() }
                                 scroll={ false }
                                 className='flex items-center px-4 h-[50px] body-md'
                             >
-                                <span className='line-clamp-2'>{ item.docsTitle }</span>
+                                <span className='line-clamp-2'>{ item.title }</span>
                             </Link>
                         </td>
                         <td className='border border-achromatic-03 w-[120px] max-w-[120px]'>
                             <Link
-                                href={ isCompleted(item.docsStatus) ? `/check-history/${item.seq}` : '' }
-                                onClick={ () => isCompleted(item.docsStatus) ? undefined : openWaitAlert() }
+                                href={ isCompleted(item.status) ? `/check-history/${item.docsId}` : '' }
+                                onClick={ () => isCompleted(item.status) ? undefined : openWaitAlert() }
                                 scroll={ false }
-                                className='flex items-center justify-center px-4 h-[50px] body-md'
+                                className='flex items-center justify-center px-4 h-[50px] body-sm'
                             >
-                                { item.docsRequesterName }
+                                <span className='line-clamp-1 break-words'>{ item.requesterName }</span>
                             </Link>
                         </td>
                         <td className='border border-achromatic-03 w-[120px] max-w-[120px]'>
                             <Link
-                                href={ isCompleted(item.docsStatus) ? `/check-history/${item.seq}` : '' }
-                                onClick={ () => isCompleted(item.docsStatus) ? undefined : openWaitAlert() }
+                                href={ isCompleted(item.status) ? `/check-history/${item.docsId}` : '' }
+                                onClick={ () => isCompleted(item.status) ? undefined : openWaitAlert() }
                                 scroll={ false }
-                                className='flex items-center justify-center px-4 h-[50px] body-md'
+                                className='flex items-center justify-center px-4 h-[50px] body-sm'
                             >
-                                { item.docsFormat }
+                                { item.format }
                             </Link>
                         </td>
-                        <td className='border border-achromatic-03 w-[240px] max-w-[240px]'>
+                        <td className='border border-achromatic-03 w-[200px]'>
                             <Link
-                                href={ isCompleted(item.docsStatus) ? `/check-history/${item.seq}` : '' }
-                                onClick={ () => isCompleted(item.docsStatus) ? undefined : openWaitAlert() }
+                                href={ isCompleted(item.status) ? `/check-history/${item.docsId}` : '' }
+                                onClick={ () => isCompleted(item.status) ? undefined : openWaitAlert() }
                                 scroll={ false }
-                                className='flex items-center px-4 h-[50px] body-md-m'
-                                style={ getDocsStatusColorStyle(item.docsStatus) }
+                                className='flex items-center px-4 h-[50px] body-sm'
+                                style={ getDocsStatusColorStyle(item.status) }
                             >
-                                { isAnalysisComplete(item.docsStatus) && <div className='w-3 h-3 rounded-sm mr-2' style={ getDocsStatusBgStyle(item.docsStatus) }></div> }
-                                <span className='line-clamp-2'>{ getDocsStatusText(item.docsStatus) }</span>
+                                { isAnalysisComplete(item.status) && <div className='w-3 h-3 rounded-sm mr-2' style={ getDocsStatusBgStyle(item.status) }></div> }
+                                <span className='line-clamp-2'>{ getDocsStatusText(item.status) }</span>
                             </Link></td>
                         <td className='border border-achromatic-03 w-[150px] max-w-[150px]'>
                             <Link
-                                href={ isCompleted(item.docsStatus) ? `/check-history/${item.seq}` : '' }
-                                onClick={ () => isCompleted(item.docsStatus) ? undefined : openWaitAlert() }
+                                href={ isCompleted(item.status) ? `/check-history/${item.docsId}` : '' }
+                                onClick={ () => isCompleted(item.status) ? undefined : openWaitAlert() }
                                 scroll={ false }
                                 className='flex items-center justify-center px-4 h-[50px] body-sm whitespace-nowrap'
                             >
-                                { Date.parseUtcText(item.docsCreatedDateTime).format('yyyy.MM.dd HH:mm') }
+                                { Date.parseUtcText(item.createdDateTime).format('yyyy.MM.dd HH:mm') }
                             </Link>
+                        </td>
+                        <td className='border border-achromatic-03'>
+                            <Link
+                                href={ isCompleted(item.status) ? `/check-history/${item.docsId}` : '' }
+                                // onClick={ () => isCompleted(item.docsStatus) ? undefined : openWaitAlert() }
+                                scroll={ false }
+                                className='flex items-center justify-center px-4 h-[50px] body-sm whitespace-nowrap'
+                            >
+                                { '정상' }
+                            </Link>
+                        </td>
+                        <td className='px-4 border border-achromatic-03'>
+                            <div className='flex items-center justify-center'>
+                                <ButtonSs
+                                    label='삭제'
+                                    buttonType='cancle' className='w-[47px]'
+                                    onClick={ onClickDelete }
+                                />
+                            </div>
                         </td>
                     </tr>
                 ))

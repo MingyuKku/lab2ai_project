@@ -3,14 +3,20 @@
 import React from "react";
 import { useRouter } from "next/navigation";
 import ButtonSs from "../buttons/Button-ss";
+import { useFetchSignin } from "@/services/auth/use-fetch-signin";
 
 
 const UserInfo = () => {
     const { replace } = useRouter();
-    const onClickSignout = React.useCallback(() => {
-        replace('/sign-in', {
-            scroll: false
-        })
+    const { signout } = useFetchSignin();
+    const onClickSignout = React.useCallback(async () => {
+        const { isSuccess } = await signout();
+
+        if (isSuccess === 'success') {
+            replace('/sign-in', {
+                scroll: false
+            })
+        }
     }, [])
 
     return (

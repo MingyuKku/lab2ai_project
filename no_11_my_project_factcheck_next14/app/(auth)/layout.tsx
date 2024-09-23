@@ -8,6 +8,8 @@ interface Props {
 }
 
 const AuthLayout: NextPage<Props> = ({ children }) => {
+
+    
     return (
         <div>
             <MainHeader />

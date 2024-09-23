@@ -52,6 +52,8 @@ export const usePopupOriginText = (queryId: number) => {
         const { innerHeight } = window;
         const { scrollTop, scrollHeight } = scrollElem.current;
 
+        if (!originScrollHeight) return;
+        
         if (originScrollHeight >= scrollHeight) {
             updatePopupPosBottom(false);
 

@@ -42,10 +42,10 @@ module.exports = {
                 },
             },
             width: {
-                desktop: '480px',
+                desktop: '1200px',
             },
-            maxWidth: {
-                desktop: '480px'
+            minWidth: {
+                desktop: '1200px'
             },
             height: {
                 'main-header': '60px',

@@ -12,13 +12,13 @@ export const usePopupDetailFilter = () => {
     const { item, scrollElem, updatePopupScrollElemHeight } = useCheckHistoryItemPopupProvider();
 
     const [ filter, setFilter ] = React.useState<FactValuesType | null>(null);
-    const [ docsBottomDetailsInfos, setDocsBottomDetailsInfos ] = React.useState(item?.docsBottomDetailsInfos);
+    const [ docsBottomDetailsInfos, setDocsBottomDetailsInfos ] = React.useState(item?.bottomDetailsInfoList);
     
 
     React.useEffect(() => {
         if (!item) return;
 
-        const content = item.docsBottomDetailsInfos.map<CheckHistoryOriginText>(detail => ({
+        const content = item.bottomDetailsInfoList.map<CheckHistoryOriginText>(detail => ({
             id: detail.queryId,
             text: detail.query
         }))
@@ -30,9 +30,9 @@ export const usePopupDetailFilter = () => {
         if (!item) return;
 
         if (filter === null) {
-            setDocsBottomDetailsInfos(item.docsBottomDetailsInfos);
+            setDocsBottomDetailsInfos(item.bottomDetailsInfoList);
         } else {
-            setDocsBottomDetailsInfos(item.docsBottomDetailsInfos.filter(info => info.docsSentenceFactCheckResultInfo.result === filter))
+            setDocsBottomDetailsInfos(item.bottomDetailsInfoList.filter(info => info.docsSentenceFactCheckResultInfo.result === filter))
         }
 
     }, [filter])

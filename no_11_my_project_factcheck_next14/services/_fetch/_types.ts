@@ -1,6 +1,9 @@
 export interface DefaultRes {
     [key: string]: any;
-    data: any;
+    data: {
+        message: string;
+        result: any;
+    };
     status?: number;
 }
 

@@ -22,8 +22,9 @@ const PieChart = () => {
 
     React.useEffect(() => {
         if (!item) return;
+        if (!item.topDetailInfo.topDetailFactCheckResult) return;
 
-        const entries = Object.entries(item.docsTopDetailInfo.docsTopDetailFactCheckResult);
+        const entries = Object.entries(item.topDetailInfo.topDetailFactCheckResult);
 
         const newArray = entries.map(([key, value], idx) => ({
             id: Facts[key as FactValuesType].label,

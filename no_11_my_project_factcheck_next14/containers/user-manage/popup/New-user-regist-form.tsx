@@ -3,6 +3,8 @@ import IconUserPlus from '@/components/icon/User-plus';
 import NewUserRegistText from './New-user-regist-text';
 import NewUserRegistAuth from './New-user-regist-auth';
 import ButtonLg from '@/components/buttons/Button-lg';
+import { useFetchSignup } from '@/services/auth/use-fetch-signup';
+import { Authority, SignupParams } from '@/services/auth/_types';
 
 
 interface Props {
@@ -11,17 +13,24 @@ interface Props {
 
 const PopupNewUserRegist: React.FC<Props> = ({ setSidePopupFlag }) => {
 
+    const { signup } = useFetchSignup();
     // 'test-user-list'
-    const onSubmitRegistUser = React.useCallback((e: React.FormEvent<HTMLFormElement>) => {
+    const onSubmitRegistUser = React.useCallback(async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
         const formData = new FormData(e.currentTarget);
         const userName = formData.get('name') as string;
         const userId = formData.get('id') as string;
         const userEmail = formData.get('email') as string;
-        const userAuth = formData.get('auth') as 'admin' | 'normal';
+        const userAuth = formData.get('auth') as Authority;
 
-
+        const params: SignupParams = {
+            username: userId,
+            name: userName,
+            email: userEmail,
+            authority: userAuth,
+        }
+        signup(params);
         // 임시로직
         // if (!window) return;
         // const items = window.sessionStorage.getItem('test-user-list');

@@ -9,12 +9,12 @@ import { usePopupDetailFilter } from '@/hooks/check-history/use-popup-detail-fil
 
 
 const ReportDetail: React.FC = () => {
- 
+
     const { filter, setFilter, docsBottomDetailsInfos } = usePopupDetailFilter();
 
 
     return (
-        <div className=''>
+        <div>
             {
                 docsBottomDetailsInfos &&
                 <React.Fragment>
@@ -28,7 +28,6 @@ const ReportDetail: React.FC = () => {
                                 />
                             ))
                         }
-                        
                     </div>
                 </React.Fragment>
             }
